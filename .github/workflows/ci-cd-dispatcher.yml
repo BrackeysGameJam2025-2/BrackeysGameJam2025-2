@@ -74,6 +74,21 @@ jobs:
           macos: ${{ vars.MACOS_RUNNER }}
         env:
           GH_TOKEN: ${{ secrets.CICD_PAT }}
+          
+  debug_runners:
+  name: Debug Runner Resolution
+  needs: resolve_runners
+  runs-on: ubuntu-latest
+  steps:
+    - name: Show resolved runners
+      run: |
+        echo "Main runner: '${{ needs.resolve_runners.outputs.main }}'"
+        echo "MacOS runner: '${{ needs.resolve_runners.outputs.macos }}'"
+        echo "Main runner length: ${#main}"
+        echo "MacOS runner length: ${#macos}"
+      env:
+        main: ${{ needs.resolve_runners.outputs.main }}
+        macos: ${{ needs.resolve_runners.outputs.macos }}
 
   validation:
     name: Check Skip CI triggers
