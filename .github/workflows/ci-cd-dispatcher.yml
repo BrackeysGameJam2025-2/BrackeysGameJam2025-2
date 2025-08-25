@@ -60,35 +60,17 @@ permissions:
 
 jobs:
   resolve_runners:
-    name: Resolve Runner Labels
-    runs-on: ubuntu-latest
-    outputs:
-      main: ${{ steps.resolve.outputs.main }}
-      macos: ${{ steps.resolve.outputs.macos }}
-    steps:
-      - name: Resolve runners
-        id: resolve
-        uses: avalin/unity-ci-templates/.github/actions/resolve-runners@main
-        with:
-          main: ${{ vars.MAIN_RUNNER }}
-          macos: ${{ vars.MACOS_RUNNER }}
-        env:
-          GH_TOKEN: ${{ secrets.CICD_PAT }}
-          
-  debug_runners:
-      name: Debug Runner Resolution
-      needs: resolve_runners
+      name: Resolve Runner Labels (Hardcoded Test)
       runs-on: ubuntu-latest
+      outputs:
+        main: ubuntu-latest
+        macos: macos-latest
       steps:
-        - name: Show resolved runners
+        - name: Set hardcoded runners
           run: |
-            echo "Main runner: '${{ needs.resolve_runners.outputs.main }}'"
-            echo "MacOS runner: '${{ needs.resolve_runners.outputs.macos }}'"
-            echo "Main runner length: ${#main}"
-            echo "MacOS runner length: ${#macos}"
-          env:
-            main: ${{ needs.resolve_runners.outputs.main }}
-            macos: ${{ needs.resolve_runners.outputs.macos }}
+            echo "main=ubuntu-latest" >> $GITHUB_OUTPUT
+            echo "macos=macos-latest" >> $GITHUB_OUTPUT
+            echo "✅ Hardcoded runners set successfully"
 
   validation:
     name: Check Skip CI triggers
