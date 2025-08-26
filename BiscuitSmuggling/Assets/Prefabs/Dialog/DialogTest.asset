@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8853951737197294430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1552
+    y: 99
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Taras
+    Text: Your repuration is bad
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -7376862122600782131}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-7376862122600782131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1225
+    y: 166
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: Reputation
+  _conditionType: 4
+  _boolTargetValue: 0
+  _intTargetValue: 10
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -222172366110655056}
+  TrueChildNode: {fileID: -8853951737197294430}
+  FalseChildNode: {fileID: 1009353848365263718}
 --- !u!114 &-6004949940728583099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +78,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 208
-    y: 63
+    x: 516
+    y: 56
     width: 210
     height: 155
   IsDragging: 1
@@ -45,8 +108,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 442
-    y: 190
+    x: 750
+    y: 183
     width: 190
     height: 135
   IsDragging: 1
@@ -78,8 +141,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 647
-    y: 195
+    x: 955
+    y: 188
     width: 190
     height: 135
   IsDragging: 1
@@ -90,7 +153,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: -55095221, guid: 6994d001989a335408a55ccea01b4f99, type: 3}
   ParentNodes:
   - {fileID: -3527389232080039252}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7376862122600782131}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -114,6 +177,9 @@ MonoBehaviour:
   - {fileID: 4634777183015429475}
   - {fileID: -3527389232080039252}
   - {fileID: -222172366110655056}
+  - {fileID: -7376862122600782131}
+  - {fileID: -8853951737197294430}
+  - {fileID: 1009353848365263718}
   VariablesConfig: {fileID: 11400000, guid: 6decb92a3afaad446be04f1b5fa045c3, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
@@ -135,8 +201,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -46
-    y: 219
+    x: 262
+    y: 213
     width: 190
     height: 135
   IsDragging: 1
@@ -152,6 +218,38 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -6004949940728583099}
   - {fileID: 4634777183015429475}
+--- !u!114 &1009353848365263718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1544
+    y: 286
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Taras
+    Text: You are preaty good with it
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -7376862122600782131}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &4634777183015429475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +265,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 222
-    y: 287
+    x: 530
+    y: 280
     width: 190
     height: 135
   IsDragging: 1
@@ -199,8 +297,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -272
-    y: 218
+    x: 36
+    y: 211
     width: 190
     height: 135
   IsDragging: 1

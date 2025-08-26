@@ -34,6 +34,8 @@ namespace cherrydev
         public VariableConditionNode CurrentVariableConditionNode { get; private set; }
         public ExternalFunctionNode CurrentExternalFunctionNode { get; private set; }
 
+        public bool IsTypingActive => _isCurrentSentenceTyping;
+
         public UnityEvent OnDialogStarted => _onDialogStarted;
         public UnityEvent OnDialogFinished => _onDialogFinished;
 
