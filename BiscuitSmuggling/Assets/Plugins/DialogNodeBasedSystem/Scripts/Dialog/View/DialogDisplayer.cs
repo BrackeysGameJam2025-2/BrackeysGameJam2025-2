@@ -138,10 +138,10 @@ namespace cherrydev
         {
             AnswerNode currentAnswerNode = _dialogBehaviour.CurrentAnswerNode;
 
-            if (currentAnswerNode != null)
+            /*if (currentAnswerNode != null)
                 _dialogAnswerPanel.GetButtonTextByIndex(index).text = currentAnswerNode.GetAnswerText(index);
-            else
-                _dialogAnswerPanel.GetButtonTextByIndex(index).text = answerText;
+            else*/
+            _dialogAnswerPanel.GetButtonTextByIndex(index).text = answerText;
         }
 
         private void HandleLanguageChanged()

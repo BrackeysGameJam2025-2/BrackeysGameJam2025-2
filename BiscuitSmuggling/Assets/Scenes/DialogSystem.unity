@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &179936443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+  m_PrefabInstance: {fileID: 306154217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54577d38420c01d44a9b28330b6a8517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &306154217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171,10 +182,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _isCanSkippingText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _nextSentenceAction.m_Name
+      value: Next Sentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _nextSentenceAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _nextSentenceAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 59f6d1fd-6988-4c9c-bf66-aba341bee4b5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _nextSentenceAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+      propertyPath: _nextSentenceAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Next Sentence
+      objectReference: {fileID: 0}
     - target: {fileID: 7766932276470276865, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
       propertyPath: _dialogBehaviour
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 179936443}
     m_RemovedComponents:
     - {fileID: 3622971408378463882, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
     m_RemovedGameObjects: []
@@ -213,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df7317f489d29d4588d42db64a0efef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestDialogInit
-  _behavior: {fileID: 0}
+  _behavior: {fileID: 179936443}
   _graph: {fileID: 11400000, guid: be5f792c9de5c0e41bfcac02a49fdc91, type: 2}
 --- !u!4 &495527989
 Transform:

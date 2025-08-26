@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 456
-    y: 54
+    x: 410
+    y: 56
     width: 210
     height: 155
   IsDragging: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 692
-    y: 181
+    x: 644
+    y: 183
     width: 190
     height: 135
   IsDragging: 1
@@ -78,15 +78,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 930
-    y: 181
+    x: 849
+    y: 188
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Taras
-    Text: You should go now
+    Text: Okey it is for now
     CharacterSprite: {fileID: 0}
   ParentNodes:
   - {fileID: -3527389232080039252}
@@ -135,15 +135,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 204
-    y: 211
+    x: 156
+    y: 212
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
   - Its non of your buisnes
-  - My name is {Name}
+  - My name is {playerName}
   AnswerKeys: []
   ParentNodes:
   - {fileID: 7325859774300113631}
@@ -165,15 +165,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 472
-    y: 278
+    x: 425
+    y: 280
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Taras
-    Text: Nice to meat you
+    Text: Nice to meat you {playerName}
     CharacterSprite: {fileID: 0}
   ParentNodes:
   - {fileID: 821506019572518515}
@@ -197,8 +197,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -54
-    y: 243
+    x: -70
+    y: 211
     width: 190
     height: 135
   IsDragging: 1

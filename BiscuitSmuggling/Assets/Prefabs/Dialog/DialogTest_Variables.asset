@@ -13,13 +13,6 @@ MonoBehaviour:
   m_Name: DialogTest_Variables
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariablesConfig
   _variables:
-  - _name: Name
-    _type: 3
-    _saveToPrefs: 0
-    _boolValue: 0
-    _intValue: 0
-    _floatValue: 0
-    _stringValue: Taras
   - _name: Reputation
     _type: 1
     _saveToPrefs: 0
@@ -27,3 +20,10 @@ MonoBehaviour:
     _intValue: 10
     _floatValue: 0
     _stringValue: 
+  - _name: playerName
+    _type: 3
+    _saveToPrefs: 0
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _stringValue: Aladin

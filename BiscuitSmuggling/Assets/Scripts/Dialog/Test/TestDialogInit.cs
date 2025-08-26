@@ -5,7 +5,7 @@ public class TestDialogInit : MonoBehaviour
 {
     [SerializeField] private DialogBehaviour _behavior;
     [SerializeField] private DialogNodeGraph _graph;
-
+    PlayerInputActions _inputActions;
     private void Start()
     {
         _behavior.StartDialog(_graph);
