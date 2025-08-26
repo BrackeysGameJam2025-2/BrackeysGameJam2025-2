@@ -9,16 +9,22 @@ public class PatrolNPCScript : MonoBehaviour
     public float visionAngle = 90f; // Vision angle of the NPC
     public Transform player; // Reference to the player
     public LayerMask visionMask; // Layer mask for vision detection
+    public MeshFilter visionMeshFilter; // MeshFilter to display the vision area
 
     private NavMeshAgent agent;
     private Transform currentTarget;
     private bool isChasing = false;
+    private Mesh visionMesh;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         currentTarget = pointA; // Start patrolling towards point A
         agent.SetDestination(currentTarget.position);
+
+        // Initialize the vision mesh
+        visionMesh = new Mesh();
+        visionMeshFilter.mesh = visionMesh;
     }
 
     void Update()
@@ -32,6 +38,8 @@ public class PatrolNPCScript : MonoBehaviour
             Patrol();
             CheckForPlayer();
         }
+
+        UpdateVisionMesh();
     }
 
     void Patrol()
@@ -80,6 +88,47 @@ public class PatrolNPCScript : MonoBehaviour
             isChasing = false;
             agent.SetDestination(currentTarget.position); // Resume patrol
         }
+    }
+
+    void UpdateVisionMesh()
+    {
+        int rayCount = 50; // Number of rays to draw the vision cone
+        float angleStep = visionAngle / rayCount;
+        float currentAngle = -visionAngle / 2f;
+
+        Vector3[] vertices = new Vector3[rayCount + 2];
+        int[] triangles = new int[rayCount * 3];
+
+        vertices[0] = Vector3.zero; // Origin of the vision cone
+
+        for (int i = 0; i <= rayCount; i++)
+        {
+            Vector3 direction = Quaternion.Euler(0, currentAngle, 0) * transform.forward;
+            Vector3 vertex = direction * visionRange;
+
+            // Check for obstacles
+            if (Physics.Raycast(transform.position, direction, out RaycastHit hit, visionRange, visionMask))
+            {
+                vertex = direction * hit.distance;
+            }
+
+            vertices[i + 1] = transform.InverseTransformPoint(transform.position + vertex);
+
+            if (i < rayCount)
+            {
+                int startIndex = i * 3;
+                triangles[startIndex] = 0;
+                triangles[startIndex + 1] = i + 1;
+                triangles[startIndex + 2] = i + 2;
+            }
+
+            currentAngle += angleStep;
+        }
+
+        visionMesh.Clear();
+        visionMesh.vertices = vertices;
+        visionMesh.triangles = triangles;
+        visionMesh.RecalculateNormals();
     }
 
     private void OnDrawGizmosSelected()
