@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Added that player can see where patrol NPC is looking">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/PatrolNPC.unity" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/PatrolNPC.unity" afterDir="false" />
-    </list>
+    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Set player layer to &quot;Player&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756220058557</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set player layer to &quot;Player&quot;">
+      <option name="closed" value="true" />
+      <created>1756225123353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756225123353</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +112,7 @@
     <MESSAGE value="Added movement to player" />
     <MESSAGE value="Added patrol NPC" />
     <MESSAGE value="Added that player can see where patrol NPC is looking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added that player can see where patrol NPC is looking" />
+    <MESSAGE value="Set player layer to &quot;Player&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set player layer to &quot;Player&quot;" />
   </component>
 </project>
