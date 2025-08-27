@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
+    [SerializeField]
+    private InteractiveObjectBehavior behavior;
+
     private void OnTriggerEnter(Collider other)
     {
         var player = other.gameObject.GetComponent<PlayerInteract>();
@@ -22,6 +25,6 @@ public class InteractiveObject : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log($"Interacted with {gameObject.name}");
+        behavior.Interact();
     }
 }

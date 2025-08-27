@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 1391902940}
   - component: {fileID: 1391902941}
   m_Layer: 0
-  m_Name: Frige
+  m_Name: Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091e795a15377d04ea0b7d0dc143858c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  behavior: {fileID: 11400000, guid: efe22f3cadb381f4da174938c43b9369, type: 2}
 --- !u!1 &1860468166
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +659,53 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!1 &1862782172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862782174}
+  - component: {fileID: 1862782173}
+  m_Layer: 0
+  m_Name: DialogVisualManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1862782173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bac3dcac7ed74e438a89579cf535330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogManager
+  _dialogWindows:
+  - type: 0
+    behavior: {fileID: 1938940236}
+--- !u!4 &1862782174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.47084, y: -0.8, z: -3.01516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1938940235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,6 +895,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+--- !u!114 &1938940236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7250229689785646963, guid: 0bd08184220c9914a877f3a735221e05, type: 3}
+  m_PrefabInstance: {fileID: 1938940235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54577d38420c01d44a9b28330b6a8517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939682935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,3 +1062,4 @@ SceneRoots:
   - {fileID: 1939682941}
   - {fileID: 907576292}
   - {fileID: 1860468171}
+  - {fileID: 1862782174}
