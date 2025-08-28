@@ -173,3 +173,7 @@ NavMesh.asset      filter=lfs diff=lfs merge=lfs
 *.dlu          filter=lfs diff=lfs merge=lfs
 # SQLite database
 *.db           filter=lfs diff=lfs merge=lfs
+
+# FMod requirements
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
