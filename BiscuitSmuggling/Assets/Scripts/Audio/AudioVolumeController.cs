@@ -1,14 +1,18 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
-using UnityEngine.Audio;
 
-public class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeController>
+public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeController>
 {
     private float _masterVolume = 1f;
     private float _sfxVolume = 1f;
     private float _soundtrackVolume = 0.8f;
+    private float _dialogVolume = 0.8f;
 
-    [SerializeField]
-    private AudioMixer m_Mixer;
+    private Bus _masterBus;
+    private Bus _sfxBus;
+    private Bus _soundtrackBus;
+    private Bus _dialogBus;
 
     /// <summary>
     /// Gets/sets a volume of all audio sources (master volume) in a range from 0 to 1.
@@ -37,7 +41,7 @@ public class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeControlle
     }
 
     /// <summary>
-    /// Gets/sets soundtrack volume  in a range from 0 to 1.
+    /// Gets/sets soundtrack volume in a range from 0 to 1.
     /// </summary>
     public float SoundtrackVolume
     {
@@ -49,29 +53,41 @@ public class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeControlle
         }
     }
 
-    private void Start()
+    /// <summary>
+    /// Gets/sets dialog volume in a range from 0 to 1.
+    /// </summary>
+    public float DialogVolume
     {
-        if (!m_Mixer)
+        get => _dialogVolume;
+        set
         {
-            Debug.LogError("Mixer is uninitialized");
+            _dialogVolume = Mathf.Clamp01(value);
+            UpdateMixer();
         }
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _masterBus = RuntimeManager.GetBus("bus:/");
+        _sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        _soundtrackBus = RuntimeManager.GetBus("bus:/Soundtrack");
+        _dialogBus = RuntimeManager.GetBus("bus:/Dialog");
+
         UpdateMixer();
     }
 
-    private static float GetDbVolume(float volume)
+    private void Start()
     {
-        volume = Mathf.Clamp01(volume);
-        float db = 20f * Mathf.Log10(volume);
-        if (float.IsInfinity(db)) return -80f;
-        return db;
+        UpdateMixer();
     }
 
     private void UpdateMixer()
     {
-        if (!m_Mixer) return;
-
-        m_Mixer.SetFloat("Master_Volume", GetDbVolume(_masterVolume));
-        m_Mixer.SetFloat("SFX_Volume", GetDbVolume(_sfxVolume));
-        m_Mixer.SetFloat("Soundtrack_Volume", GetDbVolume(_soundtrackVolume));
+        _masterBus.setVolume(_masterVolume);
+        _sfxBus.setVolume(_sfxVolume);
+        _soundtrackBus.setVolume(_soundtrackVolume);
+        _dialogBus.setVolume(_dialogVolume);
     }
 }
