@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
-using UnityEngine.Rendering;
 
-public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler, IDragHandler, IDropHandler
+
+public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler, IDragHandler, IDropHandler, IPointerClickHandler
 {
     public Inventory inventory;
     public ItemSlotInfo itemSlot;
@@ -13,14 +13,21 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     public TextMeshProUGUI stacksText;
     private bool click;
 
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("CLICKED" + gameObject.name);
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
         eventData.pointerPress = this.gameObject;
+
 
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Item clicked");
         click = true;
     }
 
@@ -66,7 +73,8 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     }
     public void PickUp()
     {
-        mouse.itemSlotInfo = itemSlot;
+        mouse.itemSlotInfo = new ItemSlotInfo(itemSlot.item, itemSlot.stacks);
+        inventory.ClearSlot(itemSlot);
         mouse.SetUi();
     }
 

@@ -98,6 +98,7 @@ public class Inventory : MonoBehaviour
                 {
                     panel.itemImage.gameObject.SetActive(true);
                     panel.itemImage.sprite = itemInfo.item.GiveItemImage();
+                    panel.itemImage.CrossFadeAlpha(1, 0.05f, true);
                     panel.stacksText.gameObject.SetActive(true);
                     panel.stacksText.text = itemInfo.stacks.ToString(); //" " + i.stacks;
                 }
