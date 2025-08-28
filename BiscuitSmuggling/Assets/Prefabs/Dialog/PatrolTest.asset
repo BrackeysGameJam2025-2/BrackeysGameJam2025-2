@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e5c79f1fadfce47b5a074add3b7f12, type: 3}
-  m_Name: FridgeInteraction
-  m_EditorClassIdentifier: Assembly-CSharp::FridgeInteraction
+  m_Script: {fileID: 11500000, guid: dd6893f6861e4ca4580cf365318bed05, type: 3}
+  m_Name: PatrolTest
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolInteract
   dialogGraphs:
-  - {fileID: 11400000, guid: 5810996d1e272e24081634507f14db5f, type: 2}
-  dialogType: 0
+  - {fileID: 11400000, guid: 6ec9a452869c04b45b5e7ca9e1f1c622, type: 2}
+  dialogType: 1

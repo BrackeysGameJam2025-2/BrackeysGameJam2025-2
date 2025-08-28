@@ -3,14 +3,23 @@ using UnityEngine;
 
 public abstract class InteractiveObjectBehavior : ScriptableObject
 {
+
     [SerializeField]
-    private DialogNodeGraph dialogGraph;
+    protected DialogNodeGraph[] dialogGraphs;
     [SerializeField]
-    private DialogType dialogType;
+    protected DialogType dialogType;
 
     public void Interact()
     {
-        DialogManager.Instance.ShowDialog(dialogType, dialogGraph, this);
+        if (dialogGraphs != null && dialogGraphs.Length > 0)
+        {
+            int index = Random.Range(0, dialogGraphs.Length);
+            DialogManager.Instance.ShowDialog(dialogType, dialogGraphs[index], this);
+        }
+        else
+        {
+            Debug.LogWarning("DialogGraph is empty or not assigned.");
+        }
     }
 
     public abstract void Accept();

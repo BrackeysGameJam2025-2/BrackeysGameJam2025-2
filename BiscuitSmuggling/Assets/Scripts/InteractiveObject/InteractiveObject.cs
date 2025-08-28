@@ -5,12 +5,20 @@ public class InteractiveObject : MonoBehaviour
     [SerializeField]
     private InteractiveObjectBehavior behavior;
 
+    [SerializeField]
+    private bool waitForPlayerToInteract = true;
+
     private void OnTriggerEnter(Collider other)
     {
         var player = other.gameObject.GetComponent<PlayerInteract>();
         if (player != null)
         {
-            player.PlayerInArea(this);
+            if (waitForPlayerToInteract)
+            {
+                player.PlayerInArea(this);
+            }
+            else
+                Interact();
         }
     }
 

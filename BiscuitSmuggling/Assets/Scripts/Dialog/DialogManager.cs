@@ -1,5 +1,6 @@
 using cherrydev;
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class DialogManager : MonoBehaviour
     [Serializable]
     private class DialogWinow
     {
-        public DialogType type;
+        public DialogType[] type;
         public DialogBehaviour behavior;
     }
 
@@ -33,7 +34,7 @@ public class DialogManager : MonoBehaviour
     {
         foreach (var window in _dialogWindows)
         {
-            if (window.type == type)
+            if (window.type.Contains(type))
             {
                 window.behavior.StartDialog(graph);
                 window.behavior.BindExternalFunction("Accept", behavior.Accept);
