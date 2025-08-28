@@ -16,7 +16,7 @@ public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : Single
     /// <summary>
     /// Gets the current instance of the object. Throws an exception if there is no instance.
     /// </summary>
-    protected static T Instance
+    public static T Instance
     {
         get
         {

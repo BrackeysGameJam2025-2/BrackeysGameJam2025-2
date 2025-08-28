@@ -103,6 +103,7 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     public void QuitGame()
     {
+        Debug.Log("Quit game (don't work in Editor, will work in build)");
         Application.Quit();
     }
 }
