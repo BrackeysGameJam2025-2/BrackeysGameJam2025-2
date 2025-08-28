@@ -12,5 +12,7 @@ EditorBuildSettings:
     path: Assets/ThirdParty/3DPixelArtEnvironment/Demo/Demo.unity
     guid: 53900dbb03df0fd4c869dfe0cb88d5d4
   m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 051070ce9a7dba84992458cf8c4c9ef1, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
