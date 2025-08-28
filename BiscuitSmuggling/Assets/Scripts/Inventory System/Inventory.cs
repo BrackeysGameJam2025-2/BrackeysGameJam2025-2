@@ -65,40 +65,41 @@ public class Inventory : MonoBehaviour
 
         int index = 0;
 
-        foreach (ItemSlotInfo i in items)
+        foreach (ItemSlotInfo itemInfo in items)
         {
             //name items in list
-           
-            
 
-             if (string.IsNullOrEmpty(i.name))
-            {
-                i.name = "" + (index + 1).ToString();
-            }
 
-            if (i.name != null)
+
+
+
+            itemInfo.name = "" + (index + 1);
+
+
+            if (itemInfo.item != null)
             {
-                i.name += ": " + i.item.GiveName();
+                itemInfo.name += ": " + itemInfo.item.GiveName();
             }
 
             else
             {
-                i.name += ": -";
+                itemInfo.name += ": -";
+               
             }
 
             //Update panel
             ItemPanel panel = existingPanels[index];
+            panel.name = itemInfo.name + "Panel";
             if (panel != null)
             {
-                panel.name = i.name + "Panel";
                 panel.inventory = this;
-                panel.itemSlot = i;
-                if (i.item != null)
+                panel.itemSlot = itemInfo;
+                if (itemInfo.item != null)
                 {
                     panel.itemImage.gameObject.SetActive(true);
-                    panel.itemImage.sprite = i.item.GiveItemImage();
+                    panel.itemImage.sprite = itemInfo.item.GiveItemImage();
                     panel.stacksText.gameObject.SetActive(true);
-                    panel.stacksText.text = i.stacks.ToString(); //" " + i.stacks;
+                    panel.stacksText.text = itemInfo.stacks.ToString(); //" " + i.stacks;
                 }
                 else
                 {
@@ -115,20 +116,20 @@ public class Inventory : MonoBehaviour
 
     public int AddItem(Item item, int amount)
     {
-        foreach (ItemSlotInfo i in items)
+        foreach (ItemSlotInfo itemInfo in items)
         {
-            if (i.item != null)
+            if (itemInfo.item != null)
             {
-                if (i.item.GiveName() == item.GiveName())
+                if (itemInfo.item.GiveName() == item.GiveName())
                 {
-                    if (amount > i.item.MaxStacks() - i.stacks)
+                    if (amount > itemInfo.item.MaxStacks() - itemInfo.stacks)
                     {
-                        amount -= i.item.MaxStacks() - i.stacks;
-                        i.stacks = i.item.MaxStacks();
+                        amount -= itemInfo.item.MaxStacks() - itemInfo.stacks;
+                        itemInfo.stacks = itemInfo.item.MaxStacks();
                     }
                     else
                     {
-                        i.stacks += amount;
+                        itemInfo.stacks += amount;
                         if (inventoryMenu.activeSelf) RefreshInventory();
                         return 0;
                     }
@@ -137,20 +138,20 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        foreach (ItemSlotInfo i in items)
+        foreach (ItemSlotInfo itemInfo in items)
         {
-            if (i.item == null)
+            if (itemInfo.item == null)
             {
                 if (amount > item.MaxStacks())
                 {
-                    i.item = item;
-                    i.stacks = item.MaxStacks();
+                    itemInfo.item = item;
+                    itemInfo.stacks = item.MaxStacks();
                     amount -= item.MaxStacks();
                 }
                 else
                 {
-                    i.item = item;
-                    i.stacks = amount;
+                    itemInfo.item = item;
+                    itemInfo.stacks = amount;
                     if (inventoryMenu.activeSelf) RefreshInventory();
                     return 0;
                 }

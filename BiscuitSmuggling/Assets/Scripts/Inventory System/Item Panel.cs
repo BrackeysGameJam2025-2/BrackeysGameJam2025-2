@@ -67,6 +67,7 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     public void PickUp()
     {
         mouse.itemSlotInfo = itemSlot;
+        mouse.SetUi();
     }
 
     public void FadeOut()
@@ -74,32 +75,35 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         itemImage.CrossFadeAlpha(0.3f, 0.05f, true);
     }
     public void OnClick()
-    {
-        mouse = inventory.mouse;
-        if (mouse.itemSlotInfo.item == null)
+    {   if (inventory != null)
         {
-            if (itemSlot.item != null)
+            mouse = inventory.mouse;
+            if (mouse.itemSlotInfo.item == null)
             {
-                PickUp();
-                FadeOut();
+                if (itemSlot.item != null)
+                {
+                    PickUp();
+                    FadeOut();
+                }
             }
-        }
-        else
-        {
+            else
+           {
             if (itemSlot == mouse.itemSlotInfo)
-            {
+             {
                 inventory.RefreshInventory();
-            }
+             }
             else if (itemSlot.item == null)
-            {
+             {
                 DropItem();
                 inventory.RefreshInventory();
-            }
+             }
             else if (itemSlot.item.GiveName() != mouse.itemSlotInfo.item.GiveName())
-            {
+             {
                 SwapItems(itemSlot, mouse.itemSlotInfo);
                 inventory.RefreshInventory();
-            }
-        }
+             }
+           }
+        
+        }  
     }
 }
