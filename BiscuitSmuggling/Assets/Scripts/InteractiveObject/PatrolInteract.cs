@@ -1,10 +1,9 @@
-using cherrydev;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "FridgeInteraction", menuName = "Scriptable Objects/InteraciveObjectBechavior/Patrol")]
 public class PatrolInteract : InteractiveObjectBehavior
 {
-
+    [SerializeField] private Transform exitPoint;
     public new void Interact()
     {
         if (dialogGraphs != null && dialogGraphs.Length > 0)
@@ -25,6 +24,6 @@ public class PatrolInteract : InteractiveObjectBehavior
 
     public override void Reject()
     {
-        Debug.LogWarning("Game over?");
+
     }
 }
