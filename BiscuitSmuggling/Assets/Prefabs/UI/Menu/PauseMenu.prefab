@@ -284,6 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 825964305094147668}
+  - component: {fileID: 5712192566993964049}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -311,6 +312,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5712192566993964049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501728749577206386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d74b75ce6cf7541b1f8f1b66aad9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  m_Overlay: {fileID: 6776655646558445617}
+  m_PauseEvent:
+    Guid:
+      Data1: 1893388298
+      Data2: 1197750910
+      Data3: -947607883
+      Data4: -266332269
+    Path: event:/UI/Pause/Paused
+  m_UnpauseEvent:
+    Guid:
+      Data1: -476971929
+      Data2: 1248400085
+      Data3: 229809550
+      Data4: 1620671331
+    Path: event:/UI/Pause/Unpaused
 --- !u!1001 &6104126088731205293
 PrefabInstance:
   m_ObjectHideFlags: 0
