@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba50836158899c49afb118d5bad6c7a, type: 3}
-  m_Name: FridgeDialog
-  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObjectBehavior
+  m_Script: {fileID: 11500000, guid: 85e5c79f1fadfce47b5a074add3b7f12, type: 3}
+  m_Name: FridgeInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::FridgeInteraction
   dialogGraph: {fileID: 11400000, guid: 5810996d1e272e24081634507f14db5f, type: 2}
   dialogType: 0

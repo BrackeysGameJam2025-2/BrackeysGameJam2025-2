@@ -1,30 +1,12 @@
-using System;
 using cherrydev;
+using System;
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour
 {
     private static DialogManager _instance;
 
-    public static DialogManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<DialogManager>();
-
-                if (_instance == null)
-                {
-                    GameObject singletonObject = new GameObject("DialogManager");
-                    _instance = singletonObject.AddComponent<DialogManager>();
-                    DontDestroyOnLoad(singletonObject);
-                }
-            }
-
-            return _instance;
-        }
-    }
+    public static DialogManager Instance => _instance;
 
     [Serializable]
     private class DialogWinow
@@ -47,13 +29,15 @@ public class DialogManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ShowDialog(DialogType type, DialogNodeGraph graph)
+    public void ShowDialog(DialogType type, DialogNodeGraph graph, InteractiveObjectBehavior behavior)
     {
         foreach (var window in _dialogWindows)
         {
             if (window.type == type)
             {
                 window.behavior.StartDialog(graph);
+                window.behavior.BindExternalFunction("Accept", behavior.Accept);
+                window.behavior.BindExternalFunction("Reject", behavior.Reject);
                 return;
             }
         }

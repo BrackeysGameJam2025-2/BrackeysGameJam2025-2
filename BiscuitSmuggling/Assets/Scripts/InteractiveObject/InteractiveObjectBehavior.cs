@@ -1,8 +1,7 @@
 using cherrydev;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "InteraciveObjectBechavior", menuName = "Scriptable Objects/InteraciveObjectBechavior")]
-public class InteractiveObjectBehavior : ScriptableObject
+public abstract class InteractiveObjectBehavior : ScriptableObject
 {
     [SerializeField]
     private DialogNodeGraph dialogGraph;
@@ -11,6 +10,10 @@ public class InteractiveObjectBehavior : ScriptableObject
 
     public void Interact()
     {
-        DialogManager.Instance.ShowDialog(dialogType, dialogGraph);
+        DialogManager.Instance.ShowDialog(dialogType, dialogGraph, this);
     }
+
+    public abstract void Accept();
+
+    public abstract void Reject();
 }
