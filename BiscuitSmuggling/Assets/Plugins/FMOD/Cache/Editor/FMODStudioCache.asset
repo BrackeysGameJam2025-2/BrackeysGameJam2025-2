@@ -192,10 +192,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638920014165326214
+  lastModified: 638920049270488442
   FileSizes:
   - Name: Desktop
-    Value: 11968
+    Value: 11872
   Exists: 1
 --- !u!114 &-3666775796194285392
 MonoBehaviour:
@@ -376,7 +376,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2836020874786143867}
   cacheVersion: 131848
-  cacheTime: 638920027798457887
+  cacheTime: 638920049270488442
   SerializableEventsDict:
   - key: event:/UI/Pause/Paused
     index: 0
