@@ -4,10 +4,10 @@ using UnityEngine;
 
 public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeController>
 {
-    private float _masterVolume = 1f;
-    private float _sfxVolume = 1f;
-    private float _soundtrackVolume = 0.8f;
-    private float _dialogVolume = 0.8f;
+    private float _masterVolume;
+    private float _sfxVolume;
+    private float _soundtrackVolume;
+    private float _dialogVolume;
 
     private Bus _masterBus;
     private Bus _sfxBus;
@@ -23,7 +23,7 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         set
         {
             _masterVolume = Mathf.Clamp01(value);
-            UpdateMixer();
+            UpdateVolumes();
         }
     }
 
@@ -36,7 +36,7 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         set
         {
             _sfxVolume = Mathf.Clamp01(value);
-            UpdateMixer();
+            UpdateVolumes();
         }
     }
 
@@ -49,7 +49,7 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         set
         {
             _soundtrackVolume = Mathf.Clamp01(value);
-            UpdateMixer();
+            UpdateVolumes();
         }
     }
 
@@ -62,7 +62,7 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         set
         {
             _dialogVolume = Mathf.Clamp01(value);
-            UpdateMixer();
+            UpdateVolumes();
         }
     }
 
@@ -75,19 +75,38 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         _soundtrackBus = RuntimeManager.GetBus("bus:/Soundtrack");
         _dialogBus = RuntimeManager.GetBus("bus:/Dialog");
 
-        UpdateMixer();
+        UpdateVolumes();
     }
 
     private void Start()
     {
-        UpdateMixer();
+        Load();
     }
 
-    private void UpdateMixer()
+    private void UpdateVolumes()
     {
         _masterBus.setVolume(_masterVolume);
         _sfxBus.setVolume(_sfxVolume);
         _soundtrackBus.setVolume(_soundtrackVolume);
         _dialogBus.setVolume(_dialogVolume);
+    }
+
+    public void Load()
+    {
+        _masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
+        _sfxVolume = PlayerPrefs.GetFloat("SfxVolume", 1f);
+        _soundtrackVolume = PlayerPrefs.GetFloat("SoundtrackVolume", 0.8f);
+        _dialogVolume = PlayerPrefs.GetFloat("DialogVolume", 1f);
+
+        UpdateVolumes();
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetFloat("MasterVolume", _masterVolume);
+        PlayerPrefs.SetFloat("SfxVolume", _sfxVolume);
+        PlayerPrefs.SetFloat("SoundtrackVolume", _soundtrackVolume);
+        PlayerPrefs.SetFloat("DialogVolume", _dialogVolume);
+        PlayerPrefs.Save();
     }
 }
