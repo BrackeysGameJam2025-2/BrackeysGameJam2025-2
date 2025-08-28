@@ -1,10 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class PatrolNPCScript : MonoBehaviour
 {
-    public Transform pointA; // Patrol point A
-    public Transform pointB; // Patrol point B
+    public List<Transform> patrolPoints; // List of patrol points
     public float visionRange = 10f; // Vision range of the NPC
     public float visionAngle = 90f; // Vision angle of the NPC
     public Transform player; // Reference to the player
@@ -12,15 +12,20 @@ public class PatrolNPCScript : MonoBehaviour
     public MeshFilter visionMeshFilter; // MeshFilter to display the vision area
 
     private NavMeshAgent agent;
-    private Transform currentTarget;
+    private int currentPointIndex = 0; // Index of the current patrol point
     private bool isChasing = false;
     private Mesh visionMesh;
 
     void Start()
     {
+        if (patrolPoints == null || patrolPoints.Count == 0)
+        {
+            Debug.LogError("No patrol points assigned!");
+            return;
+        }
+
         agent = GetComponent<NavMeshAgent>();
-        currentTarget = pointA; // Start patrolling towards point A
-        agent.SetDestination(currentTarget.position);
+        agent.SetDestination(patrolPoints[currentPointIndex].position);
 
         // Initialize the vision mesh
         visionMesh = new Mesh();
@@ -46,9 +51,9 @@ public class PatrolNPCScript : MonoBehaviour
     {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
-            // Switch to the next patrol point
-            currentTarget = currentTarget == pointA ? pointB : pointA;
-            agent.SetDestination(currentTarget.position);
+            // Move to the next patrol point
+            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
+            agent.SetDestination(patrolPoints[currentPointIndex].position);
         }
     }
 
@@ -86,7 +91,7 @@ public class PatrolNPCScript : MonoBehaviour
         if (distanceToPlayer > visionRange)
         {
             isChasing = false;
-            agent.SetDestination(currentTarget.position); // Resume patrol
+            agent.SetDestination(patrolPoints[currentPointIndex].position); // Resume patrol
         }
     }
 
