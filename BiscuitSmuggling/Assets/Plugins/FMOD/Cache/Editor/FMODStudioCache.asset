@@ -145,7 +145,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638920027798437878
+  lastModified: 638920194373080838
   FileSizes:
   - Name: Desktop
     Value: 2862
@@ -192,7 +192,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638920049270488442
+  lastModified: 638920194373102503
   FileSizes:
   - Name: Desktop
     Value: 11872
@@ -259,7 +259,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638920027798457887
+  lastModified: 638920194373091195
   FileSizes:
   - Name: Desktop
     Value: 1542
@@ -299,7 +299,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638920014164985981
+  lastModified: 638920194373064927
   FileSizes:
   - Name: Desktop
     Value: 506
@@ -319,7 +319,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638920014165924251
+  lastModified: 638920194373479674
   FileSizes:
   - Name: Desktop
     Value: 3461856
@@ -376,7 +376,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2836020874786143867}
   cacheVersion: 131848
-  cacheTime: 638920049270488442
+  cacheTime: 638920194373479674
   SerializableEventsDict:
   - key: event:/UI/Pause/Paused
     index: 0
