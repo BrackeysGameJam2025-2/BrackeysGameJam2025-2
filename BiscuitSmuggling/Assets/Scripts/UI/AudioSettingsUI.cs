@@ -31,6 +31,8 @@ public class AudioSettingsUI : MonoBehaviour
         m_SfxVolume.onValueChanged.RemoveListener(OnVolumeChanged);
         m_DialogVolume.onValueChanged.RemoveListener(OnVolumeChanged);
         m_SoundtrackVolume.onValueChanged.RemoveListener(OnVolumeChanged);
+
+        AudioVolumeController.Instance.Save();
     }
 
     private void OnVolumeChanged(float volume)
