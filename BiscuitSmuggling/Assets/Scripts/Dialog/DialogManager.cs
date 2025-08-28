@@ -9,6 +9,8 @@ public class DialogManager : MonoBehaviour
 
     public static DialogManager Instance => _instance;
 
+    public DialogBehaviour CurrentDialog { get; private set; }
+
     [Serializable]
     private class DialogWinow
     {
@@ -36,13 +38,31 @@ public class DialogManager : MonoBehaviour
         {
             if (window.type.Contains(type))
             {
+                CurrentDialog = window.behavior;
+                window.behavior.gameObject.SetActive(true);
                 window.behavior.StartDialog(graph);
                 window.behavior.BindExternalFunction("Accept", behavior.Accept);
                 window.behavior.BindExternalFunction("Reject", behavior.Reject);
+                window.behavior.DialogEnded += OnDialogEnded; // Subscribe to the DialogEnded event
                 return;
             }
+            else
+            {
+                window.behavior.gameObject.SetActive(false);
+            }
+
         }
         Debug.LogError($"No dialog window found for type: {type}");
+    }
+
+    private void OnDialogEnded()
+    {
+        if (CurrentDialog != null)
+        {
+            CurrentDialog.gameObject.SetActive(false); // Deactivate the dialog window
+            CurrentDialog.DialogEnded -= OnDialogEnded; // Unsubscribe from the event
+            CurrentDialog = null; // Set CurrentDialog to null
+        }
     }
 }
 
