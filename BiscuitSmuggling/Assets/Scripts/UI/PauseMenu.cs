@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 {
@@ -12,6 +13,8 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     [SerializeField]
     private GameObject m_Overlay;
+    [SerializeField]
+    private GameObject m_SettingsMenu;
 
     [SerializeField]
     private EventReference m_PauseEvent;
@@ -61,6 +64,12 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         if (!_isPaused) return;
 
+        if (m_SettingsMenu.activeSelf)
+        {
+            m_SettingsMenu.SetActive(false);
+            return;
+        }
+
         m_Overlay.SetActive(false);
 
         _isPaused = false;
@@ -73,5 +82,27 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         RuntimeManager.PlayOneShot(m_UnpauseEvent);
 
         RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
+    }
+
+    public void OpenSettingsMenu()
+    {
+        m_SettingsMenu.SetActive(true);
+    }
+
+    public void QuitToMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+
+        _oneTimeSfxBus.setPaused(false);
+        _continuousSfxBus.setPaused(false);
+        _dialogBus.setPaused(false);
+        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
