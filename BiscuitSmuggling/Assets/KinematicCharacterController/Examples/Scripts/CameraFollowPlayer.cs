@@ -20,9 +20,6 @@ public class CameraFollowPlayer : MonoBehaviour
 
             // Smoothly move the camera to the target position
             transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
-
-            // Ensure the camera always looks at the player
-            transform.LookAt(player);
         }
     }
 }
