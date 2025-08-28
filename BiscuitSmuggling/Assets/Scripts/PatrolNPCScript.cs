@@ -71,7 +71,8 @@ public class PatrolNPCScript : MonoBehaviour
                 // Check if there is a clear line of sight to the player
                 if (Physics.Raycast(transform.position, directionToPlayer.normalized, out RaycastHit hit, visionRange, visionMask))
                 {
-                    if (hit.collider.CompareTag("Player"))
+                    // Ensure the raycast hit the player and not an obstacle
+                    if (hit.collider != null && hit.collider.CompareTag("Player"))
                     {
                         isChasing = true;
                     }
