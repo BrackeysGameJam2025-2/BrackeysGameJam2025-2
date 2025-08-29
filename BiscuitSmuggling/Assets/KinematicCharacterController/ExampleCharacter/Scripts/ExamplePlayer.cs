@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using KinematicCharacterController;
-using KinematicCharacterController.Examples;
+﻿using UnityEngine;
 
 namespace KinematicCharacterController.Examples
 {
@@ -10,19 +6,27 @@ namespace KinematicCharacterController.Examples
     {
         public ExampleCharacterController Character;
 
+        [SerializeField]
+        public bool _lockCursor = true;
+
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
 
         private void Start()
         {
+
             Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (_lockCursor)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
             }
 
             HandleCharacterInput();
@@ -41,6 +45,11 @@ namespace KinematicCharacterController.Examples
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
+        }
+
+        public void ChangeLockCursor(bool newState)
+        {
+            _lockCursor = newState;
         }
     }
 }

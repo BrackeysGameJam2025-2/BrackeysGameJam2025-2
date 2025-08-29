@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 438009405}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0.6000001, z: 0}
+  m_LocalPosition: {x: 12.14, y: 0.6000001, z: 10.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1071,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 438009408}
+  _lockCursor: 1
 --- !u!1 &1214821795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1748,64 @@ MonoBehaviour:
     behavior: {fileID: 1938940236}
   - type: 01000000
     behavior: {fileID: 1874393442}
+  OnDialogStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192567666}
+        m_TargetAssemblyTypeName: KinematicCharacterController.Examples.ExamplePlayer,
+          Assembly-CSharp
+        m_MethodName: ChangeLockCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 438009407}
+        m_TargetAssemblyTypeName: KinematicCharacterController.KinematicCharacterMotor,
+          Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDialogEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1192567666}
+        m_TargetAssemblyTypeName: KinematicCharacterController.Examples.ExamplePlayer,
+          Assembly-CSharp
+        m_MethodName: ChangeLockCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 438009407}
+        m_TargetAssemblyTypeName: KinematicCharacterController.KinematicCharacterMotor,
+          Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1862782174
 Transform:
   m_ObjectHideFlags: 0
