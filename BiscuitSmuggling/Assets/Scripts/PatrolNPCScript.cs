@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,7 +19,16 @@ public class PatrolNPCScript : MonoBehaviour
     private bool isChasing = false;
     private Mesh visionMesh;
 
-    void Start()
+    [SerializeField]
+    private int raysCount = 50;
+
+    [SerializeField]
+    private float visionUpdateRate = 1 / 60f;
+
+    private Vector3[] _vertices;
+    private int[] _triangles;
+
+    private void Start()
     {
         if (patrolPoints == null || patrolPoints.Count == 0)
         {
@@ -26,15 +36,22 @@ public class PatrolNPCScript : MonoBehaviour
             return;
         }
 
+        _vertices = new Vector3[raysCount + 2];
+        _triangles = new int[raysCount * 3];
+
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(patrolPoints[currentPointIndex].position);
 
         // Initialize the vision mesh
         visionMesh = new Mesh();
         visionMeshFilter.mesh = visionMesh;
+
+        UpdateVisionMesh();
+        visionMesh.RecalculateNormals();
+        visionMesh.RecalculateBounds();
     }
 
-    void Update()
+    private void Update()
     {
         if (isChasing)
         {
@@ -45,11 +62,24 @@ public class PatrolNPCScript : MonoBehaviour
             Patrol();
             CheckForPlayer();
         }
-
-        UpdateVisionMesh();
     }
 
-    void Patrol()
+    private void OnEnable()
+    {
+        StartCoroutine(VisionUpdate());
+    }
+
+    private IEnumerator VisionUpdate()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(visionUpdateRate);
+
+            UpdateVisionMesh();
+        }
+    }
+
+    private void Patrol()
     {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
@@ -59,7 +89,7 @@ public class PatrolNPCScript : MonoBehaviour
         }
     }
 
-    void CheckForPlayer()
+    private void CheckForPlayer()
     {
         Vector3 directionToPlayer = player.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
@@ -70,8 +100,8 @@ public class PatrolNPCScript : MonoBehaviour
 
             if (angleToPlayer <= visionAngle / 2f)
             {
-                Vector3 rayOrigin = transform.position + Vector3.up * 0.5f;
-                Vector3 playerCenter = player.position + Vector3.up * 1f;
+                Vector3 rayOrigin = transform.position + (Vector3.up * 0.5f);
+                Vector3 playerCenter = player.position + (Vector3.up * 1f);
                 Vector3 rayDirection = (playerCenter - rayOrigin).normalized;
                 float rayDistance = Vector3.Distance(rayOrigin, playerCenter);
 
@@ -94,7 +124,7 @@ public class PatrolNPCScript : MonoBehaviour
         }
     }
 
-    void ChasePlayer()
+    private void ChasePlayer()
     {
         agent.SetDestination(player.position);
 
@@ -109,46 +139,40 @@ public class PatrolNPCScript : MonoBehaviour
         }
     }
 
-    void UpdateVisionMesh()
+    private void UpdateVisionMesh()
     {
-        int rayCount = 50; // Number of rays to draw the vision cone
-        float angleStep = visionAngle / rayCount;
+        float angleStep = visionAngle / raysCount;
         float currentAngle = -visionAngle / 2f;
 
-        Vector3[] vertices = new Vector3[rayCount + 2];
-        int[] triangles = new int[rayCount * 3];
+        _vertices[0] = Vector3.zero; // Origin of the vision cone
 
-        vertices[0] = Vector3.zero; // Origin of the vision cone
-
-        for (int i = 0; i <= rayCount; i++)
+        for (int i = 0; i <= raysCount; i++)
         {
             Vector3 direction = Quaternion.Euler(0, currentAngle, 0) * transform.forward;
             Vector3 vertex = direction * visionRange;
 
             // Check for obstacles
-            Vector3 rayOrigin = transform.position + Vector3.up * 0.5f;
+            Vector3 rayOrigin = transform.position + (Vector3.up * 0.5f);
             if (Physics.Raycast(rayOrigin, direction, out RaycastHit hit, visionRange, obstacleLayers | playerLayer))
             {
                 vertex = direction * hit.distance;
             }
 
-            vertices[i + 1] = transform.InverseTransformPoint(transform.position + vertex);
+            _vertices[i + 1] = transform.InverseTransformPoint(transform.position + vertex);
 
-            if (i < rayCount)
+            if (i < raysCount)
             {
                 int startIndex = i * 3;
-                triangles[startIndex] = 0;
-                triangles[startIndex + 1] = i + 1;
-                triangles[startIndex + 2] = i + 2;
+                _triangles[startIndex] = 0;
+                _triangles[startIndex + 1] = i + 1;
+                _triangles[startIndex + 2] = i + 2;
             }
 
             currentAngle += angleStep;
         }
 
-        visionMesh.Clear();
-        visionMesh.vertices = vertices;
-        visionMesh.triangles = triangles;
-        visionMesh.RecalculateNormals();
+        visionMesh.SetVertices(_vertices);
+        visionMesh.SetTriangles(_triangles, 0);
     }
 
     private void OnDrawGizmosSelected()
