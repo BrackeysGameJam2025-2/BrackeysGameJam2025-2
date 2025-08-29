@@ -400,7 +400,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638921095409959970
+  lastModified: 638921127417417683
   FileSizes:
   - Name: Desktop
     Value: 57088
@@ -660,7 +660,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638921094368912177
+  lastModified: 638921127417422722
   FileSizes:
   - Name: Desktop
     Value: 2122
@@ -926,7 +926,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2656629483976298953}
   cacheVersion: 131848
-  cacheTime: 638921095409959970
+  cacheTime: 638921127417422722
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0

@@ -53,7 +53,7 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     public void Pause()
     {
-        if (_isPaused) return;
+        if (_isPaused || DialogManager.Instance.CurrentDialog != null) return;
 
         SetPaused();
 
