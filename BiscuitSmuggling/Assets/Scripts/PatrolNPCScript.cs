@@ -39,7 +39,6 @@ public class PatrolNPCScript : MonoBehaviour
         if (isChasing)
         {
             ChasePlayer();
-            // TODO: Add noticing. If player is sean
         }
         else
         {
