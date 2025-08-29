@@ -66,6 +66,11 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         }
     }
 
+    public Bus MasterBus => _masterBus;
+    public Bus SfxBus => _sfxBus;
+    public Bus SoundtrackBus => _soundtrackBus;
+    public Bus DialogBus => _dialogBus;
+
     protected override void Awake()
     {
         base.Awake();
@@ -76,6 +81,13 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         _dialogBus = RuntimeManager.GetBus("bus:/Dialog");
 
         UpdateVolumes();
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     private void Start()

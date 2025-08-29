@@ -726,11 +726,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -803249438
-      Data2: 1109808082
-      Data3: 1302886285
-      Data4: -447931425
-    Path: event:/Soundtrack/PreparationPhase
+      Data1: -1579183749
+      Data2: 1201992174
+      Data3: 554800774
+      Data4: 2140635135
+    Path: event:/Soundtrack/Hideout
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -738,7 +738,9 @@ MonoBehaviour:
   TriggerOnce: 1
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: Daytime
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20

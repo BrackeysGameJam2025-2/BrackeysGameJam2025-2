@@ -32,12 +32,22 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         _dialogBus = RuntimeManager.GetBus("bus:/Dialog");
     }
 
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        _oneTimeSfxBus.setPaused(false);
+        _continuousSfxBus.setPaused(false);
+        _dialogBus.setPaused(false);
+        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (IsPaused) Unpause();
-            else Pause();
+            if (IsPaused && m_Overlay.activeInHierarchy) Unpause();
+            if (!IsPaused) Pause();
         }
     }
 
@@ -45,7 +55,35 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         if (_isPaused) return;
 
+        SetPaused();
+
         m_Overlay.SetActive(true);
+
+        RuntimeManager.PlayOneShot(m_PauseEvent);
+        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 1f);
+    }
+
+    public void Unpause()
+    {
+        if (!_isPaused) return;
+
+        if (m_SettingsMenu.activeInHierarchy)
+        {
+            m_SettingsMenu.SetActive(false);
+            return;
+        }
+
+        SetUnpaused();
+
+        m_Overlay.SetActive(false);
+
+        RuntimeManager.PlayOneShot(m_UnpauseEvent);
+        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
+    }
+
+    public void SetPaused()
+    {
+        if (_isPaused) return;
 
         _isPaused = true;
         Time.timeScale = 0f;
@@ -54,23 +92,11 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         _oneTimeSfxBus.setPaused(true);
         _continuousSfxBus.setPaused(true);
         _dialogBus.setPaused(true);
-
-        RuntimeManager.PlayOneShot(m_PauseEvent);
-
-        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 1f);
     }
 
-    public void Unpause()
+    public void SetUnpaused()
     {
         if (!_isPaused) return;
-
-        if (m_SettingsMenu.activeSelf)
-        {
-            m_SettingsMenu.SetActive(false);
-            return;
-        }
-
-        m_Overlay.SetActive(false);
 
         _isPaused = false;
         Time.timeScale = 1f;
@@ -78,10 +104,6 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         _oneTimeSfxBus.setPaused(false);
         _continuousSfxBus.setPaused(false);
         _dialogBus.setPaused(false);
-
-        RuntimeManager.PlayOneShot(m_UnpauseEvent);
-
-        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
     }
 
     public void OpenSettingsMenu()
@@ -94,11 +116,6 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         Time.timeScale = 1f;
 
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-
-        _oneTimeSfxBus.setPaused(false);
-        _continuousSfxBus.setPaused(false);
-        _dialogBus.setPaused(false);
-        RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
     }
 
     public void QuitGame()
