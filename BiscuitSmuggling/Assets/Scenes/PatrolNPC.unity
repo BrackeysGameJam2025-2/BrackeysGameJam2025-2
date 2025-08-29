@@ -182,10 +182,16 @@ MonoBehaviour:
   visionRange: 10
   visionAngle: 90
   player: {fileID: 717282846}
-  visionMask:
+  playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  interactiveObject: {fileID: 0}
   visionMeshFilter: {fileID: 29953280}
+  raysCount: 50
+  visionUpdateRate: 0.016666668
 --- !u!136 &29953278
 CapsuleCollider:
   m_ObjectHideFlags: 0
