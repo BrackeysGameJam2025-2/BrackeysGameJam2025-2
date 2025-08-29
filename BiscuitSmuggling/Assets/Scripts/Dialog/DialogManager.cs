@@ -1,4 +1,5 @@
 using cherrydev;
+using FMODUnity;
 using System;
 using System.Linq;
 using UnityEngine;
@@ -24,11 +25,12 @@ public class DialogManager : MonoBehaviour
         public DialogBehaviour behavior;
     }
 
+    [SerializeField] private CharacterToVoiceMap _characterToVoiceMap;
     [SerializeField] private DialogWinow[] _dialogWindows;
 
     // New events to notify when a dialog starts or ends
-    public UnityEvent<DialogType> OnDialogStarted = new UnityEvent<DialogType>();
-    public UnityEvent<DialogType> OnDialogEnded = new UnityEvent<DialogType>();
+    public UnityEvent<DialogType> OnDialogStarted = new();
+    public UnityEvent<DialogType> OnDialogEnded = new();
 
     private void Awake()
     {
@@ -61,34 +63,52 @@ public class DialogManager : MonoBehaviour
                 // Notify listeners that a dialog has started
                 OnDialogStarted.Invoke(type);
 
+                window.behavior.SentenceStarted += OnSentenceStarted;
+
                 // Subscribe to OnDialogStarted and OnDialogFinished
-                window.behavior.OnDialogStarted.AddListener(() => HandleDialogStarted(type));
+                window.behavior.OnDialogStarted.AddListener(HandleDialogStarted);
 
                 window.behavior.StartDialog(graph);
                 window.behavior.BindExternalFunction("Accept", behavior.Accept);
                 window.behavior.BindExternalFunction("Reject", behavior.Reject);
-                window.behavior.DialogEnded += () => HandleDialogEnded(type); // Subscribe to the DialogEnded event
+                window.behavior.DialogEnded += HandleDialogEnded; // Subscribe to the DialogEnded event
                 return;
             }
         }
         Debug.LogError($"No dialog window found for type: {type}");
     }
 
-    private void HandleDialogEnded(DialogType type)
+    private void HandleDialogEnded()
     {
-        OnDialogEnded.Invoke(type);
+        OnDialogEnded.Invoke(_currentDialogType);
         Debug.Log("Dialog ended");
         if (CurrentDialog != null)
         {
             CurrentDialog.gameObject.SetActive(false); // Deactivate the dialog window
-            CurrentDialog.DialogEnded -= () => HandleDialogEnded(type); // Unsubscribe from the event
+            CurrentDialog.DialogEnded -= HandleDialogEnded; // Unsubscribe from the event
+            CurrentDialog.SentenceStarted -= OnSentenceStarted;
             CurrentDialog = null; // Set CurrentDialog to null
         }
     }
 
-    private void HandleDialogStarted(DialogType type)
+    private void OnSentenceStarted()
     {
-        OnDialogStarted.Invoke(type);
+        if (!AudioVolumeController.Exists)
+        {
+            Debug.LogError("Dialog voices do not work. Add \"AudioController\" prefab to the scene.");
+            return;
+        }
+
+        string name = CurrentDialog.CurrentSentenceNode.GetCharacterName().Trim().ToLower();
+        var audioEvent = _characterToVoiceMap.NameToEvent(name);
+
+        AudioVolumeController.Instance.DialogBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        RuntimeManager.PlayOneShot(audioEvent);
+    }
+
+    private void HandleDialogStarted()
+    {
+        OnDialogStarted.Invoke(_currentDialogType);
     }
 
     public void ShowInteractInfo(DialogNodeGraph graph)
@@ -113,11 +133,11 @@ public class DialogManager : MonoBehaviour
                     OnDialogStarted.Invoke(type);
 
                     // Subscribe to OnDialogStarted and OnDialogFinished
-                    window.behavior.OnDialogStarted.AddListener(() => HandleDialogStarted(type));
+                    window.behavior.OnDialogStarted.AddListener(HandleDialogStarted);
                 }
 
                 window.behavior.StartDialog(graph);
-                window.behavior.DialogEnded += () => HandleDialogEnded(type); // Subscribe to the DialogEnded event
+                window.behavior.DialogEnded += HandleDialogEnded; // Subscribe to the DialogEnded event
                 return;
             }
         }
@@ -128,9 +148,8 @@ public class DialogManager : MonoBehaviour
     {
         if (CurrentDialog == null || _currentDialogType != DialogType.ShowInfo)
             return;
-        var type = DialogType.ShowInfo;
         CurrentDialog.gameObject.SetActive(false);
-        CurrentDialog.DialogEnded -= () => HandleDialogEnded(type);
+        CurrentDialog.DialogEnded -= HandleDialogEnded;
         CurrentDialog = null;
     }
 

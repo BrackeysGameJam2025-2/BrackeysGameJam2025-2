@@ -618,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bac3dcac7ed74e438a89579cf535330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogManager
+  _characterToVoiceMap: {fileID: 11400000, guid: 1a444d9a298a39a4fb4f711bb0e5eb5d, type: 2}
   _dialogWindows:
   - type: 00000000
     behavior: {fileID: 7250229689785646963}
