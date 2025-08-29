@@ -400,10 +400,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638920982537980299
+  lastModified: 638921095409959970
   FileSizes:
   - Name: Desktop
-    Value: 54304
+    Value: 57088
   Exists: 1
 --- !u!114 &-4913774854835386134
 MonoBehaviour:
@@ -660,10 +660,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638920982538050632
+  lastModified: 638921094368912177
   FileSizes:
   - Name: Desktop
-    Value: 2066
+    Value: 2122
   Exists: 1
 --- !u!114 &-1540611080649953180
 MonoBehaviour:
@@ -918,6 +918,7 @@ MonoBehaviour:
   - {fileID: -4913774854835386134}
   - {fileID: 7684144760146417926}
   - {fileID: 8672953064279929849}
+  - {fileID: 7340750694787313635}
   EditorParameters:
   - {fileID: 2833171746860780736}
   MasterBanks:
@@ -925,7 +926,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2656629483976298953}
   cacheVersion: 131848
-  cacheTime: 638920982538610967
+  cacheTime: 638921095409959970
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0
@@ -961,6 +962,8 @@ MonoBehaviour:
     index: 15
   - key: event:/Soundtrack/MainMenu
     index: 16
+  - key: event:/Dialog/DefaultDialog
+    index: 17
 --- !u!114 &128728067841683307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1112,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638920982538040610
+  lastModified: 638921094368902170
   FileSizes:
   - Name: Desktop
     Value: 2862
@@ -1386,6 +1389,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7340750694787313635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/DefaultDialog
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/DefaultDialog
+  Guid:
+    Data1: -1488812230
+    Data2: 1154428811
+    Data3: 1777225906
+    Data4: 45088670
+  Banks:
+  - {fileID: -4998525671329701282}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7684144760146417926
 MonoBehaviour:
   m_ObjectHideFlags: 0
