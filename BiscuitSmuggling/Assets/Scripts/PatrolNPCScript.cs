@@ -10,6 +10,7 @@ public class PatrolNPCScript : MonoBehaviour
     public Transform player; // Reference to the player
     public LayerMask playerLayer; // Layer mask for vision detection
     [SerializeField] private LayerMask obstacleLayers; // Layers considered as obstacles
+    [SerializeField] private InteractiveObject interactiveObject; // Reference to the InteractiveObject component
     public MeshFilter visionMeshFilter; // MeshFilter to display the vision area
 
     private NavMeshAgent agent;
@@ -38,6 +39,7 @@ public class PatrolNPCScript : MonoBehaviour
         if (isChasing)
         {
             ChasePlayer();
+            // TODO: Add noticing. If player is sean
         }
         else
         {

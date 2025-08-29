@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using Debug = UnityEngine.Debug;
 
 public class DialogManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class DialogManager : MonoBehaviour
     public static DialogManager Instance => _instance;
 
     public DialogBehaviour CurrentDialog { get; private set; }
+
+    public string CurrentDialogName => CurrentDialog.CurrentSentenceNode.GetCharacterName();
 
     private DialogType _currentDialogType;
 
@@ -130,6 +133,7 @@ public class DialogManager : MonoBehaviour
         CurrentDialog.DialogEnded -= () => HandleDialogEnded(type);
         CurrentDialog = null;
     }
+
 }
 
 public enum DialogType
