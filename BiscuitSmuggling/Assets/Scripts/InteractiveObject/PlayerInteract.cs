@@ -27,8 +27,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        // Check for the "Interact" key press in the old Input System
-        if (Input.GetKeyDown(KeyCode.E)) // Replace KeyCode.E with your desired key
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }

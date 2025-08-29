@@ -341,9 +341,7 @@ MonoBehaviour:
   MaxAirMoveSpeed: 10
   AirAccelerationSpeed: 30
   Drag: 0
-  IgnoredColliders:
-  - {fileID: 0}
-  - {fileID: 0}
+  IgnoredColliders: []
   BonusOrientationMethod: 1
   BonusOrientationSharpness: 20
   Gravity: {x: 0, y: -30, z: 0}

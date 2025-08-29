@@ -12,6 +12,8 @@ public class DialogManager : MonoBehaviour
 
     public DialogBehaviour CurrentDialog { get; private set; }
 
+    private DialogType _currentDialogType;
+
     [Serializable]
     private class DialogWinow
     {
@@ -50,6 +52,7 @@ public class DialogManager : MonoBehaviour
             if (window.type.Contains(type))
             {
                 CurrentDialog = window.behavior;
+                _currentDialogType = type;
                 window.behavior.gameObject.SetActive(true);
 
                 // Notify listeners that a dialog has started
@@ -70,15 +73,13 @@ public class DialogManager : MonoBehaviour
 
     private void HandleDialogEnded(DialogType type)
     {
+        OnDialogEnded.Invoke(type);
+        Debug.Log("Dialog ended");
         if (CurrentDialog != null)
         {
             CurrentDialog.gameObject.SetActive(false); // Deactivate the dialog window
             CurrentDialog.DialogEnded -= () => HandleDialogEnded(type); // Unsubscribe from the event
             CurrentDialog = null; // Set CurrentDialog to null
-
-            // Notify listeners that a dialog has ended
-            if (type != DialogType.ShowInfo)
-                OnDialogEnded.Invoke(type);
         }
     }
 
@@ -100,6 +101,7 @@ public class DialogManager : MonoBehaviour
             if (window.type.Contains(type))
             {
                 CurrentDialog = window.behavior;
+                _currentDialogType = type;
                 window.behavior.gameObject.SetActive(true);
 
                 if (type != DialogType.ShowInfo)
@@ -121,7 +123,7 @@ public class DialogManager : MonoBehaviour
 
     public void HideInteractInfo()
     {
-        if (CurrentDialog == null)
+        if (CurrentDialog == null || _currentDialogType != DialogType.ShowInfo)
             return;
         var type = DialogType.ShowInfo;
         CurrentDialog.gameObject.SetActive(false);

@@ -77,8 +77,6 @@ public class PatrolNPCScript : MonoBehaviour
                 // Check for obstacles first
                 if (Physics.Raycast(rayOrigin, rayDirection, rayDistance, obstacleLayers))
                 {
-                    // Something is blocking the view
-                    Debug.Log("Line of sight blocked by obstacle");
                     return;
                 }
 
