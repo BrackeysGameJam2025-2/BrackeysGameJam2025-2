@@ -120,10 +120,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638920982538235425
+  lastModified: 638921158430329259
   FileSizes:
   - Name: Desktop
-    Value: 150560
+    Value: 413792
   Exists: 1
 --- !u!114 &-8167149334861122805
 MonoBehaviour:
@@ -385,6 +385,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5196445857011171691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PlayerSpotted
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/PlayerSpotted
+  Guid:
+    Data1: 354265707
+    Data2: 1282413506
+    Data3: -135847253
+    Data4: 478102229
+  Banks:
+  - {fileID: -8251792358914239043}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 7.6
+  MaxDistance: 75
+  Length: 0
 --- !u!114 &-4998525671329701282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +427,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638921127417417683
+  lastModified: 638921158427789935
   FileSizes:
   - Name: Desktop
     Value: 57088
@@ -660,10 +687,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638921127417422722
+  lastModified: 638921158427875603
   FileSizes:
   - Name: Desktop
-    Value: 2122
+    Value: 2216
   Exists: 1
 --- !u!114 &-1540611080649953180
 MonoBehaviour:
@@ -919,6 +946,8 @@ MonoBehaviour:
   - {fileID: 7684144760146417926}
   - {fileID: 8672953064279929849}
   - {fileID: 7340750694787313635}
+  - {fileID: -5196445857011171691}
+  - {fileID: 5241927672150372231}
   EditorParameters:
   - {fileID: 2833171746860780736}
   MasterBanks:
@@ -926,7 +955,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2656629483976298953}
   cacheVersion: 131848
-  cacheTime: 638921127417422722
+  cacheTime: 638921158430329259
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0
@@ -964,6 +993,10 @@ MonoBehaviour:
     index: 16
   - key: event:/Dialog/DefaultDialog
     index: 17
+  - key: event:/SFX/PlayerSpotted
+    index: 18
+  - key: event:/SFX/Siren
+    index: 19
 --- !u!114 &128728067841683307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1145,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638921094368902170
+  lastModified: 638921158427865606
   FileSizes:
   - Name: Desktop
     Value: 2862
@@ -1345,6 +1378,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5241927672150372231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Siren
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Siren
+  Guid:
+    Data1: 779798965
+    Data2: 1267797499
+    Data3: -915903041
+    Data4: 131790055
+  Banks:
+  - {fileID: -8251792358914239043}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15759
 --- !u!114 &5621465679114349722
 MonoBehaviour:
   m_ObjectHideFlags: 0
