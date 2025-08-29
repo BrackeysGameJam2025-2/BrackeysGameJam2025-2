@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 6648127330480496423}
   - component: {fileID: 4503550260659056066}
   - component: {fileID: 2386444141653810030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PatrolNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,6 +288,7 @@ MonoBehaviour:
   m_InteractiveObject: {fileID: 0}
   m_VisionMeshFilter: {fileID: 7817560452338597869}
   m_RaysCount: 50
+  m_AiUpdateRate: 0.033333335
   m_VisionUpdateRate: 0.016666668
 --- !u!195 &2386444141653810030
 NavMeshAgent:

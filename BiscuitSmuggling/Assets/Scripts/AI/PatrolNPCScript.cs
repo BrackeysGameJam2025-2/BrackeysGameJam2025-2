@@ -42,7 +42,10 @@ public class PatrolNPCScript : MonoBehaviour
     private int m_RaysCount = 50;
 
     [SerializeField]
-    private float m_VisionUpdateRate = 1 / 60f;
+    private float m_AiUpdateRate = 1 / 30f;
+
+    [SerializeField]
+    private float m_VisionUpdateRate = 1 / 50f;
 
     private void Start()
     {
@@ -70,22 +73,28 @@ public class PatrolNPCScript : MonoBehaviour
         _currentPointIndex = m_PatrolPath.FindNearestPointIndex(transform.position);
     }
 
-    private void Update()
-    {
-        if (_isChasing)
-        {
-            ChasePlayer();
-        }
-        else
-        {
-            Patrol();
-            CheckForPlayer();
-        }
-    }
-
     private void OnEnable()
     {
         StartCoroutine(VisionUpdate());
+        StartCoroutine(AIUpdate());
+    }
+
+    private IEnumerator AIUpdate()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(m_AiUpdateRate);
+
+            if (_isChasing)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+                Patrol();
+                CheckForPlayer();
+            }
+        }
     }
 
     private IEnumerator VisionUpdate()
@@ -93,7 +102,6 @@ public class PatrolNPCScript : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(m_VisionUpdateRate);
-
             UpdateVisionMesh();
         }
     }
@@ -112,33 +120,21 @@ public class PatrolNPCScript : MonoBehaviour
     {
         Vector3 directionToPlayer = Player.Transform.position - transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
+        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
-        if (distanceToPlayer <= m_VisionRange)
+        if (distanceToPlayer <= m_VisionRange && angleToPlayer <= m_VisionAngle / 2f)
         {
-            float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+            Vector3 visionOrigin = transform.position + (Vector3.up * 1f);
+            Vector3 playerCenter = Player.Transform.position + (Vector3.up * 1f);
 
-            if (angleToPlayer <= m_VisionAngle / 2f)
+            // Check for obstacles between the enemy and the player
+#if UNITY_EDITOR
+            Debug.DrawLine(visionOrigin, playerCenter, Color.red);
+#endif
+            if (Physics.Linecast(visionOrigin, playerCenter, out RaycastHit hit, m_ObstacleLayers))
             {
-                Vector3 rayOrigin = transform.position + (Vector3.up * 0.5f);
-                Vector3 playerCenter = Player.Transform.position + (Vector3.up * 1f);
-                Vector3 rayDirection = (playerCenter - rayOrigin).normalized;
-                float rayDistance = Vector3.Distance(rayOrigin, playerCenter);
-
-                // Check for obstacles first
-                if (Physics.Raycast(rayOrigin, rayDirection, rayDistance, m_ObstacleLayers))
-                {
-                    return;
-                }
-
-                // Check if we can see the player (no obstacles in the way)
-                if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, rayDistance, m_PlayerLayer))
-                {
-                    if (hit.collider.CompareTag("Player"))
-                    {
-                        _isChasing = true;
-                        Debug.Log("Player spotted! Clear line of sight.");
-                    }
-                }
+                Debug.Log(hit.collider.name);
+                return;
             }
         }
     }
@@ -172,7 +168,7 @@ public class PatrolNPCScript : MonoBehaviour
 
             // Check for obstacles
             Vector3 rayOrigin = transform.position + (Vector3.up * 0.5f);
-            if (Physics.Raycast(rayOrigin, direction, out RaycastHit hit, m_VisionRange, m_ObstacleLayers | m_PlayerLayer))
+            if (Physics.Raycast(rayOrigin, direction, out RaycastHit hit, m_VisionRange, m_ObstacleLayers))
             {
                 vertex = direction * hit.distance;
             }
