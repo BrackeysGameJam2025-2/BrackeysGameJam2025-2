@@ -79,10 +79,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 587
+    x: 588
     y: 330
     width: 190
-    height: 135
+    height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -94,8 +94,8 @@ MonoBehaviour:
   - {fileID: 365453701417998081}
   - {fileID: -2775780104258473604}
   ChildNode: {fileID: 0}
-  _isExternalFunc: 0
-  _externalFunctionName: 
+  _isExternalFunc: 1
+  _externalFunctionName: Accept
   CharacterNameKey: 
   SentenceTextKey: 
 --- !u!114 &-2775780104258473604

@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    public static PlayerInteract Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError($"There multiple instance of {this} point {this.gameObject}");
+            Destroy(gameObject);
+        }
+    }
     private List<InteractiveObject> objectsToInteract = new();
 
     private InteractiveObject lastInteractedObject;
@@ -50,5 +64,10 @@ public class PlayerInteract : MonoBehaviour
             lastInteractedObject = null; // No objects left to interact with
             DialogManager.Instance.HideInteractInfo();
         }
+    }
+
+    public void Teleport()
+    {
+        this.transform.position = TeleportationPoint.Instance.GetPosition();
     }
 }
