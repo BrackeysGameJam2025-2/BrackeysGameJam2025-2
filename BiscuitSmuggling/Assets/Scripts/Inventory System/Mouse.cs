@@ -36,8 +36,23 @@ public class Mouse : MonoBehaviour
 
     public void SetUi()
     {
+        // stacksText.text = " " + itemSlotInfo.stacks;
+        // itemImage.sprite = itemSlotInfo.item.GiveItemImage();
+       if (itemSlotInfo != null && itemSlotInfo.item != null)
+    {
         stacksText.text = " " + itemSlotInfo.stacks;
         itemImage.sprite = itemSlotInfo.item.GiveItemImage();
+        itemImage.gameObject.SetActive(true);
+        stacksText.gameObject.SetActive(true);
+    }
+    else
+    {
+        // Empty slot visuals
+        stacksText.text = "";
+        itemImage.sprite = null;
+        itemImage.gameObject.SetActive(false);
+        stacksText.gameObject.SetActive(false);
+    }
     }
     public void EmptySlot()
     {

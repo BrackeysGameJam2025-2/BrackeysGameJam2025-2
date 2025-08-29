@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class Inventory : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Inventory : MonoBehaviour
     public Mouse mouse;
 
     private List<ItemPanel> existingPanels = new List<ItemPanel>();
+    Dictionary<string, Item> allItemDictionary = new Dictionary<string, Item>();
     [Space]
     public int inventorySize = 8;
 
@@ -24,9 +26,22 @@ public class Inventory : MonoBehaviour
             items.Add(new ItemSlotInfo(null, 0));
         }
 
-        //testing purpose
-
-        AddItem(new Meat(), 40);
+        List<Item> allItems = GetAllItems().ToList();
+        string itemsInDictionary = "Item in Dictionary";
+        foreach (Item item in allItems)
+        {
+            if (!allItemDictionary.ContainsKey(item.GiveName()))
+            {
+                allItemDictionary.Add(item.GiveName(), item);
+                itemsInDictionary += ", " + item.GiveName();
+            }
+            else
+            {
+                Debug.Log("" + item + "already exists in dictionary" + allItemDictionary[item.GiveName()]);
+            }
+        }
+        itemsInDictionary += ".";
+        Debug.Log(itemsInDictionary);
     }
 
     void Update()
@@ -84,7 +99,7 @@ public class Inventory : MonoBehaviour
             else
             {
                 itemInfo.name += ": -";
-               
+
             }
 
             //Update panel
@@ -106,7 +121,7 @@ public class Inventory : MonoBehaviour
                 {
                     panel.itemImage.gameObject.SetActive(false);
                     panel.stacksText.gameObject.SetActive(false);
-                    
+
                 }
 
             }
@@ -115,29 +130,38 @@ public class Inventory : MonoBehaviour
         mouse.EmptySlot();
     }
 
-    public int AddItem(Item item, int amount)
+    public int AddItem(string itemName, int amount)
     {
-        foreach (ItemSlotInfo itemInfo in items)
+        // find item to add
+        Item item = null;
+        allItemDictionary.TryGetValue(itemName, out item);
+        //Exit the method if item not found 
+        if (item == null)
         {
-            if (itemInfo.item != null)
-            {
-                if (itemInfo.item.GiveName() == item.GiveName())
-                {
-                    if (amount > itemInfo.item.MaxStacks() - itemInfo.stacks)
-                    {
-                        amount -= itemInfo.item.MaxStacks() - itemInfo.stacks;
-                        itemInfo.stacks = itemInfo.item.MaxStacks();
-                    }
-                    else
-                    {
-                        itemInfo.stacks += amount;
-                        if (inventoryMenu.activeSelf) RefreshInventory();
-                        return 0;
-                    }
-                }
+            Debug.Log("Could not found item in dictionary to add to inventory");
 
-            }
         }
+        foreach (ItemSlotInfo itemInfo in items)
+            {
+                if (itemInfo.item != null)
+                {
+                    if (itemInfo.item.GiveName() == item.GiveName())
+                    {
+                        if (amount > itemInfo.item.MaxStacks() - itemInfo.stacks)
+                        {
+                            amount -= itemInfo.item.MaxStacks() - itemInfo.stacks;
+                            itemInfo.stacks = itemInfo.item.MaxStacks();
+                        }
+                        else
+                        {
+                            itemInfo.stacks += amount;
+                            if (inventoryMenu.activeSelf) RefreshInventory();
+                            return 0;
+                        }
+                    }
+
+                }
+            }
 
         foreach (ItemSlotInfo itemInfo in items)
         {
@@ -168,5 +192,11 @@ public class Inventory : MonoBehaviour
     {
         slot.item = null;
         slot.stacks = 0;
+    }
+
+    IEnumerable<Item> GetAllItems()
+    {
+        return System.AppDomain.CurrentDomain.GetAssemblies().SelectMany(assembly => assembly.GetTypes()).Where(type => type.IsSubclassOf(typeof(Item)))
+        .Select(type => System.Activator.CreateInstance(type) as Item);
     }
 }

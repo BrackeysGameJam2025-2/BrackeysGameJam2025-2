@@ -57,12 +57,14 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
 
     public void SwapItems(ItemSlotInfo slotA, ItemSlotInfo slotB)
     {
-        ItemSlotInfo tempItem = new ItemSlotInfo(slotA.item, slotB.stacks);
+        //ItemSlotInfo tempItem = new ItemSlotInfo(slotA.item, slotA.stacks);
+        Item tempItem = slotA.item;
+        int tempStack = slotA.stacks;
         slotA.item = slotB.item;
         slotA.stacks = slotB.stacks;
 
-        slotB.item = tempItem.item;
-        slotB.stacks = tempItem.stacks;
+        slotB.item = tempItem;
+        slotB.stacks = tempStack;
 
     }
     public void DropItem()
@@ -70,12 +72,13 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         itemSlot.item = mouse.itemSlotInfo.item;
         itemSlot.stacks = mouse.itemSlotInfo.stacks;
         inventory.ClearSlot(mouse.itemSlotInfo);
+        inventory.RefreshInventory();
     }
     public void PickUp()
     {
         mouse.itemSlotInfo = new ItemSlotInfo(itemSlot.item, itemSlot.stacks);
-        inventory.ClearSlot(itemSlot);
         mouse.SetUi();
+        inventory.ClearSlot(itemSlot);
     }
 
     public void FadeOut()
@@ -95,21 +98,22 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
                 }
             }
             else
-           {
-            if (itemSlot == mouse.itemSlotInfo)
-             {
-                inventory.RefreshInventory();
-             }
-            else if (itemSlot.item == null)
-             {
-                DropItem();
-                inventory.RefreshInventory();
-             }
-            else if (itemSlot.item.GiveName() != mouse.itemSlotInfo.item.GiveName())
-             {
-                SwapItems(itemSlot, mouse.itemSlotInfo);
-                inventory.RefreshInventory();
-             }
+            {
+                if (itemSlot == mouse.itemSlotInfo)
+                {
+                    inventory.RefreshInventory();
+                }
+                else if (itemSlot.item == null)
+                {
+                    DropItem();
+                    inventory.RefreshInventory();
+                }
+                else if (itemSlot.item.GiveName() != mouse.itemSlotInfo.item.GiveName())
+                {
+                    SwapItems(itemSlot, mouse.itemSlotInfo);
+                    inventory.RefreshInventory();
+                }
+
            }
         
         }  
