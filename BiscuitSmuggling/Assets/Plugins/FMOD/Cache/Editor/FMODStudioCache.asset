@@ -24,6 +24,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-8749001058730197605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack/VictoryST
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Soundtrack/VictoryST
+  Guid:
+    Data1: 863922825
+    Data2: 1294491094
+    Data3: 1431805580
+    Data4: -1968847629
+  Banks:
+  - {fileID: -839115886702303469}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5984
 --- !u!114 &-8256059797734185095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +105,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 48000
+--- !u!114 &-7437050267630464718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack/GameOverST
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Soundtrack/GameOverST
+  Guid:
+    Data1: -1538281058
+    Data2: 1103247220
+    Data3: 322125978
+    Data4: 1617358351
+  Banks:
+  - {fileID: -839115886702303469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10434
+--- !u!114 &-7403986875053659978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/Guide
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/Guide
+  Guid:
+    Data1: 1697168378
+    Data2: 1196622285
+    Data3: 1804744082
+    Data4: -235540191
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6791883839398056431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +183,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-6014710928885312677
+--- !u!114 &-6367527966372958866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,24 +193,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Soundtrack/CheckpointPhase
+  m_Name: event:/Dialog/Bartender
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Soundtrack/CheckpointPhase
+  Path: event:/Dialog/Bartender
   Guid:
-    Data1: -903160051
-    Data2: 1295332794
-    Data3: 1897580223
-    Data4: 820363910
+    Data1: 429491975
+    Data2: 1318954754
+    Data3: -1930260568
+    Data4: -346717545
   Banks:
-  - {fileID: -839115886702303469}
-  IsStream: 1
+  - {fileID: -1474022924401068180}
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 5942361044309585538}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 43636
+  Length: 0
+--- !u!114 &-5438994187179296707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/Protagonist
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/Protagonist
+  Guid:
+    Data1: -103856745
+    Data2: 1225013838
+    Data3: -1481044043
+    Data4: -255399096
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4608669892310640360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,11 +252,38 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638920027798437878
+  lastModified: 638920933041204897
   FileSizes:
   - Name: Desktop
     Value: 2862
   Exists: 1
+--- !u!114 &-4519795172897352499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/Clerk
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/Clerk
+  Guid:
+    Data1: -1652836384
+    Data2: 1172167222
+    Data3: -1576934245
+    Data4: 1473948430
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 955
 --- !u!114 &-4455738785460427411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,10 +326,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638920049270488442
+  lastModified: 638920933041406486
   FileSizes:
   - Name: Desktop
-    Value: 11872
+    Value: 150560
   Exists: 1
 --- !u!114 &-3666775796194285392
 MonoBehaviour:
@@ -259,10 +393,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638920027798457887
+  lastModified: 638920933041220015
   FileSizes:
   - Name: Desktop
-    Value: 1542
+    Value: 2066
   Exists: 1
 --- !u!114 &-1540611080649953180
 MonoBehaviour:
@@ -299,11 +433,40 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638920014164985981
+  lastModified: 638920933041159805
   FileSizes:
   - Name: Desktop
-    Value: 506
+    Value: 54304
   Exists: 1
+--- !u!114 &-940648011434865814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack/RestrictedArea
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Soundtrack/RestrictedArea
+  Guid:
+    Data1: -903160051
+    Data2: 1295332794
+    Data3: 1897580223
+    Data4: 820363910
+  Banks:
+  - {fileID: -839115886702303469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8833088100370750305}
+  - {fileID: 8412089915217550669}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-839115886702303469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,10 +482,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638920014165924251
+  lastModified: 638920933041761268
   FileSizes:
   - Name: Desktop
-    Value: 3461856
+    Value: 5435392
   Exists: 1
 --- !u!114 &-252467361807109116
 MonoBehaviour:
@@ -344,6 +507,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2424
   Exists: 1
+--- !u!114 &-110683618620006999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/DogGuy
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/DogGuy
+  Guid:
+    Data1: 1202217832
+    Data2: 1111945836
+    Data3: -982998399
+    Data4: 1465319567
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,10 +555,21 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 8761577616051591415}
   - {fileID: -2883757781532522075}
-  - {fileID: -6014710928885312677}
-  - {fileID: 2501038626458901303}
   - {fileID: 4636716591196527296}
-  - {fileID: 2656972342101445855}
+  - {fileID: -6367527966372958866}
+  - {fileID: -110683618620006999}
+  - {fileID: -5438994187179296707}
+  - {fileID: 8305155095820915584}
+  - {fileID: -4519795172897352499}
+  - {fileID: 1088598298966135267}
+  - {fileID: -7403986875053659978}
+  - {fileID: 9148301742289340562}
+  - {fileID: 4816553972627371983}
+  - {fileID: -940648011434865814}
+  - {fileID: 9196410706084837473}
+  - {fileID: -8749001058730197605}
+  - {fileID: 4863203985202626044}
+  - {fileID: -7437050267630464718}
   EditorParameters:
   - {fileID: -9087026603955553807}
   MasterBanks:
@@ -376,20 +577,69 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2836020874786143867}
   cacheVersion: 131848
-  cacheTime: 638920049270488442
+  cacheTime: 638920933041761268
   SerializableEventsDict:
   - key: event:/UI/Pause/Paused
     index: 0
   - key: event:/UI/Pause/Unpaused
     index: 1
-  - key: event:/Soundtrack/CheckpointPhase
-    index: 2
-  - key: event:/Soundtrack/ScoutingPhase
-    index: 3
   - key: event:/Soundtrack/MainMenu
+    index: 2
+  - key: event:/Dialog/Bartender
+    index: 3
+  - key: event:/Dialog/DogGuy
     index: 4
-  - key: event:/Soundtrack/PreparationPhase
+  - key: event:/Dialog/Protagonist
     index: 5
+  - key: event:/Dialog/Veteran
+    index: 6
+  - key: event:/Dialog/Clerk
+    index: 7
+  - key: event:/Dialog/Fatty
+    index: 8
+  - key: event:/Dialog/Guide
+    index: 9
+  - key: event:/Stingers/Sugar Euphoria
+    index: 10
+  - key: event:/Stingers/Caught with Hand in the Cookie Jar
+    index: 11
+  - key: event:/Soundtrack/RestrictedArea
+    index: 12
+  - key: event:/Soundtrack/Hideout
+    index: 13
+  - key: event:/Soundtrack/VictoryST
+    index: 14
+  - key: event:/Soundtrack/Bar
+    index: 15
+  - key: event:/Soundtrack/GameOverST
+    index: 16
+--- !u!114 &1088598298966135267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/Fatty
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/Fatty
+  Guid:
+    Data1: -1250267678
+    Data2: 1193598505
+    Data3: -1688896608
+    Data4: -286978462
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1012
 --- !u!114 &1486587459952332622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,60 +668,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 43636
---- !u!114 &2501038626458901303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Soundtrack/ScoutingPhase
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Soundtrack/ScoutingPhase
-  Guid:
-    Data1: 493451887
-    Data2: 1286184617
-    Data3: -114040398
-    Data4: -506617839
-  Banks:
-  - {fileID: -839115886702303469}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 48000
---- !u!114 &2656972342101445855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Soundtrack/PreparationPhase
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Soundtrack/PreparationPhase
-  Guid:
-    Data1: -803249438
-    Data2: 1109808082
-    Data3: 1302886285
-    Data4: -447931425
-  Banks:
-  - {fileID: -839115886702303469}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 54857
 --- !u!114 &3041728954567872840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,6 +766,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 46829
+--- !u!114 &4816553972627371983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stingers/Caught with Hand in the Cookie Jar
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Stingers/Caught with Hand in the Cookie Jar
+  Guid:
+    Data1: -836499735
+    Data2: 1258345782
+    Data3: -197063515
+    Data4: -978579520
+  Banks:
+  - {fileID: -4220532040664348012}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4863203985202626044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack/Bar
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Soundtrack/Bar
+  Guid:
+    Data1: -1132662389
+    Data2: 1290356661
+    Data3: 150585225
+    Data4: -735361385
+  Banks:
+  - {fileID: -839115886702303469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5963809672481381574}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 47407
 --- !u!114 &5621465679114349722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +841,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1406
   Exists: 1
---- !u!114 &5942361044309585538
+--- !u!114 &5963809672481381574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -600,16 +851,91 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CheckpointPhase/SuspicionBlend
+  m_Name: parameter:/Bar/Daytime
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: SuspicionBlend
+  Name: Daytime
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 1134396445
-    data2: 4290852309
+    data1: 1717572799
+    data2: 1471309899
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8093219783663356898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Hideout/Daytime
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Daytime
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1717572799
+    data2: 1471309899
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8305155095820915584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/Veteran
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Dialog/Veteran
+  Guid:
+    Data1: 67562702
+    Data2: 1304397802
+    Data3: -253228659
+    Data4: -1146164386
+  Banks:
+  - {fileID: -1474022924401068180}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8412089915217550669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestrictedArea/Daytime
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Daytime
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1717572799
+    data2: 1471309899
   Type: 0
   IsGlobal: 0
   Labels: []
@@ -668,3 +994,82 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8833088100370750305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestrictedArea/SuspicionBlend
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SuspicionBlend
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1134396445
+    data2: 4290852309
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9148301742289340562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Stingers/Sugar Euphoria
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Stingers/Sugar Euphoria
+  Guid:
+    Data1: 919185174
+    Data2: 1290324592
+    Data3: -1144496758
+    Data4: -642746709
+  Banks:
+  - {fileID: -4220532040664348012}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9196410706084837473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack/Hideout
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Soundtrack/Hideout
+  Guid:
+    Data1: -1579183749
+    Data2: 1201992174
+    Data3: 554800774
+    Data4: 2140635135
+  Banks:
+  - {fileID: -839115886702303469}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8093219783663356898}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54857
