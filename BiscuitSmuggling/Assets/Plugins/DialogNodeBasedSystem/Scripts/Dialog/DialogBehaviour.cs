@@ -81,6 +81,7 @@ namespace cherrydev
 
         private event Action<DialogVariablesHandler> _dialogFinished;
 
+        public event Action DialogEnded; // New event to notify when the dialog ends
 
         public DialogExternalFunctionsHandler ExternalFunctionsHandler { get; private set; }
         public DialogVariablesHandler VariablesHandler => _variablesHandler;
@@ -561,6 +562,8 @@ namespace cherrydev
             _boundFunctionNames.Clear();
             _onDialogFinished?.Invoke();
             _dialogFinished = null;
+
+            DialogEnded?.Invoke(); // Trigger the new event
         }
 
         /// <summary>
