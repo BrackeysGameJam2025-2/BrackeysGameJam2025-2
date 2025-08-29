@@ -326,7 +326,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638920933041406486
+  lastModified: 638920957546780055
   FileSizes:
   - Name: Desktop
     Value: 150560
@@ -482,10 +482,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638920933041761268
+  lastModified: 638920957547182327
   FileSizes:
   - Name: Desktop
-    Value: 5435392
+    Value: 5436160
   Exists: 1
 --- !u!114 &-252467361807109116
 MonoBehaviour:
@@ -577,7 +577,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2836020874786143867}
   cacheVersion: 131848
-  cacheTime: 638920933041761268
+  cacheTime: 638920957547182327
   SerializableEventsDict:
   - key: event:/UI/Pause/Paused
     index: 0
