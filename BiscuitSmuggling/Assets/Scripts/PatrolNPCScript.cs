@@ -8,7 +8,9 @@ public class PatrolNPCScript : MonoBehaviour
     public float visionRange = 10f; // Vision range of the NPC
     public float visionAngle = 90f; // Vision angle of the NPC
     public Transform player; // Reference to the player
-    public LayerMask visionMask; // Layer mask for vision detection
+    public LayerMask playerLayer; // Layer mask for vision detection
+    [SerializeField] private LayerMask obstacleLayers; // Layers considered as obstacles
+    [SerializeField] private InteractiveObject interactiveObject; // Reference to the InteractiveObject component
     public MeshFilter visionMeshFilter; // MeshFilter to display the vision area
 
     private NavMeshAgent agent;
@@ -68,13 +70,24 @@ public class PatrolNPCScript : MonoBehaviour
 
             if (angleToPlayer <= visionAngle / 2f)
             {
-                // Check if there is a clear line of sight to the player
-                if (Physics.Raycast(transform.position, directionToPlayer.normalized, out RaycastHit hit, visionRange, visionMask))
+                Vector3 rayOrigin = transform.position + Vector3.up * 0.5f;
+                Vector3 playerCenter = player.position + Vector3.up * 1f;
+                Vector3 rayDirection = (playerCenter - rayOrigin).normalized;
+                float rayDistance = Vector3.Distance(rayOrigin, playerCenter);
+
+                // Check for obstacles first
+                if (Physics.Raycast(rayOrigin, rayDirection, rayDistance, obstacleLayers))
                 {
-                    // Ensure the raycast hit the player and not an obstacle
-                    if (hit.collider != null && hit.collider.CompareTag("Player"))
+                    return;
+                }
+
+                // Check if we can see the player (no obstacles in the way)
+                if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, rayDistance, playerLayer))
+                {
+                    if (hit.collider.CompareTag("Player"))
                     {
                         isChasing = true;
+                        Debug.Log("Player spotted! Clear line of sight.");
                     }
                 }
             }
@@ -113,7 +126,8 @@ public class PatrolNPCScript : MonoBehaviour
             Vector3 vertex = direction * visionRange;
 
             // Check for obstacles
-            if (Physics.Raycast(transform.position, direction, out RaycastHit hit, visionRange, visionMask))
+            Vector3 rayOrigin = transform.position + Vector3.up * 0.5f;
+            if (Physics.Raycast(rayOrigin, direction, out RaycastHit hit, visionRange, obstacleLayers | playerLayer))
             {
                 vertex = direction * hit.distance;
             }
