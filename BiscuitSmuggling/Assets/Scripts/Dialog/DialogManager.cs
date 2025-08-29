@@ -39,6 +39,12 @@ public class DialogManager : MonoBehaviour
 
     public void ShowDialog(DialogType type, DialogNodeGraph graph, InteractiveObjectBehavior behavior)
     {
+        // Deactivate all dialog windows before activating the desired one
+        foreach (var window in _dialogWindows)
+        {
+            window.behavior.gameObject.SetActive(false);
+        }
+
         foreach (var window in _dialogWindows)
         {
             if (window.type.Contains(type))
@@ -58,11 +64,6 @@ public class DialogManager : MonoBehaviour
                 window.behavior.DialogEnded += () => HandleDialogEnded(type); // Subscribe to the DialogEnded event
                 return;
             }
-            else
-            {
-                window.behavior.gameObject.SetActive(false);
-            }
-
         }
         Debug.LogError($"No dialog window found for type: {type}");
     }
@@ -76,7 +77,8 @@ public class DialogManager : MonoBehaviour
             CurrentDialog = null; // Set CurrentDialog to null
 
             // Notify listeners that a dialog has ended
-            OnDialogEnded.Invoke(type);
+            if (type != DialogType.ShowInfo)
+                OnDialogEnded.Invoke(type);
         }
     }
 
@@ -84,10 +86,53 @@ public class DialogManager : MonoBehaviour
     {
         OnDialogStarted.Invoke(type);
     }
+
+    public void ShowInteractInfo(DialogNodeGraph graph)
+    {
+        // Deactivate all dialog windows before activating the desired one
+        foreach (var window in _dialogWindows)
+        {
+            window.behavior.gameObject.SetActive(false);
+        }
+        var type = DialogType.ShowInfo;
+        foreach (var window in _dialogWindows)
+        {
+            if (window.type.Contains(type))
+            {
+                CurrentDialog = window.behavior;
+                window.behavior.gameObject.SetActive(true);
+
+                if (type != DialogType.ShowInfo)
+                {
+                    // Notify listeners that a dialog has started
+                    OnDialogStarted.Invoke(type);
+
+                    // Subscribe to OnDialogStarted and OnDialogFinished
+                    window.behavior.OnDialogStarted.AddListener(() => HandleDialogStarted(type));
+                }
+
+                window.behavior.StartDialog(graph);
+                window.behavior.DialogEnded += () => HandleDialogEnded(type); // Subscribe to the DialogEnded event
+                return;
+            }
+        }
+        Debug.LogError($"No dialog window found for type: {type}");
+    }
+
+    public void HideInteractInfo()
+    {
+        if (CurrentDialog == null)
+            return;
+        var type = DialogType.ShowInfo;
+        CurrentDialog.gameObject.SetActive(false);
+        CurrentDialog.DialogEnded -= () => HandleDialogEnded(type);
+        CurrentDialog = null;
+    }
 }
 
 public enum DialogType
 {
     Interact,
-    Talk
+    Talk,
+    ShowInfo
 }

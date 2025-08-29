@@ -1,3 +1,4 @@
+using cherrydev;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,9 @@ public class PlayerInteract : MonoBehaviour
     private List<InteractiveObject> objectsToInteract = new();
 
     private InteractiveObject lastInteractedObject;
+
+    [SerializeField]
+    private DialogNodeGraph info;
 
     private void Update()
     {
@@ -26,8 +30,10 @@ public class PlayerInteract : MonoBehaviour
 
     public void PlayerInArea(InteractiveObject interact)
     {
+        DialogManager.Instance.ShowInteractInfo(info);
         objectsToInteract.Add(interact);
         lastInteractedObject = interact; // Remember the last interacted object
+
     }
 
     public void PlayerOutArea(InteractiveObject interact)
@@ -42,6 +48,7 @@ public class PlayerInteract : MonoBehaviour
         else
         {
             lastInteractedObject = null; // No objects left to interact with
+            DialogManager.Instance.HideInteractInfo();
         }
     }
 }

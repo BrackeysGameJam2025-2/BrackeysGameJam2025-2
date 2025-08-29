@@ -18,7 +18,9 @@ public class InteractiveObject : MonoBehaviour
                 player.PlayerInArea(this);
             }
             else
+            {
                 Interact();
+            }
         }
     }
 
