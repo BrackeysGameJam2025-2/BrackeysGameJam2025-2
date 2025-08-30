@@ -12,7 +12,6 @@ public class WhereToGoMenu : SingletonMonoBehaviour<WhereToGoMenu>
 
         PauseMenu.Instance.SetPaused();
         m_Overlay.SetActive(true);
-        InteractLabel.Instance.Hide();
     }
 
     public void Hide()
@@ -22,7 +21,6 @@ public class WhereToGoMenu : SingletonMonoBehaviour<WhereToGoMenu>
 
         PauseMenu.Instance.SetUnpaused();
         m_Overlay.SetActive(false);
-        InteractLabel.Instance.Show();
     }
 
     public void GoToOffice()
