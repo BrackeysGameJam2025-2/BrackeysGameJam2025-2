@@ -1,16 +1,23 @@
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Image))]
 public class DayOrNightPicture : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Image _image;
+
+    [SerializeField]
+    private Sprite m_DaySprite;
+    [SerializeField]
+    private Sprite m_NightSprite;
+
+    private void Awake()
     {
-        
+        _image = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _image.sprite = TransitionManager.IsDay() ? m_DaySprite : m_NightSprite;
     }
 }
