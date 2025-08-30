@@ -1,5 +1,7 @@
 using cherrydev;
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public abstract class InteractiveObjectBehavior : ScriptableObject
 {
@@ -8,6 +10,9 @@ public abstract class InteractiveObjectBehavior : ScriptableObject
     protected DialogNodeGraph[] dialogGraphs;
     [SerializeField]
     protected DialogType dialogType;
+
+
+    public event Action<bool> OnInteractionResult;
 
     protected DialogNodeGraph chosenGraph;
 
@@ -23,6 +28,11 @@ public abstract class InteractiveObjectBehavior : ScriptableObject
         {
             Debug.LogWarning("DialogGraph is empty or not assigned.");
         }
+    }
+
+    protected void TriggerInteractionResult(bool result)
+    {
+        OnInteractionResult?.Invoke(result);
     }
 
     public abstract void Prepare(DialogBehaviour dialogBehaviour);

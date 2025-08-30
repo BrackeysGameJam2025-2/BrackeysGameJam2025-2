@@ -11,11 +11,12 @@ public class FridgeInteraction : InteractiveObjectBehavior
 
     public override void Accept()
     {
-        Debug.LogWarning("Accept is pressed, but it is not yet implemented.");
+        TriggerInteractionResult(true);
     }
 
     public override void Reject()
     {
-        Debug.LogWarning("Reject is pressed, but it is not yet implemented.");
+        TriggerInteractionResult(false);
     }
+
 }

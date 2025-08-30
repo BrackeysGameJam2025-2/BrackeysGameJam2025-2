@@ -1,7 +1,7 @@
 using cherrydev;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FridgeInteraction", menuName = "Scriptable Objects/InteraciveObjectBechavior/Patrol")]
+[CreateAssetMenu(fileName = "PatrolInteract", menuName = "Scriptable Objects/InteraciveObjectBechavior/Patrol")]
 public class PatrolInteract : InteractiveObjectBehavior
 {
     public new void Interact()

@@ -8,14 +8,21 @@ public class InteractiveObject : MonoBehaviour
     [SerializeField]
     private bool waitForPlayerToInteract = true;
 
+    [SerializeField]
+    private bool preventMultipleInteractions = false;
+
+    [SerializeField] private Collider interactionArea;
+
+    private PlayerInteract playerInArea;
+
     private void OnTriggerEnter(Collider other)
     {
-        var player = other.gameObject.GetComponent<PlayerInteract>();
-        if (player != null)
+        playerInArea = other.gameObject.GetComponent<PlayerInteract>();
+        if (playerInArea != null)
         {
             if (waitForPlayerToInteract)
             {
-                player.PlayerInArea(this);
+                playerInArea.PlayerInArea(this);
             }
             else
             {
@@ -30,11 +37,29 @@ public class InteractiveObject : MonoBehaviour
         if (player != null)
         {
             player.PlayerOutArea(this);
+            playerInArea = null;
         }
     }
 
     public void Interact()
     {
+        behavior.OnInteractionResult += OnAccept;
         behavior.Interact();
+    }
+
+    private void OnAccept(bool obj)
+    {
+        behavior.OnInteractionResult -= OnAccept;
+        if (!preventMultipleInteractions)
+            return;
+        if (obj)
+        {
+            interactionArea.enabled = false;
+            playerInArea.PlayerOutArea(this);
+        }
+        else
+        {
+            interactionArea.enabled = true;
+        }
     }
 }

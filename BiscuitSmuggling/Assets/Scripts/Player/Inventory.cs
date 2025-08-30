@@ -26,8 +26,16 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemMetadata item, int quantity)
     {
-        Debug.Log($"Added {quantity} of {item.name} to inventory.");
-        _items.Add(item, quantity);
+        if (_items.ContainsKey(item))
+        {
+            _items[item] += quantity;
+            Debug.Log($"Updated {item.name} quantity to {_items[item]} in inventory.");
+        }
+        else
+        {
+            _items.Add(item, quantity);
+            Debug.Log($"Added {quantity} of {item.name} to inventory.");
+        }
     }
 
     public bool HasItem(ItemMetadata item, int quantity)
@@ -40,6 +48,18 @@ public class Inventory : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public int GetItem(ItemMetadata itemToGet)
+    {
+        foreach (var invItem in _items)
+        {
+            if (invItem.Key == itemToGet)
+            {
+                return invItem.Value;
+            }
+        }
+        return 0;
     }
 }
 
