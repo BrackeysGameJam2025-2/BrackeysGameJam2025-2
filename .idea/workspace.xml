@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Error that pops up from nowhere (I think that's Unity new version problem)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="import-pixel-camera-and-environment" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;markustar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/BrackeysGameJam2025-2/BrackeysGameJam2025-2.git&quot;,
+    &quot;accountId&quot;: &quot;9ad48d62-81fd-41b6-8bda-72ca4bfb7ee5&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="31oznhLhF16ETPUZ7mQVNfsjccM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PatrolNPC&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/BrackeysGameJam2025-2&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-657d8234b839-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="" />
+      <created>1756205382169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756205382169</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added movement to player">
+      <option name="closed" value="true" />
+      <created>1756210026790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756210026790</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added patrol NPC">
+      <option name="closed" value="true" />
+      <created>1756219389039</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756219389039</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added that player can see where patrol NPC is looking">
+      <option name="closed" value="true" />
+      <created>1756220058557</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756220058557</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Set player layer to &quot;Player&quot;">
+      <option name="closed" value="true" />
+      <created>1756225123353</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756225123353</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Error that pops up from nowhere (I think that's Unity new version problem)">
+      <option name="closed" value="true" />
+      <created>1756382320217</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756382320217</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added movement to player" />
+    <MESSAGE value="Added patrol NPC" />
+    <MESSAGE value="Added that player can see where patrol NPC is looking" />
+    <MESSAGE value="Set player layer to &quot;Player&quot;" />
+    <MESSAGE value="Error that pops up from nowhere (I think that's Unity new version problem)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error that pops up from nowhere (I think that's Unity new version problem)" />
+  </component>
+</project>
