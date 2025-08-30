@@ -276,9 +276,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc41c00ee50d18d4faf4ad237ee95ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PatrolNPCScript
+  m_IgnoreAlarm: 0
+  m_InRange:
+    Guid:
+      Data1: -2067260088
+      Data2: 1215474663
+      Data3: -1079553361
+      Data4: -1674387129
+    Path: event:/SFX/InVisionRange
+  m_Spotted:
+    Guid:
+      Data1: 354265707
+      Data2: 1282413506
+      Data3: -135847253
+      Data4: 478102229
+    Path: event:/SFX/PlayerSpotted
+  m_DefaultVisionColor: {r: 1, g: 1, b: 1, a: 0.10980392}
+  m_SearchVisionColor: {r: 1, g: 0.9866903, b: 0.6094339, a: 0.10980392}
+  m_ChaseVisionColor: {r: 1, g: 0.5641509, b: 0.5641509, a: 0.10980392}
   m_PatrolPath: {fileID: 0}
   m_VisionRange: 10
   m_VisionAngle: 90
+  m_NormalSpeed: 3.5
+  m_SearchSpeed: 5
+  m_ChaseSpeed: 6
+  m_TimeToSpotPlayer: 0.15
+  m_TimeToStopSearch: 12
+  m_TimeToStopChase: 2
+  m_CommunicationRadius: 15
+  m_SearchRadius: 15
+  m_MinWaitTime: 0.2
+  m_MaxWaitTime: 0.5
+  m_AfterChaseCommunicationCooldown: 5.5
+  m_CommunicationCooldown: 10
   m_PlayerLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -290,6 +320,7 @@ MonoBehaviour:
   m_RaysCount: 50
   m_AiUpdateRate: 0.033333335
   m_VisionUpdateRate: 0.016666668
+  m_ChanceToCommunicate: 0.25
 --- !u!195 &2386444141653810030
 NavMeshAgent:
   m_ObjectHideFlags: 0

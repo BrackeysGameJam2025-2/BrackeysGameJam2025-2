@@ -120,10 +120,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638921158430329259
+  lastModified: 638921209659166499
   FileSizes:
   - Name: Desktop
-    Value: 413792
+    Value: 417344
   Exists: 1
 --- !u!114 &-8167149334861122805
 MonoBehaviour:
@@ -167,7 +167,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638920982538610967
+  lastModified: 638921209659681952
   FileSizes:
   - Name: Desktop
     Value: 5436160
@@ -427,7 +427,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638921158427789935
+  lastModified: 638921209658775277
   FileSizes:
   - Name: Desktop
     Value: 57088
@@ -687,10 +687,10 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638921158427875603
+  lastModified: 638921209658851202
   FileSizes:
   - Name: Desktop
-    Value: 2216
+    Value: 2260
   Exists: 1
 --- !u!114 &-1540611080649953180
 MonoBehaviour:
@@ -948,6 +948,7 @@ MonoBehaviour:
   - {fileID: 7340750694787313635}
   - {fileID: -5196445857011171691}
   - {fileID: 5241927672150372231}
+  - {fileID: 4628603684792032021}
   EditorParameters:
   - {fileID: 2833171746860780736}
   MasterBanks:
@@ -955,7 +956,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2656629483976298953}
   cacheVersion: 131848
-  cacheTime: 638921158430329259
+  cacheTime: 638921209659681952
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0
@@ -997,6 +998,8 @@ MonoBehaviour:
     index: 18
   - key: event:/SFX/Siren
     index: 19
+  - key: event:/SFX/InVisionRange
+    index: 20
 --- !u!114 &128728067841683307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1148,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638921158427865606
+  lastModified: 638921209658826071
   FileSizes:
   - Name: Desktop
     Value: 2862
@@ -1269,6 +1272,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4628603684792032021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/InVisionRange
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/InVisionRange
+  Guid:
+    Data1: -2067260088
+    Data2: 1215474663
+    Data3: -1079553361
+    Data4: -1674387129
+  Banks:
+  - {fileID: -8251792358914239043}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4636716591196527296
 MonoBehaviour:
   m_ObjectHideFlags: 0

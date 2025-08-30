@@ -46,14 +46,20 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (IsPaused && m_Overlay.activeInHierarchy) Unpause();
-            if (!IsPaused) Pause();
+            if (IsPaused)
+            {
+                if (m_Overlay.activeSelf) Unpause();
+            }
+            else Pause();
         }
     }
 
     public void Pause()
     {
-        if (_isPaused || DialogManager.Instance.CurrentDialog != null) return;
+        if (_isPaused || (DialogManager.Exists && DialogManager.Instance.CurrentDialog != null)) return;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         SetPaused();
 
@@ -67,7 +73,7 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         if (!_isPaused) return;
 
-        if (m_SettingsMenu.activeInHierarchy)
+        if (m_SettingsMenu.activeSelf)
         {
             m_SettingsMenu.SetActive(false);
             return;
@@ -79,6 +85,9 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
         RuntimeManager.PlayOneShot(m_UnpauseEvent);
         RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void SetPaused()
