@@ -17,7 +17,7 @@ public class HidingSpotScript : MonoBehaviour
             return;
         }
 
-        // Notify the guard to check this hiding spot
-        guard.QueueCheckedHidingSpots(); 
+        // Notify the guard to check hiding spots
+        guard.Check();
     }
 }

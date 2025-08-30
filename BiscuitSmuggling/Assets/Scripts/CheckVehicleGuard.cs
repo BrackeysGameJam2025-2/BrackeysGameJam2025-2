@@ -5,7 +5,15 @@ using UnityEngine.AI;
 
 public class CheckVehicleGuard : MonoBehaviour
 {
+    public enum GuardType
+    {
+        Fat,
+        Veteran,
+        WithDog
+    }
+
     [SerializeField] private CheckVehicleSystem vehicleSystem;
+    private GuardType guardType;
     public GameObject currentHidingSpotToCheck;
 
     private NavMeshAgent navMeshAgent;
@@ -20,7 +28,7 @@ public class CheckVehicleGuard : MonoBehaviour
         }
     }
 
-    public void QueueCheckedHidingSpots()
+    public void Check()
     {
         if (vehicleSystem == null || vehicleSystem.hidingSpots == null)
         {
@@ -28,8 +36,23 @@ public class CheckVehicleGuard : MonoBehaviour
             return;
         }
 
-        foreach (Transform hidingSpot in vehicleSystem.hidingSpots)
+        hidingSpotsToCheck.Clear();
+
+        int spotsToCheck = guardType switch
         {
+            GuardType.Fat => 1,
+            GuardType.Veteran => 2,
+            GuardType.WithDog => vehicleSystem.hidingSpots.Count,
+            _ => 0
+        };
+
+        List<Transform> hidingSpots = new List<Transform>(vehicleSystem.hidingSpots);
+        for (int i = 0; i < spotsToCheck && hidingSpots.Count > 0; i++)
+        {
+            int randomIndex = Random.Range(0, hidingSpots.Count);
+            Transform hidingSpot = hidingSpots[randomIndex];
+            hidingSpots.RemoveAt(randomIndex);
+
             HidingSpotScript hidingSpotScript = hidingSpot.GetComponent<HidingSpotScript>();
             if (hidingSpotScript != null && hidingSpotScript.IsThisHidingSpotChecked)
             {
@@ -37,7 +60,6 @@ public class CheckVehicleGuard : MonoBehaviour
             }
         }
 
-        // Start processing the queue if there are hiding spots to check
         if (hidingSpotsToCheck.Count > 0)
         {
             StartCoroutine(ProcessHidingSpots());
