@@ -14,7 +14,7 @@ public class PlayerInteract : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"There multiple instance of {this} point {this.gameObject}");
+            Debug.LogError($"There multiple instance of {this} point {gameObject}");
             Destroy(gameObject);
         }
     }
@@ -41,9 +41,9 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    public void PlayerInArea(InteractiveObject interact)
+    public void PlayerInArea(InteractiveObject interact, DialogNodeGraph infoOverride = null)
     {
-        DialogManager.Instance.ShowInteractInfo(info);
+        DialogManager.Instance.ShowInteractInfo(infoOverride ? infoOverride : info);
         objectsToInteract.Add(interact);
         lastInteractedObject = interact; // Remember the last interacted object
 
@@ -67,6 +67,6 @@ public class PlayerInteract : MonoBehaviour
 
     public void Teleport()
     {
-        this.transform.position = TeleportationPoint.Instance.GetPosition();
+        transform.position = TeleportationPoint.Instance.GetPosition();
     }
 }
