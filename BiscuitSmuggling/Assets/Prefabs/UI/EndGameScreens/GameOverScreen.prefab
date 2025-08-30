@@ -188,14 +188,34 @@ PrefabInstance:
     - {fileID: 6479452659969020952, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8139196183295587899, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8401886202821860285}
   m_SourcePrefab: {fileID: 100100000, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+--- !u!1 &2844586688903097027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8139196183295587899, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+  m_PrefabInstance: {fileID: 6309045323890416888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8401886202821860285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844586688903097027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4ef049f31c2744c836774d82f2ca87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoseScreen
 --- !u!114 &5841235171133413436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 476826561517913284, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
   m_PrefabInstance: {fileID: 6309045323890416888}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2844586688903097027}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c57cbe9d3e69c6449ef487a4f9d91fa, type: 3}
