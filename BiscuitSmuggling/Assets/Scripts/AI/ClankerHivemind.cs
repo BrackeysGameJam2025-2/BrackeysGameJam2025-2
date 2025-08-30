@@ -156,5 +156,6 @@ public sealed class ClankerHivemind : SingletonMonoBehaviour<ClankerHivemind>
         {
             clanker.CurrentState = AIState.Frozen;
         }
+        LoseScreen.Instance.Show();
     }
 }
