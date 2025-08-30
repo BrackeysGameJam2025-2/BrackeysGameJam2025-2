@@ -29,6 +29,8 @@ public sealed class ClankerHivemind : SingletonMonoBehaviour<ClankerHivemind>
 
     public bool WasAlarmStarted { get; private set; } = false;
 
+    public bool AnyoneChases => _chasingClankers > 0;
+
     public event Action AlarmStarted;
 
     private void Start()
