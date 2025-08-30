@@ -43,7 +43,7 @@ public class PatrolPath : MonoBehaviour
         Color endColor = Color.red;
         for (int i = 0; i < points.Length; i++)
         {
-            float blend = points.Length == 1 ? 0f : i / (points.Length - 1);
+            float blend = points.Length == 1 ? 0f : (float)i / (points.Length - 1);
             Gizmos.color = Color.Lerp(startColor, endColor, blend);
             Gizmos.DrawWireSphere(points[i], 1f);
         }

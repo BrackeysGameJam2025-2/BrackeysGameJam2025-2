@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Error that pops up from nowhere (I think that's Unity new version problem)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Make check vehicle system working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="import-pixel-camera-and-environment" />
+        <entry key="$PROJECT_DIR$" value="PlayerMovement" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,15 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PatrolNPC&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/BrackeysGameJam2025-2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "CheckVehicleSystem",
+    "last_opened_file_path": "D:/GitHub/BrackeysGameJam2025-2"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -104,7 +102,39 @@
       <option name="project" value="LOCAL" />
       <updated>1756382320217</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Set up scene for checking vehicle">
+      <option name="closed" value="true" />
+      <created>1756555150055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756555150055</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Start making check vehicle mechanic">
+      <option name="closed" value="true" />
+      <created>1756558678967</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756558678967</updated>
+    </task>
+    <task id="LOCAL-00008" summary="This stupid Unity is keep crushing">
+      <option name="closed" value="true" />
+      <created>1756562008745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756562008745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Make check vehicle system working">
+      <option name="closed" value="true" />
+      <created>1756564718654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756564718654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +154,10 @@
     <MESSAGE value="Added that player can see where patrol NPC is looking" />
     <MESSAGE value="Set player layer to &quot;Player&quot;" />
     <MESSAGE value="Error that pops up from nowhere (I think that's Unity new version problem)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error that pops up from nowhere (I think that's Unity new version problem)" />
+    <MESSAGE value="Set up scene for checking vehicle" />
+    <MESSAGE value="Start making check vehicle mechanic" />
+    <MESSAGE value="This stupid Unity is keep crushing" />
+    <MESSAGE value="Make check vehicle system working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make check vehicle system working" />
   </component>
 </project>
