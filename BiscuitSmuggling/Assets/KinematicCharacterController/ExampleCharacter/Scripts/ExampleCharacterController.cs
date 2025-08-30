@@ -24,6 +24,7 @@ namespace KinematicCharacterController.Examples
         public Quaternion CameraRotation;
         public bool CrouchDown;
         public bool CrouchUp;
+        public bool Sprint; // Added sprint input
     }
 
     public struct AICharacterInputs
@@ -71,6 +72,8 @@ namespace KinematicCharacterController.Examples
         private bool _shouldBeCrouching = false;
         private bool _isCrouching = false;
 
+        private float _defaultMaxStableMoveSpeed; // Store default move speed
+
         private void Awake()
         {
             // Handle initial state
@@ -78,6 +81,9 @@ namespace KinematicCharacterController.Examples
 
             // Assign the characterController to the motor
             Motor.CharacterController = this;
+
+            // Store the default move speed
+            _defaultMaxStableMoveSpeed = MaxStableMoveSpeed;
         }
 
         public void TransitionToState(CharacterState newState)
@@ -138,6 +144,17 @@ namespace KinematicCharacterController.Examples
                             case OrientationMethod.TowardsMovement:
                                 _lookInputVector = _moveInputVector.normalized;
                                 break;
+                        }
+
+                        // Sprinting input using Input.GetKey
+                        if (Input.GetKey(KeyCode.LeftShift))
+                        {
+                            Debug.Log("Sprinting!");
+                            MaxStableMoveSpeed = _defaultMaxStableMoveSpeed * 2f; // Double the speed
+                        }
+                        else
+                        {
+                            MaxStableMoveSpeed = _defaultMaxStableMoveSpeed; // Reset to default speed
                         }
 
                         // Crouching input
