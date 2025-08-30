@@ -15,6 +15,7 @@ public class PatrolNPC : MonoBehaviour
     private bool _isAlarmed = false;
 
     private float _communicationTimer;
+    private float _bustTimer;
     private float _waitTimer;
     private float _stopSearchTimer = 0f;
     private float _spotPlayerTimer;
@@ -71,6 +72,10 @@ public class PatrolNPC : MonoBehaviour
     private float m_CommunicationRadius = 10f;
     [SerializeField]
     private float m_SearchRadius = 15f;
+    [SerializeField]
+    private float m_BustDistance = 2f;
+    [SerializeField]
+    private float m_TimeToBust = 0.3f;
 
     [SerializeField]
     private float m_MinWaitTime = 1f;
@@ -90,8 +95,7 @@ public class PatrolNPC : MonoBehaviour
     private LayerMask m_ObstacleLayers; // Layers considered as obstacles
 
     [SerializeField]
-    [FormerlySerializedAs("interactiveObject")]
-    private InteractiveObject m_InteractiveObject; // Reference to the InteractiveObject component
+    private InteractiveObjectBehavior m_BustBehavior;
 
     [SerializeField]
     [FormerlySerializedAs("visionMeshFilter")]
@@ -269,6 +273,7 @@ public class PatrolNPC : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(m_Spotted, transform.position);
 
+        _bustTimer = 0f;
         _waitTimer = 0f;
         _targetVisionColor = m_ChaseVisionColor;
 
@@ -300,7 +305,7 @@ public class PatrolNPC : MonoBehaviour
 
     private void Search()
     {
-        _stopSearchTimer -= Time.deltaTime;
+        _stopSearchTimer -= m_AiUpdateRate;
         if (_stopSearchTimer <= 0f && !IsAlarmed)
         {
             CurrentState = AIState.Patrol;
@@ -309,7 +314,7 @@ public class PatrolNPC : MonoBehaviour
 
         if (HasReachedDestination())
         {
-            _waitTimer -= Time.deltaTime;
+            _waitTimer -= m_AiUpdateRate;
 
             if (_waitTimer <= 0f)
             {
@@ -341,7 +346,7 @@ public class PatrolNPC : MonoBehaviour
 
         if (!CanSeePlayer())
         {
-            _waitTimer += Time.deltaTime;
+            _waitTimer += m_AiUpdateRate;
             if (_waitTimer >= m_TimeToStopChase)
             {
                 _communicationTimer = m_AfterChaseCommunicationCooldown;
@@ -352,6 +357,23 @@ public class PatrolNPC : MonoBehaviour
         {
             _waitTimer = 0f;
         }
+
+        // Try to bust
+        float distanceToPlayer = Vector3.Distance(transform.position, Player.Transform.position);
+        if (distanceToPlayer < m_BustDistance)
+        {
+            _bustTimer += m_AiUpdateRate;
+            if (_bustTimer >= m_TimeToBust)
+            {
+                ClankerHivemind.Instance.Busted();
+                m_BustBehavior.Interact();
+            }
+        }
+        else
+        {
+            _bustTimer -= m_AiUpdateRate;
+        }
+
         AlarmOthers(AIState.Chase);
     }
 
@@ -393,7 +415,7 @@ public class PatrolNPC : MonoBehaviour
 
             _targetVisionColor = m_ChaseVisionColor;
 
-            _spotPlayerTimer += Time.deltaTime;
+            _spotPlayerTimer += m_AiUpdateRate;
 
             if (_spotPlayerTimer >= m_TimeToSpotPlayer)
             {
@@ -403,7 +425,7 @@ public class PatrolNPC : MonoBehaviour
         else
         {
             _couldSeePlayer = false;
-            _spotPlayerTimer -= Time.deltaTime;
+            _spotPlayerTimer -= m_AiUpdateRate;
             _spotPlayerTimer = Mathf.Max(0, _spotPlayerTimer);
             _targetVisionColor = defaultVisionColor;
         }
@@ -481,6 +503,8 @@ public class PatrolNPC : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, leftRayRotation * forward);
         Gizmos.DrawRay(transform.position, rightRayRotation * forward);
+
+        Gizmos.DrawWireSphere(transform.position, m_BustDistance);
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, m_CommunicationRadius);

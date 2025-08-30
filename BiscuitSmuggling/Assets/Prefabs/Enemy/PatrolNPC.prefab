@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 1599130640299628270}
   - component: {fileID: 4200615093097297281}
   - component: {fileID: 4800512980039565380}
-  - component: {fileID: 7236492948811138958}
-  - component: {fileID: 2694193268945743176}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -113,41 +111,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &7236492948811138958
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5418312069799546823}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.16, y: 0.2, z: 1.77}
-  m_Center: {x: 0, y: -0.39, z: 0.85}
---- !u!114 &2694193268945743176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5418312069799546823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091e795a15377d04ea0b7d0dc143858c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
-  behavior: {fileID: 11400000, guid: be025c12211d78e479a7b796ee5bb6ab, type: 2}
-  waitForPlayerToInteract: 0
 --- !u!1 &6488002271377038640
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,15 +262,17 @@ MonoBehaviour:
   m_VisionAngle: 90
   m_NormalSpeed: 3.5
   m_SearchSpeed: 5
-  m_ChaseSpeed: 6
-  m_TimeToSpotPlayer: 0.15
-  m_TimeToStopSearch: 12
-  m_TimeToStopChase: 2
+  m_ChaseSpeed: 7
+  m_TimeToSpotPlayer: 0.5
+  m_TimeToStopSearch: 20
+  m_TimeToStopChase: 5
   m_CommunicationRadius: 15
   m_SearchRadius: 15
+  m_BustDistance: 4
+  m_TimeToBust: 0.3
   m_MinWaitTime: 0.2
   m_MaxWaitTime: 0.5
-  m_AfterChaseCommunicationCooldown: 5.5
+  m_AfterChaseCommunicationCooldown: 7.5
   m_CommunicationCooldown: 10
   m_PlayerLayer:
     serializedVersion: 2
@@ -315,7 +280,7 @@ MonoBehaviour:
   m_ObstacleLayers:
     serializedVersion: 2
     m_Bits: 1
-  m_InteractiveObject: {fileID: 0}
+  m_BustBehavior: {fileID: 11400000, guid: be025c12211d78e479a7b796ee5bb6ab, type: 2}
   m_VisionMeshFilter: {fileID: 7817560452338597869}
   m_RaysCount: 50
   m_AiUpdateRate: 0.033333335
