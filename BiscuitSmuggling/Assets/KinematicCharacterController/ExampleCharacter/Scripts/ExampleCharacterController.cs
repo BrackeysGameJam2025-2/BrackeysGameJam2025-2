@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using KinematicCharacterController;
-using System;
 
 namespace KinematicCharacterController.Examples
 {
@@ -55,13 +52,16 @@ namespace KinematicCharacterController.Examples
         public float Drag = 0.1f;
 
         [Header("Misc")]
-        public List<Collider> IgnoredColliders = new List<Collider>();
+        public List<Collider> IgnoredColliders = new();
         public BonusOrientationMethod BonusOrientationMethod = BonusOrientationMethod.None;
         public float BonusOrientationSharpness = 10f;
-        public Vector3 Gravity = new Vector3(0, -30f, 0);
+        public Vector3 Gravity = new(0, -30f, 0);
         public Transform MeshRoot;
         public Transform CameraFollowPoint;
         public float CrouchedCapsuleHeight = 1f;
+
+        public Vector3 AxisUp = Vector3.forward;
+        public Vector3 AxisRight = Vector3.right;
 
         public CharacterState CurrentCharacterState { get; private set; }
 
@@ -113,7 +113,8 @@ namespace KinematicCharacterController.Examples
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
             // Clamp input
-            Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
+            Vector3 axis = (AxisRight * inputs.MoveAxisRight) + (AxisUp * inputs.MoveAxisForward);
+            Vector3 moveInputVector = Vector3.ClampMagnitude(axis, 1f);
 
             // Calculate camera direction and rotation on the character plane
             Vector3 cameraPlanarDirection = Vector3.ProjectOnPlane(inputs.CameraRotation * Vector3.forward, Motor.CharacterUp).normalized;
@@ -184,7 +185,7 @@ namespace KinematicCharacterController.Examples
                             currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
                         }
 
-                        Vector3 currentUp = (currentRotation * Vector3.up);
+                        Vector3 currentUp = currentRotation * Vector3.up;
                         if (BonusOrientationMethod == BonusOrientationMethod.TowardsGravity)
                         {
                             Vector3 smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized, 1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
@@ -272,7 +273,7 @@ namespace KinematicCharacterController.Examples
 
                             currentVelocity += Gravity * deltaTime;
 
-                            currentVelocity *= (1f / (1f + (Drag * deltaTime)));
+                            currentVelocity *= 1f / (1f + (Drag * deltaTime));
                         }
                         break;
                     }
