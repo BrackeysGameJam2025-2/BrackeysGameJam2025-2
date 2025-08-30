@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2830307212685270007}
   - component: {fileID: 3892758594125704641}
   - component: {fileID: 1317115255250993028}
-  - component: {fileID: 4412444794175511914}
+  - component: {fileID: 7708808666803083794}
   m_Layer: 0
-  m_Name: ExitTrigger
+  m_Name: LeaveLocationTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4412444794175511914
+--- !u!114 &7708808666803083794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2592969990707343306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5aadd44e98120a4d98c979b83e0af3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba395d567034114ca883a3df10f4507, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WarehouseExitTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::LeaveLocationTrigger
+  m_info: {fileID: 11400000, guid: 44c74f21c79956e4aa55240dedab8d35, type: 2}
