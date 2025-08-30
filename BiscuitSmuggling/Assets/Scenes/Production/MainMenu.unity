@@ -274,7 +274,7 @@ MonoBehaviour:
     Path: event:/Soundtrack/MainMenu
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '{Game Title}'
+  m_text: Dough Smugglers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c044c522de569e84195cc298577ded81, type: 2}
   m_sharedMaterial: {fileID: 7880454232700296421, guid: c044c522de569e84195cc298577ded81, type: 2}
