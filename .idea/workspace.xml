@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Set up scene for checking vehicle">
+    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Start making check vehicle mechanic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/CheckingVehicle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/CheckingVehicle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scripts/CheckVehicleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scripts/CheckVehicleSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756382320217</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Set up scene for checking vehicle">
+      <option name="closed" value="true" />
+      <created>1756555150055</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756555150055</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Start making check vehicle mechanic">
+      <option name="closed" value="true" />
+      <created>1756558678967</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756558678967</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +143,7 @@
     <MESSAGE value="Set player layer to &quot;Player&quot;" />
     <MESSAGE value="Error that pops up from nowhere (I think that's Unity new version problem)" />
     <MESSAGE value="Set up scene for checking vehicle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up scene for checking vehicle" />
+    <MESSAGE value="Start making check vehicle mechanic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start making check vehicle mechanic" />
   </component>
 </project>

@@ -515,7 +515,6 @@ GameObject:
   - component: {fileID: 529332956}
   - component: {fileID: 529332955}
   - component: {fileID: 529332954}
-  - component: {fileID: 529332957}
   m_Layer: 5
   m_Name: HidingSpo3
   m_TagString: Untagged
@@ -709,20 +708,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529332952}
   m_CullTransparentMesh: 1
---- !u!114 &529332957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529332952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 764f3af8812dbb041b0f0739584f2454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HidingSpotScript
-  IsThisHidingSpotChosen: 0
-  IsThisHidingSpotChecked: 0
 --- !u!1 &609946653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1014,6 @@ GameObject:
   - component: {fileID: 1116521808}
   - component: {fileID: 1116521807}
   - component: {fileID: 1116521806}
-  - component: {fileID: 1116521809}
   m_Layer: 5
   m_Name: HidingSpo2
   m_TagString: Untagged
@@ -1223,20 +1207,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116521804}
   m_CullTransparentMesh: 1
---- !u!114 &1116521809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116521804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 764f3af8812dbb041b0f0739584f2454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HidingSpotScript
-  IsThisHidingSpotChosen: 0
-  IsThisHidingSpotChecked: 0
 --- !u!1 &1448320368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,8 +1546,6 @@ GameObject:
   - component: {fileID: 1572299037}
   - component: {fileID: 1572299036}
   - component: {fileID: 1572299035}
-  - component: {fileID: 1572299040}
-  - component: {fileID: 1572299039}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -1679,42 +1647,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &1572299039
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572299034}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1572299040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572299034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdd1044fc7d1f144bb36bb42bb9e11e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CheckVehicleGuard
-  vehicleSystem: {fileID: 609946654}
-  currentHidingSpotToCheck: {fileID: 0}
 --- !u!1 &1954964807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,7 +1922,6 @@ GameObject:
   - component: {fileID: 2101697613}
   - component: {fileID: 2101697612}
   - component: {fileID: 2101697611}
-  - component: {fileID: 2101697614}
   m_Layer: 5
   m_Name: HidingSpo1
   m_TagString: Untagged
@@ -2184,20 +2115,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101697609}
   m_CullTransparentMesh: 1
---- !u!114 &2101697614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101697609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 764f3af8812dbb041b0f0739584f2454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HidingSpotScript
-  IsThisHidingSpotChosen: 0
-  IsThisHidingSpotChecked: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

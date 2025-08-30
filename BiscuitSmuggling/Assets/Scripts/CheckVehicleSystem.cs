@@ -59,12 +59,16 @@ public class CheckVehicleSystem : MonoBehaviour
                 secondSpot = hidingSpots[Random.Range(0, hidingSpots.Count)];
             } while (secondSpot == firstSpot);
 
+            firstSpot.gameObject.GetComponent<HidingSpotScript>().IsThisHidingSpotChecked = true;
+            secondSpot.gameObject.GetComponent<HidingSpotScript>().IsThisHidingSpotChecked = true;
+
             Debug.Log($"Two hiding spots chosen: {hidingSpotNameMap[firstSpot]} and {hidingSpotNameMap[secondSpot]}");
         }
         else
         {
             // Choose one random hiding spot
             Transform chosenSpot = hidingSpots[Random.Range(0, hidingSpots.Count)];
+            chosenSpot.gameObject.GetComponent<HidingSpotScript>().IsThisHidingSpotChecked = true;
             Debug.Log($"One hiding spot chosen: {hidingSpotNameMap[chosenSpot]}");
         }
     }
