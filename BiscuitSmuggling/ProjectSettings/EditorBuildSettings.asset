@@ -8,6 +8,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Production/MainMenu.unity
     guid: 3605a25da7cc04448b593a7e5ba9193e
+  - enabled: 1
+    path: Assets/Scenes/Production/BarDay.unity
+    guid: 82b724a8ed5845945afd7a7db859f9a1
+  - enabled: 1
+    path: Assets/Scenes/Production/BarNight.unity
+    guid: 105b682d78016134991c04e83bf00ba0
+  - enabled: 1
+    path: Assets/Scenes/Production/CheckpointDay.unity
+    guid: aa7435fb77f57b343834d8fef01ec20e
+  - enabled: 1
+    path: Assets/Scenes/Production/CheckpointNight.unity
+    guid: b51dfc352d65d044588752ef174f9c49
+  - enabled: 1
+    path: Assets/Scenes/Production/OfficeDay.unity
+    guid: cda6fd00b365d154d9180d037b1b9e48
+  - enabled: 1
+    path: Assets/Scenes/Production/OfficeNight.unity
+    guid: b1d4d15f032655f4f92da2240958d05c
+  - enabled: 1
+    path: Assets/Scenes/Production/WarehouseDay.unity
+    guid: c2e0c760aa5c86d4f967c028ded1b396
+  - enabled: 1
+    path: Assets/Scenes/Production/WarehouseNight.unity
+    guid: 95394fe7d5cc5184099303dbf436abc7
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 051070ce9a7dba84992458cf8c4c9ef1, type: 2}

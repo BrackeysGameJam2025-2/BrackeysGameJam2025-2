@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("TODO: Implement StartGame.");
-        // UnityEngine.SceneManagement.SceneManager.LoadScene("???");
+        Debug.Log("TODO: Check if that's start right.");
+        SceneManager.LoadScene("WarehouseDay", LoadSceneMode.Single);
     }
 
     public void QuitGame()

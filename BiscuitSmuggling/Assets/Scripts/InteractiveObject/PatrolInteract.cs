@@ -1,6 +1,7 @@
+using cherrydev;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FridgeInteraction", menuName = "Scriptable Objects/InteraciveObjectBechavior/Patrol")]
+[CreateAssetMenu(fileName = "PatrolInteract", menuName = "Scriptable Objects/InteraciveObjectBechavior/Patrol")]
 public class PatrolInteract : InteractiveObjectBehavior
 {
     public new void Interact()
@@ -14,6 +15,10 @@ public class PatrolInteract : InteractiveObjectBehavior
         {
             Debug.LogWarning("DialogGraph is empty or not assigned.");
         }
+    }
+
+    public override void Prepare(DialogBehaviour dialogBehaviour)
+    {
     }
 
     public override void Accept()

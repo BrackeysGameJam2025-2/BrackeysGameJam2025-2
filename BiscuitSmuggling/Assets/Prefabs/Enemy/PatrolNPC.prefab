@@ -262,14 +262,14 @@ MonoBehaviour:
   m_VisionAngle: 90
   m_NormalSpeed: 3.5
   m_SearchSpeed: 5
-  m_ChaseSpeed: 7
-  m_TimeToSpotPlayer: 0.5
+  m_ChaseSpeed: 9
+  m_TimeToSpotPlayer: 0.35
   m_TimeToStopSearch: 20
   m_TimeToStopChase: 5
   m_CommunicationRadius: 15
   m_SearchRadius: 15
-  m_BustDistance: 4
-  m_TimeToBust: 0.3
+  m_BustDistance: 4.5
+  m_TimeToBust: 0.25
   m_MinWaitTime: 0.2
   m_MaxWaitTime: 0.5
   m_AfterChaseCommunicationCooldown: 7.5
@@ -295,7 +295,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6488002271377038640}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
