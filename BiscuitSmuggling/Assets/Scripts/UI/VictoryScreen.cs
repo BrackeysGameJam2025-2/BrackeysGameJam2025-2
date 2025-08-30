@@ -2,6 +2,6 @@ public class VictoryScreen : SingletonMonoBehaviour<VictoryScreen>
 {
     public void Show()
     {
-        gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 }
