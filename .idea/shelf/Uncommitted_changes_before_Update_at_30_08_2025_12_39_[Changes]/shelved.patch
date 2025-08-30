@@ -1,0 +1,46 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"372b9c23-cf3e-492c-8af3-e1a932c7c038\" name=\"Changes\" comment=\"Something\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"PatrolNPC\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;markustar&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/BrackeysGameJam2025-2/BrackeysGameJam2025-2.git&quot;,\n    &quot;accountId&quot;: &quot;9ad48d62-81fd-41b6-8bda-72ca4bfb7ee5&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"31oznhLhF16ETPUZ7mQVNfsjccM\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;PlayerMovement&quot;,\n    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/BrackeysGameJam2025-2&quot;\n  }\n}</component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-python-sdk-657d8234b839-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.74\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"372b9c23-cf3e-492c-8af3-e1a932c7c038\" name=\"Changes\" comment=\"\" />\n      <created>1756205382169</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1756205382169</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Added movement to player\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756210026790</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756210026790</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added patrol NPC\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756219389039</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756219389039</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Added that player can see where patrol NPC is looking\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756220058557</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756220058557</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Set player layer to &quot;Player&quot;\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756225123353</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756225123353</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Make player movement again and make that camera doesn't rotate\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756231645127</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756231645127</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Remove player jump\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1756297767985</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1756297767986</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Added movement to player\" />\n    <MESSAGE value=\"Added patrol NPC\" />\n    <MESSAGE value=\"Added that player can see where patrol NPC is looking\" />\n    <MESSAGE value=\"Set player layer to &quot;Player&quot;\" />\n    <MESSAGE value=\"Make player movement again and make that camera doesn't rotate\" />\n    <MESSAGE value=\"Remove player jump\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Remove player jump\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4d806cc686f9decabd4bf27282c45e12d7a01d88)
++++ b/.idea/workspace.xml	(date 1756412613851)
+@@ -4,7 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Something" />
++    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Fix materials and make camera static" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -110,7 +110,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1756297767986</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Fix materials and make camera static">
++      <option name="closed" value="true" />
++      <created>1756412605719</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1756412605719</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -131,6 +139,7 @@
+     <MESSAGE value="Set player layer to &quot;Player&quot;" />
+     <MESSAGE value="Make player movement again and make that camera doesn't rotate" />
+     <MESSAGE value="Remove player jump" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Remove player jump" />
++    <MESSAGE value="Fix materials and make camera static" />
++    <option name="LAST_COMMIT_MESSAGE" value="Fix materials and make camera static" />
+   </component>
+ </project>
+\ No newline at end of file
