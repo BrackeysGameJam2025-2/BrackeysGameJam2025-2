@@ -14,6 +14,7 @@ public static class TransitionManager
         string daytime = IsDay() ? "Day" : "Night";
         string sceneName = $"{location}{daytime}";
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        PauseMenu.Instance.SetUnpaused();
     }
 
     public static void GoToOffice()
@@ -28,7 +29,7 @@ public static class TransitionManager
 
     public static void GoToBar()
     {
-        Transition("Office");
+        Transition("Bar");
     }
 
     public static void GoToWarehouse()

@@ -7,6 +7,9 @@ public class WhereToGoMenu : SingletonMonoBehaviour<WhereToGoMenu>
 
     public void Show()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         PauseMenu.Instance.SetPaused();
         m_Overlay.SetActive(true);
         InteractLabel.Instance.Hide();
@@ -14,6 +17,9 @@ public class WhereToGoMenu : SingletonMonoBehaviour<WhereToGoMenu>
 
     public void Hide()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         PauseMenu.Instance.SetUnpaused();
         m_Overlay.SetActive(false);
         InteractLabel.Instance.Show();
