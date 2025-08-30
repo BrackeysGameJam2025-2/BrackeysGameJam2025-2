@@ -30,12 +30,12 @@ public class PlyrAnimations : MonoBehaviour
         {
             velocityZ = 4;
         }
-        else if (Input.GetKey(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.LeftShift)&& kinamaticMotor.BaseVelocity.magnitude >= 0.2)
         {
             velocityZ = 8;
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift) )
         {
             velocityZ = 4;
         }
