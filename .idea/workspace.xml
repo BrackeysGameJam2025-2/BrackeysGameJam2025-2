@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Start making check vehicle mechanic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/CheckingVehicle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scenes/CheckingVehicle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scripts/CheckVehicleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BiscuitSmuggling/Assets/Scripts/CheckVehicleSystem.cs" afterDir="false" />
-    </list>
+    <list default="true" id="372b9c23-cf3e-492c-8af3-e1a932c7c038" name="Changes" comment="Make check vehicle system working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +118,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756558678967</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="This stupid Unity is keep crushing">
+      <option name="closed" value="true" />
+      <created>1756562008745</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756562008745</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Make check vehicle system working">
+      <option name="closed" value="true" />
+      <created>1756564718654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756564718654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +156,8 @@
     <MESSAGE value="Error that pops up from nowhere (I think that's Unity new version problem)" />
     <MESSAGE value="Set up scene for checking vehicle" />
     <MESSAGE value="Start making check vehicle mechanic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start making check vehicle mechanic" />
+    <MESSAGE value="This stupid Unity is keep crushing" />
+    <MESSAGE value="Make check vehicle system working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make check vehicle system working" />
   </component>
 </project>
