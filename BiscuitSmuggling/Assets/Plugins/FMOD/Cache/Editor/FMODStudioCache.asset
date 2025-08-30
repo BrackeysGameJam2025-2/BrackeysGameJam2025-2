@@ -167,7 +167,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638921209659681952
+  lastModified: 638921243291867902
   FileSizes:
   - Name: Desktop
     Value: 5436160
@@ -956,7 +956,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2656629483976298953}
   cacheVersion: 131848
-  cacheTime: 638921209659681952
+  cacheTime: 638921243291867902
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0
