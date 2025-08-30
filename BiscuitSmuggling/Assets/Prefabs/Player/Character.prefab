@@ -1423,6 +1423,8 @@ GameObject:
   - component: {fileID: 3822433527402593}
   - component: {fileID: 5084689026176156015}
   - component: {fileID: 5966271739642212777}
+  - component: {fileID: 5403364242855618329}
+  - component: {fileID: 4426484986784840904}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -1580,6 +1582,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
   info: {fileID: 11400000, guid: a4af1015a2da70145b6faa9bb7729f1e, type: 2}
+--- !u!114 &5403364242855618329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985759011386455204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f28d29b3fdbb13478b5af308fac1aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  prepareInventoryInfo: {fileID: 4426484986784840904}
+--- !u!114 &4426484986784840904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985759011386455204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f3bfb7af7c67342988f383acfd01f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PrepareInventoryInfo
+  itemsInInventory:
+  - itemVariableName: money
+    itemVariableType: 1
+    itemMetadata: {fileID: 11400000, guid: 043479e3c4ad9814f9b860e1ebccd678, type: 2}
+    itemQuantity: 0
+  - itemVariableName: haveEnoughMoney
+    itemVariableType: 0
+    itemMetadata: {fileID: 11400000, guid: 043479e3c4ad9814f9b860e1ebccd678, type: 2}
+    itemQuantity: 5
+  - itemVariableName: haveEnoughMoneyForBear
+    itemVariableType: 0
+    itemMetadata: {fileID: 11400000, guid: 043479e3c4ad9814f9b860e1ebccd678, type: 2}
+    itemQuantity: 3
+  - itemVariableName: haveDogtags
+    itemVariableType: 0
+    itemMetadata: {fileID: 11400000, guid: 8a46db29c1dd3ce4b9cd03dc88b4ce3c, type: 2}
+    itemQuantity: 1
 --- !u!1 &5825870014156403097
 GameObject:
   m_ObjectHideFlags: 0
