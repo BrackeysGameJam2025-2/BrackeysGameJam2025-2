@@ -8,6 +8,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Music.Path
+      value: event:/Soundtrack/GameOverST
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Stinger.Path
+      value: event:/Stingers/Caught with Hand in the Cookie Jar
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Music.Guid.Data1
+      value: -1538281058
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Music.Guid.Data2
+      value: 1103247220
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Music.Guid.Data3
+      value: 322125978
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Music.Guid.Data4
+      value: 1617358351
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Stinger.Guid.Data1
+      value: -836499735
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Stinger.Guid.Data2
+      value: 1258345782
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Stinger.Guid.Data3
+      value: -197063515
+      objectReference: {fileID: 0}
+    - target: {fileID: 37835979993590355, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+      propertyPath: m_Stinger.Guid.Data4
+      value: -978579520
+      objectReference: {fileID: 0}
     - target: {fileID: 476826561517913284, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
       propertyPath: m_Music.Path
       value: event:/Soundtrack/GameOverST
@@ -72,10 +112,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1375814180114449184, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5841235171133413436}
     - target: {fileID: 1375814180114449184, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -186,19 +222,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6479452659969020952, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+    - {fileID: 6313637481031724030, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
+    - {fileID: 8586072304833036661, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8139196183295587899, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8401886202821860285}
+      addedObject: {fileID: 4247483746510964926}
   m_SourcePrefab: {fileID: 100100000, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
 --- !u!1 &2844586688903097027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8139196183295587899, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
   m_PrefabInstance: {fileID: 6309045323890416888}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8401886202821860285
+--- !u!114 &4247483746510964926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,14 +248,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4ef049f31c2744c836774d82f2ca87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoseScreen
---- !u!114 &5841235171133413436 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 476826561517913284, guid: 2d68ed13c3543ed448370d234ad08d3e, type: 3}
-  m_PrefabInstance: {fileID: 6309045323890416888}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2844586688903097027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c57cbe9d3e69c6449ef487a4f9d91fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameEndedScreen

@@ -366,7 +366,7 @@ public class PatrolNPC : MonoBehaviour
             if (_bustTimer >= m_TimeToBust)
             {
                 ClankerHivemind.Instance.Busted();
-                m_BustBehavior.Interact();
+                //m_BustBehavior.Interact();
             }
         }
         else
