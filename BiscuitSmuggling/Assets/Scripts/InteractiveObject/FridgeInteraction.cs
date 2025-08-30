@@ -1,8 +1,14 @@
+using cherrydev;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "FridgeInteraction", menuName = "Scriptable Objects/InteraciveObjectBechavior/Fridge")]
 public class FridgeInteraction : InteractiveObjectBehavior
 {
+    public override void Prepare(DialogBehaviour dialogBehaviour)
+    {
+
+    }
+
     public override void Accept()
     {
         Debug.LogWarning("Accept is pressed, but it is not yet implemented.");

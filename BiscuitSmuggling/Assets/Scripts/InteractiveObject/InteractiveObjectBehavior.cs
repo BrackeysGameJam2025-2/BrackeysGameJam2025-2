@@ -9,11 +9,14 @@ public abstract class InteractiveObjectBehavior : ScriptableObject
     [SerializeField]
     protected DialogType dialogType;
 
+    protected DialogNodeGraph chosenGraph;
+
     public void Interact()
     {
         if (dialogGraphs != null && dialogGraphs.Length > 0)
         {
             int index = Random.Range(0, dialogGraphs.Length);
+            chosenGraph = dialogGraphs[index];
             DialogManager.Instance.ShowDialog(dialogType, dialogGraphs[index], this);
         }
         else
@@ -21,6 +24,8 @@ public abstract class InteractiveObjectBehavior : ScriptableObject
             Debug.LogWarning("DialogGraph is empty or not assigned.");
         }
     }
+
+    public abstract void Prepare(DialogBehaviour dialogBehaviour);
 
     public abstract void Accept();
 

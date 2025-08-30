@@ -65,6 +65,7 @@ public class DialogManager : MonoBehaviour
                 window.behavior.OnDialogStarted.AddListener(() => HandleDialogStarted(type));
 
                 window.behavior.StartDialog(graph);
+                behavior.Prepare(window.behavior);
                 window.behavior.BindExternalFunction("Accept", behavior.Accept);
                 window.behavior.BindExternalFunction("Reject", behavior.Reject);
                 window.behavior.DialogEnded += () => HandleDialogEnded(type); // Subscribe to the DialogEnded event
