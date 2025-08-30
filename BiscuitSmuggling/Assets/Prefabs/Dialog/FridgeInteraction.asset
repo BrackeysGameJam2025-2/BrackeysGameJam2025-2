@@ -15,3 +15,4 @@ MonoBehaviour:
   dialogGraphs:
   - {fileID: 11400000, guid: 5810996d1e272e24081634507f14db5f, type: 2}
   dialogType: 0
+  food: {fileID: 11400000, guid: 5400aea99758d384eadd587688efd54d, type: 2}
