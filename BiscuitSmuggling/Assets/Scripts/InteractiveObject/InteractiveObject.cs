@@ -3,17 +3,17 @@ using UnityEngine;
 public class InteractiveObject : MonoBehaviour
 {
     [SerializeField]
-    private InteractiveObjectBehavior behavior;
+    protected InteractiveObjectBehavior behavior;
 
     [SerializeField]
-    private bool waitForPlayerToInteract = true;
+    protected bool waitForPlayerToInteract = true;
 
     [SerializeField]
-    private bool preventMultipleInteractions = false;
+    protected bool preventMultipleInteractions = false;
 
     [SerializeField] private Collider interactionArea;
 
-    private PlayerInteract playerInArea;
+    protected PlayerInteract playerInArea;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -47,19 +47,15 @@ public class InteractiveObject : MonoBehaviour
         behavior.Interact();
     }
 
-    private void OnAccept(bool obj)
+    protected virtual void OnAccept(bool obj)
     {
         behavior.OnInteractionResult -= OnAccept;
         if (!preventMultipleInteractions)
             return;
         if (obj)
         {
-            interactionArea.enabled = false;
             playerInArea.PlayerOutArea(this);
-        }
-        else
-        {
-            interactionArea.enabled = true;
+            interactionArea.enabled = false;
         }
     }
 }
