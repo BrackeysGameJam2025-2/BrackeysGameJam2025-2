@@ -23,6 +23,9 @@ public class GameEndedScreen : MonoBehaviour
         _bus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
         RuntimeManager.PlayOneShot(m_Stinger);
         RuntimeManager.PlayOneShot(m_Music);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void OnDisable()

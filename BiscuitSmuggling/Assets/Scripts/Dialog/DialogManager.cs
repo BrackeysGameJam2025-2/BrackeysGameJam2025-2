@@ -6,12 +6,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using Debug = UnityEngine.Debug;
 
-public class DialogManager : MonoBehaviour
+public sealed class DialogManager : SingletonMonoBehaviour<DialogManager>
 {
-    private static DialogManager _instance;
-
-    public static DialogManager Instance => _instance;
-
     public DialogBehaviour CurrentDialog { get; private set; }
 
     public string CurrentDialogName => CurrentDialog.CurrentSentenceNode.GetCharacterName();
@@ -32,15 +28,9 @@ public class DialogManager : MonoBehaviour
     public UnityEvent<DialogType> OnDialogStarted = new();
     public UnityEvent<DialogType> OnDialogEnded = new();
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        _instance = this;
+        base.Awake();
         DontDestroyOnLoad(gameObject);
     }
 

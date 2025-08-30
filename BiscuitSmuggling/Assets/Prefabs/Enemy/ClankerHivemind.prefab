@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4344747907627798999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 535181436481162552}
+  - component: {fileID: 3662719852842500008}
+  m_Layer: 0
+  m_Name: ClankerHivemind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &535181436481162552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344747907627798999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3662719852842500008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344747907627798999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4493e2238b0091349a1eaf3e30bbf954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClankerHivemind
+  m_TimeForAlarm: 20
+  m_AlarmRefreshPlayerPositionTime: 3
+  m_Soundtrack:
+    Guid:
+      Data1: -903160051
+      Data2: 1295332794
+      Data3: 1897580223
+      Data4: 820363910
+    Path: event:/Soundtrack/RestrictedArea
+  m_SirenSfx:
+    Guid:
+      Data1: 779798965
+      Data2: 1267797499
+      Data3: -915903041
+      Data4: 131790055
+    Path: event:/SFX/Siren

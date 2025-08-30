@@ -2705,7 +2705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 818712678621169289}
-  _lockCursor: 1
+  _lockCursor: 0
 --- !u!1 &8642634916439555914
 GameObject:
   m_ObjectHideFlags: 0
