@@ -220,6 +220,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 818712678621169289, guid: 5900cefe0e3b05e4dad75ea54b779da2, type: 3}
       propertyPath: MaxStableMoveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 818712678621169289, guid: 5900cefe0e3b05e4dad75ea54b779da2, type: 3}
+      propertyPath: StableMovementSharpness
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 818712678621169289, guid: 5900cefe0e3b05e4dad75ea54b779da2, type: 3}
