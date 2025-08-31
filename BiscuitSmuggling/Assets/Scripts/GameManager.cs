@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -33,6 +34,27 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private List<Guard> guards;
 
+    // Event for car searching
+    public static event Action OnCarSearchRequested;
+
+    public GuardsType GetCurrentGuardType()
+    {
+        // Return the main guard's type (assuming the second guard is the main one)
+        if (guards != null && guards.Count > 1)
+        {
+            return guards[1].Type;
+        }
+
+        // Fallback to first guard if available
+        if (guards != null && guards.Count > 0)
+        {
+            return guards[0].Type;
+        }
+
+        // Default fallback
+        return GuardsType.Fat;
+    }
+
     private void Start()
     {
         InitializeGuards();
@@ -44,13 +66,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         guards = new List<Guard>();
 
         // Generate the first guard randomly
-        GuardsType firstGuardType = (GuardsType)Random.Range(0, System.Enum.GetValues(typeof(GuardsType)).Length);
+        GuardsType firstGuardType = (GuardsType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(GuardsType)).Length);
         guards.Add(new Guard("Guard1", firstGuardType));
 
         // Generate the second guard with 50% chance to be the same as the first guard or a different type
-        GuardsType secondGuardType = Random.value < 0.5f
+        GuardsType secondGuardType = UnityEngine.Random.value < 0.5f
             ? firstGuardType
-            : (GuardsType)Random.Range(0, System.Enum.GetValues(typeof(GuardsType)).Length);
+            : (GuardsType)UnityEngine.Random.Range(0, System.Enum.GetValues(typeof(GuardsType)).Length);
 
         guards.Add(new Guard("MainGuard", secondGuardType));
 
@@ -70,11 +92,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             switch (guard.Type)
             {
                 case GuardsType.Fat:
-                    willBeChekcedSpots = carSpots.OrderBy(_ => Random.value).Take(1).ToList();
+                    willBeChekcedSpots = carSpots.OrderBy(_ => UnityEngine.Random.value).Take(1).ToList();
                     break;
 
                 case GuardsType.Veteran:
-                    willBeChekcedSpots = carSpots.OrderBy(_ => Random.value).Take(2).ToList();
+                    willBeChekcedSpots = carSpots.OrderBy(_ => UnityEngine.Random.value).Take(2).ToList();
                     break;
 
                 case GuardsType.WithDog:
@@ -87,5 +109,16 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             Debug.Log($"Guard {guard.Name} ({guard.Type}) checked spots: {string.Join(", ", willBeChekcedSpots)}");
             Debug.Log($"Hidden spots: {string.Join(", ", hidenSpots)}");
         }
+    }
+
+    private void StartSerchingCars()
+    {
+        //TODO : Call CheckVehicleGuard to seacrh car
+    }
+
+    public void StartSearchingCars()
+    {
+        Debug.Log("Car search requested by GameManager.");
+        OnCarSearchRequested?.Invoke();
     }
 }

@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckVehicleSystem
   hidingSpots: []
---- !u!84 &348670908
+--- !u!84 &289478907
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -650,6 +650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarGuard
       objectReference: {fileID: 0}
+    - target: {fileID: 1446710295903516138, guid: 9f9df41ce9f5a5f48968f7919b1ccd2e, type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 11400000, guid: 65aaf0de34beb6247abd54fd8bf426f2, type: 2}
     - target: {fileID: 5855164360337362632, guid: 9f9df41ce9f5a5f48968f7919b1ccd2e, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.34
@@ -1677,7 +1681,7 @@ PrefabInstance:
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 348670908}
+      objectReference: {fileID: 289478907}
     - target: {fileID: 5941307248670765442, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1767,11 +1771,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8767914831250611903, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: itemsInInventory.Array.data[6].itemMetadata
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a94f160e8fad7b49bbab83f3482aca6, type: 2}
+    - target: {fileID: 8767914831250611903, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: itemsInInventory.Array.data[6].itemQuantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767914831250611903, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: itemsInInventory.Array.data[4].itemVariableName
       value: haveFood
       objectReference: {fileID: 0}
     - target: {fileID: 8767914831250611903, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: itemsInInventory.Array.data[5].itemVariableName
+      value: haveContraband
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767914831250611903, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: itemsInInventory.Array.data[6].itemVariableName
       value: haveContraband
       objectReference: {fileID: 0}
     - target: {fileID: 9215135487608937330, guid: f4df389e131f2d4458818227702c109a, type: 3}
