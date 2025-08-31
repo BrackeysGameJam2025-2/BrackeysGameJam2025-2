@@ -72,7 +72,6 @@ public sealed class DialogManager : SingletonMonoBehaviour<DialogManager>
     private void HandleDialogEnded()
     {
         OnDialogEnded.Invoke(_currentDialogType);
-        Debug.Log("Dialog ended");
         if (CurrentDialog != null)
         {
             CurrentDialog.gameObject.SetActive(false); // Deactivate the dialog window

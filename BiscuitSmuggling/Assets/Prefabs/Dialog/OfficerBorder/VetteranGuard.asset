@@ -1,258 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8688176371556866473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
-  m_Name: Modify Variable Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -235
-    y: -83
-    width: 210
-    height: 155
-  IsDragging: 1
-  IsSelected: 0
-  _variableName: money
-  _modifyType: 2
-  _boolValue: 0
-  _intValue: 3
-  _floatValue: 0
-  _stringValue: 
-  ParentNodes:
-  - {fileID: -6573818122398503052}
-  ChildNode: {fileID: 9208246591481536780}
---- !u!114 &-6769954139545274744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 195
-    y: 573
-    width: 190
-    height: 155
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: Come again if you need anything!
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: 1889179821931311394}
-  - {fileID: -2746561400784494934}
-  - {fileID: -5885786429684323088}
-  ChildNode: {fileID: -632865905665742972}
-  _isExternalFunc: 1
-  _externalFunctionName: Reject
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &-6581179395706085165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -217
-    y: 145
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Me
-    Text: Opss I have no enough money
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: -6573818122398503052}
-  ChildNode: {fileID: 9208246591481536780}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &-6573818122398503052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
-  m_Name: Variable Condition Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -492
-    y: 73
-    width: 240
-    height: 160
-  IsDragging: 1
-  IsSelected: 0
-  _variableName: haveEnoughMoneyForBear
-  _conditionType: 0
-  _boolTargetValue: 1
-  _intTargetValue: 0
-  _floatTargetValue: 0
-  _stringTargetValue: 
-  ParentNodes:
-  - {fileID: 1889179821931311394}
-  TrueChildNode: {fileID: -8688176371556866473}
-  FalseChildNode: {fileID: -6581179395706085165}
---- !u!114 &-6421293429131460076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
-  m_Name: Variable Condition Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -1005
-    y: 248
-    width: 240
-    height: 160
-  IsDragging: 1
-  IsSelected: 0
-  _variableName: haveDogtags
-  _conditionType: 0
-  _boolTargetValue: 0
-  _intTargetValue: 0
-  _floatTargetValue: 0
-  _stringTargetValue: 
-  ParentNodes:
-  - {fileID: 4912826213528386795}
-  TrueChildNode: {fileID: 1889179821931311394}
-  FalseChildNode: {fileID: -5866853562948138123}
---- !u!114 &-5885786429684323088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -192
-    y: 665
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Me
-    Text: Oh... I see, I will come later.
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: 2543635400861609457}
-  ChildNode: {fileID: -6769954139545274744}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &-5866853562948138123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -908
-    y: 532
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: I don't think I can help you anymore
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: -6421293429131460076}
-  ChildNode: {fileID: 0}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &-5532418231619439545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
-  m_Name: Modify Variable Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 326
-    y: 288
-    width: 210
-    height: 155
-  IsDragging: 1
-  IsSelected: 0
-  _variableName: haveDogtags
-  _modifyType: 0
-  _boolValue: 1
-  _intValue: 0
-  _floatValue: 0
-  _stringValue: 
-  ParentNodes:
-  - {fileID: 3673675299943527946}
-  ChildNode: {fileID: 7062696982296285903}
---- !u!114 &-2746561400784494934
+--- !u!114 &-9168419711602269299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,22 +15,24 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 212
-    y: 9
+    x: 134
+    y: 395
     width: 190
-    height: 135
+    height: 155
   IsDragging: 1
   IsSelected: 0
   Answers:
-  - '[Nothing] Nothing.'
-  - '[Dogtag] Could you give me something good?'
+  - '[Check] You can check. '
+  - '[Bribe] Maybe we can work something out? '
+  - '[Negotiate] Come on, we both know how this works. '
   AnswerKeys: []
   ParentNodes:
-  - {fileID: 9208246591481536780}
+  - {fileID: -3279314572899233357}
   ChildNodes:
-  - {fileID: -6769954139545274744}
-  - {fileID: 5284268098329581638}
---- !u!114 &-632865905665742972
+  - {fileID: 4439234943268481292}
+  - {fileID: -5120344350608573469}
+  - {fileID: -3911971207770477774}
+--- !u!114 &-9132451159865112558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,22 +47,275 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 549
-    y: 510
+    x: 994
+    y: 449
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: ' Go on through, soldier.'
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -2371328084087284666}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-8087904482162212986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -791
+    y: 191
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Bartender
-    Text: Now leve
+    CharacterName: VETERAN SOLDIER
+    Text: Documentation. Present it properly.
     CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: -6769954139545274744}
-  - {fileID: 7062696982296285903}
-  ChildNode: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: 2999942691441706829}
   _isExternalFunc: 0
   _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-5120344350608573469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 461
+    y: 220
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: passBorder
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 0
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 6215413134077629327}
+  - {fileID: -9168419711602269299}
+  ChildNode: {fileID: -173785033894125147}
+--- !u!114 &-3911971207770477774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 401
+    y: 589
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: Civilian scum!
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -9168419711602269299}
+  ChildNode: {fileID: 6695629367064329413}
+  _isExternalFunc: 1
+  _externalFunctionName: Reject
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-3279314572899233357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -154
+    y: 265
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: haveDogtags
+  _conditionType: 0
+  _boolTargetValue: 1
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -191054790888793073}
+  TrueChildNode: {fileID: 6215413134077629327}
+  FalseChildNode: {fileID: -9168419711602269299}
+--- !u!114 &-2371328084087284666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 729
+    y: 419
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: ' Well I''ll be damned...'
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 6954547486264839032}
+  ChildNode: {fileID: -9132451159865112558}
+  _isExternalFunc: 1
+  _externalFunctionName: Reject
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-1256813045107701061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -564
+    y: 182
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: Stand straight when addressing me!
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 2999942691441706829}
+  ChildNode: {fileID: -191054790888793073}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-191054790888793073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -362
+    y: 288
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: Any contraband in your vehicle?
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1256813045107701061}
+  - {fileID: 4454802841507338250}
+  ChildNode: {fileID: -3279314572899233357}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-173785033894125147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 700
+    y: 219
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: BRIBERY?!
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -5120344350608573469}
+  ChildNode: {fileID: 9065392422857626882}
+  _isExternalFunc: 1
+  _externalFunctionName: Reject
   CharacterNameKey: 
   SentenceTextKey: 
 --- !u!114 &11400000
@@ -325,34 +328,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
-  m_Name: ShopTest
+  m_Name: VetteranGuard
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.DialogNodeGraph
   NodesList:
-  - {fileID: 6407441406130873732}
-  - {fileID: 4912826213528386795}
-  - {fileID: 1889179821931311394}
-  - {fileID: -6769954139545274744}
-  - {fileID: -8688176371556866473}
-  - {fileID: -6581179395706085165}
-  - {fileID: 9208246591481536780}
-  - {fileID: -2746561400784494934}
-  - {fileID: 5284268098329581638}
-  - {fileID: -6573818122398503052}
-  - {fileID: 2543635400861609457}
-  - {fileID: -5885786429684323088}
-  - {fileID: 7062696982296285903}
-  - {fileID: 3673675299943527946}
-  - {fileID: -632865905665742972}
-  - {fileID: -6421293429131460076}
-  - {fileID: -5866853562948138123}
-  - {fileID: -5532418231619439545}
-  VariablesConfig: {fileID: 11400000, guid: 1655e736d5b760448a184d95156b43aa, type: 2}
+  - {fileID: -8087904482162212986}
+  - {fileID: 2999942691441706829}
+  - {fileID: -1256813045107701061}
+  - {fileID: 4454802841507338250}
+  - {fileID: -191054790888793073}
+  - {fileID: 6215413134077629327}
+  - {fileID: -3279314572899233357}
+  - {fileID: -9168419711602269299}
+  - {fileID: 4439234943268481292}
+  - {fileID: -173785033894125147}
+  - {fileID: -5120344350608573469}
+  - {fileID: 9065392422857626882}
+  - {fileID: 6954547486264839032}
+  - {fileID: -3911971207770477774}
+  - {fileID: 6695629367064329413}
+  - {fileID: -2371328084087284666}
+  - {fileID: -9132451159865112558}
+  - {fileID: 6213421460488172667}
+  VariablesConfig: {fileID: 11400000, guid: 31b6699eaffc81c479e45cf3dd4e4446, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 0
---- !u!114 &1889179821931311394
+--- !u!114 &2999942691441706829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,24 +370,22 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -712
-    y: 329
+    x: -803
+    y: 338
     width: 190
-    height: 155
+    height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
-  - '[Nothing] Nothing.'
-  - '[Beer] I would like beer! '
-  - '[Dogtag] Could you give me something good?'
+  - Here you go, officer.
+  - ' Of course, just a moment.'
   AnswerKeys: []
   ParentNodes:
-  - {fileID: -6421293429131460076}
+  - {fileID: -8087904482162212986}
   ChildNodes:
-  - {fileID: -6769954139545274744}
-  - {fileID: -6573818122398503052}
-  - {fileID: 5284268098329581638}
---- !u!114 &2543635400861609457
+  - {fileID: -1256813045107701061}
+  - {fileID: 4454802841507338250}
+--- !u!114 &4439234943268481292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,29 +394,159 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
-  m_Name: Variable Condition Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -581
-    y: 662
-    width: 240
-    height: 160
+    x: 440
+    y: 34
+    width: 190
+    height: 155
   IsDragging: 1
   IsSelected: 0
-  _variableName: haveEnoughMoney
-  _conditionType: 0
-  _boolTargetValue: 1
-  _intTargetValue: 0
-  _floatTargetValue: 0
-  _stringTargetValue: 
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: Stay put. I'll inspect every inch.
+    CharacterSprite: {fileID: 0}
   ParentNodes:
-  - {fileID: 5284268098329581638}
-  TrueChildNode: {fileID: 3673675299943527946}
-  FalseChildNode: {fileID: -5885786429684323088}
---- !u!114 &3673675299943527946
+  - {fileID: -9168419711602269299}
+  - {fileID: 6215413134077629327}
+  ChildNode: {fileID: 6213421460488172667}
+  _isExternalFunc: 1
+  _externalFunctionName: Accept
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &4454802841507338250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -592
+    y: 348
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: Faster! I don't have all day.
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 2999942691441706829}
+  ChildNode: {fileID: -191054790888793073}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &6213421460488172667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 678
+    y: 53
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Me
+    Text: '*Waiting*'
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 4439234943268481292}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &6215413134077629327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 131
+    y: 188
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - '[Check] You can check. '
+  - '[Bribe] Maybe we can work something out? '
+  - '[Military] We''ve served together, brother. '
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -3279314572899233357}
+  ChildNodes:
+  - {fileID: 4439234943268481292}
+  - {fileID: -5120344350608573469}
+  - {fileID: 6954547486264839032}
+--- !u!114 &6695629367064329413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 645
+    y: 598
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: VETERAN SOLDIER
+    Text: You're under arrest!
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -3911971207770477774}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &6954547486264839032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -430,22 +561,22 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -73
-    y: 332
+    x: 463
+    y: 386
     width: 210
     height: 155
   IsDragging: 1
   IsSelected: 0
-  _variableName: money
-  _modifyType: 2
-  _boolValue: 0
-  _intValue: 5
+  _variableName: passBorder
+  _modifyType: 0
+  _boolValue: 1
+  _intValue: 0
   _floatValue: 0
   _stringValue: 
   ParentNodes:
-  - {fileID: 2543635400861609457}
-  ChildNode: {fileID: -5532418231619439545}
---- !u!114 &4912826213528386795
+  - {fileID: 6215413134077629327}
+  ChildNode: {fileID: -2371328084087284666}
+--- !u!114 &9065392422857626882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,148 +591,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1071
-    y: 97
+    x: 901
+    y: 240
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Bartender
-    Text: What do you want?
+    CharacterName: VETERAN SOLDIER
+    Text: You're under arrest!
     CharacterSprite: {fileID: 0}
   ParentNodes:
-  - {fileID: 6407441406130873732}
-  ChildNode: {fileID: -6421293429131460076}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &5284268098329581638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -448
-    y: 498
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: Ohh... I see. It will cost you a {testMoney}
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: 1889179821931311394}
-  - {fileID: -2746561400784494934}
-  ChildNode: {fileID: 2543635400861609457}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &6407441406130873732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: -740
-    y: -73
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: Hello there!
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: 4912826213528386795}
-  _isExternalFunc: 0
-  _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &7062696982296285903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 557
-    y: 334
-    width: 190
-    height: 155
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: Here you go!
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: -5532418231619439545}
-  ChildNode: {fileID: -632865905665742972}
-  _isExternalFunc: 1
-  _externalFunctionName: Accept
-  CharacterNameKey: 
-  SentenceTextKey: 
---- !u!114 &9208246591481536780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
-  m_Name: Sentence Node
-  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
-  NodeGraph: {fileID: 11400000}
-  Rect:
-    serializedVersion: 2
-    x: 14
-    y: 28
-    width: 190
-    height: 135
-  IsDragging: 1
-  IsSelected: 0
-  _sentence:
-    CharacterName: Bartender
-    Text: Anything else?
-    CharacterSprite: {fileID: 0}
-  ParentNodes:
-  - {fileID: -8688176371556866473}
-  - {fileID: -6581179395706085165}
-  ChildNode: {fileID: -2746561400784494934}
+  - {fileID: -173785033894125147}
+  ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 

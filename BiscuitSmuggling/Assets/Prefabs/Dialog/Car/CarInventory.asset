@@ -1,0 +1,969 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9165333134531343999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 304
+    y: -955
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: Lets started
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 3095435600880310819}
+  ChildNode: {fileID: 618797974513244156}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-6845578296343751930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 473
+    y: 238
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Biscuits the Front wheels
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 5974580431482493433}
+  ChildNode: {fileID: 4709480054265602775}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-6500578920798727218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -7
+    y: 36
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: trunk
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 2
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 5394709439706637060}
+  ChildNode: {fileID: 9040774251229685608}
+--- !u!114 &-3484152187839592254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -130
+    y: -1090
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: If you gona put stuff in car, you will got to last location.
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: -2401550417791425175}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-3179301948692386911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 429
+    y: -794
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Where you want to put it?
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 618797974513244156}
+  ChildNode: {fileID: -1840135675474906542}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-2401550417791425175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -122
+    y: -950
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: Are you sure?
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -3484152187839592254}
+  ChildNode: {fileID: 3095435600880310819}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-1840135675474906542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 685
+    y: -796
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Trunk
+  - Engine bay
+  - Front wheels
+  - Rear wheels
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -3179301948692386911}
+  ChildNodes:
+  - {fileID: 5262559258190919141}
+  - {fileID: 2630528658600654806}
+  - {fileID: 7029291502278528021}
+  - {fileID: -1285312500855520739}
+--- !u!114 &-1288612911310602098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 747
+    y: 12
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: rearW
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 2
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 5394709439706637060}
+  ChildNode: {fileID: 8741105630092433941}
+--- !u!114 &-1285312500855520739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1080
+    y: -609
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Food in the Rear wheels
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1840135675474906542}
+  ChildNode: {fileID: 9025703808412732227}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-691549698984714975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 363
+    y: -454
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: haveContraband
+  _conditionType: 0
+  _boolTargetValue: 1
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 618797974513244156}
+  - {fileID: 4607122431417269754}
+  - {fileID: 6887145478951987233}
+  - {fileID: -612837704191574141}
+  - {fileID: 9025703808412732227}
+  TrueChildNode: {fileID: 8913534068756703794}
+  FalseChildNode: {fileID: 6338813142741420853}
+--- !u!114 &-612837704191574141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1354
+    y: -734
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: frontW
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 7029291502278528021}
+  ChildNode: {fileID: -691549698984714975}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: CarInventory
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.DialogNodeGraph
+  NodesList:
+  - {fileID: -3484152187839592254}
+  - {fileID: -2401550417791425175}
+  - {fileID: 3095435600880310819}
+  - {fileID: -9165333134531343999}
+  - {fileID: 4899269214598850703}
+  - {fileID: 618797974513244156}
+  - {fileID: -3179301948692386911}
+  - {fileID: -691549698984714975}
+  - {fileID: 8913534068756703794}
+  - {fileID: 6338813142741420853}
+  - {fileID: -1840135675474906542}
+  - {fileID: 5262559258190919141}
+  - {fileID: 2630528658600654806}
+  - {fileID: 7029291502278528021}
+  - {fileID: -1285312500855520739}
+  - {fileID: 4607122431417269754}
+  - {fileID: 6887145478951987233}
+  - {fileID: -612837704191574141}
+  - {fileID: 9025703808412732227}
+  - {fileID: 5394709439706637060}
+  - {fileID: 8854122460712636331}
+  - {fileID: 5974580431482493433}
+  - {fileID: -1288612911310602098}
+  - {fileID: -6500578920798727218}
+  - {fileID: 9040774251229685608}
+  - {fileID: 8326762747375697060}
+  - {fileID: -6845578296343751930}
+  - {fileID: 8741105630092433941}
+  - {fileID: 4709480054265602775}
+  VariablesConfig: {fileID: 11400000, guid: ff011797e58144240bec83ff584c6887, type: 2}
+  _localizationTableName: 
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 0
+--- !u!114 &618797974513244156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.VariableConditionNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 121
+    y: -803
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: haveFood
+  _conditionType: 0
+  _boolTargetValue: 1
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -9165333134531343999}
+  TrueChildNode: {fileID: -3179301948692386911}
+  FalseChildNode: {fileID: -691549698984714975}
+--- !u!114 &2630528658600654806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1053
+    y: -875
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Food in the Engine bay
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1840135675474906542}
+  ChildNode: {fileID: 6887145478951987233}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &3095435600880310819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 99
+    y: -956
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Yes
+  - No
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: -2401550417791425175}
+  ChildNodes:
+  - {fileID: -9165333134531343999}
+  - {fileID: 4899269214598850703}
+--- !u!114 &4607122431417269754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1354
+    y: -1023
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: trunk
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 5262559258190919141}
+  ChildNode: {fileID: -691549698984714975}
+--- !u!114 &4709480054265602775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 387
+    y: 437
+    width: 190
+    height: 155
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: You good to go
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 9040774251229685608}
+  - {fileID: 8326762747375697060}
+  - {fileID: -6845578296343751930}
+  - {fileID: 8741105630092433941}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 1
+  _externalFunctionName: Accept
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &4899269214598850703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -113
+    y: -794
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: See you later
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 3095435600880310819}
+  - {fileID: 6338813142741420853}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &5262559258190919141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1069
+    y: -995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Food in the Trunk
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1840135675474906542}
+  ChildNode: {fileID: 4607122431417269754}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &5394709439706637060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.AnswerNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 256
+    y: -217
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Trunk
+  - Engine bay
+  - Front wheels
+  - Rear wheels
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 8913534068756703794}
+  ChildNodes:
+  - {fileID: -6500578920798727218}
+  - {fileID: 8854122460712636331}
+  - {fileID: 5974580431482493433}
+  - {fileID: -1288612911310602098}
+--- !u!114 &5974580431482493433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 485
+    y: 14
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: frontW
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 2
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 5394709439706637060}
+  ChildNode: {fileID: -6845578296343751930}
+--- !u!114 &6338813142741420853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 71
+    y: -420
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Game
+    Text: How you wana do it without biscuts?
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -691549698984714975}
+  ChildNode: {fileID: 4899269214598850703}
+  _isExternalFunc: 1
+  _externalFunctionName: Reject
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &6887145478951987233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1352
+    y: -877
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: engine
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 2630528658600654806}
+  ChildNode: {fileID: -691549698984714975}
+--- !u!114 &7029291502278528021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1075
+    y: -740
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Food in the Front wheels
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1840135675474906542}
+  ChildNode: {fileID: -612837704191574141}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &8326762747375697060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 249
+    y: 250
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Biscuits the Engine bay
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 8854122460712636331}
+  ChildNode: {fileID: 4709480054265602775}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &8741105630092433941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 747
+    y: 233
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Biscuits the Rear wheels
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1288612911310602098}
+  ChildNode: {fileID: 4709480054265602775}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &8854122460712636331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 239
+    y: 21
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: engine
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 2
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 5394709439706637060}
+  ChildNode: {fileID: 8326762747375697060}
+--- !u!114 &8913534068756703794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 638
+    y: -356
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Where you want to hide biscuits
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -691549698984714975}
+  ChildNode: {fileID: 5394709439706637060}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &9025703808412732227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.ModifyVariableNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1348
+    y: -589
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: rearW
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -1285312500855520739}
+  ChildNode: {fileID: -691549698984714975}
+--- !u!114 &9040774251229685608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: Assembly-CSharp-firstpass::cherrydev.SentenceNode
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -16
+    y: 230
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Car
+    Text: Biscuits the Trunk
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -6500578920798727218}
+  ChildNode: {fileID: 4709480054265602775}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 

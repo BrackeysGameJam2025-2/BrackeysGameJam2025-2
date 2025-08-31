@@ -22,10 +22,12 @@ namespace KinematicCharacterController.Examples
         {
             if (_lockCursor)
             {
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
+                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }
 

@@ -16,7 +16,7 @@ public abstract class InteractiveObjectBehavior : ScriptableObject
 
     protected DialogNodeGraph chosenGraph;
 
-    public void Interact()
+    public virtual void Interact()
     {
         if (dialogGraphs != null && dialogGraphs.Length > 0)
         {

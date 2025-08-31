@@ -21,7 +21,7 @@ MonoBehaviour:
         Data3: 1804744082
         Data4: -235540191
       Path: event:/Dialog/Guide
-  - CharacterName: Officer Olse
+  - CharacterName: FATTY
     Voice:
       Guid:
         Data1: -1250267678
@@ -29,6 +29,38 @@ MonoBehaviour:
         Data3: -1688896608
         Data4: -286978462
       Path: event:/Dialog/Fatty
+  - CharacterName: VETERAN SOLDIER
+    Voice:
+      Guid:
+        Data1: 67562702
+        Data2: 1304397802
+        Data3: -253228659
+        Data4: -1146164386
+      Path: event:/Dialog/Veteran
+  - CharacterName: GUARD WITH DOG
+    Voice:
+      Guid:
+        Data1: 1202217832
+        Data2: 1111945836
+        Data3: -982998399
+        Data4: 1465319567
+      Path: event:/Dialog/DogGuy
+  - CharacterName: Me
+    Voice:
+      Guid:
+        Data1: -103856745
+        Data2: 1225013838
+        Data3: -1481044043
+        Data4: -255399096
+      Path: event:/Dialog/Protagonist
+  - CharacterName: Bartender
+    Voice:
+      Guid:
+        Data1: 429491975
+        Data2: 1318954754
+        Data3: -1930260568
+        Data4: -346717545
+      Path: event:/Dialog/Bartender
   m_DefaultEvent:
     Guid:
       Data1: -1488812230

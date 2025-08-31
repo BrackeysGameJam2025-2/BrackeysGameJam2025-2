@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2008783f1c069cc438bf8fae5a3adf45, type: 3}
+  m_Name: Clerk
+  m_EditorClassIdentifier: Assembly-CSharp::ShopInteraction
+  dialogGraphs:
+  - {fileID: 11400000, guid: 9196328b5691bd54e93308955f0c9023, type: 2}
+  dialogType: 1
+  itemsForSale: []
