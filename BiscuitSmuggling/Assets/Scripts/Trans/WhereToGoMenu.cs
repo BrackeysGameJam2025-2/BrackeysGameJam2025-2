@@ -16,8 +16,8 @@ public class WhereToGoMenu : SingletonMonoBehaviour<WhereToGoMenu>
 
     public void Hide()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
 
         PauseMenu.Instance.SetUnpaused();
         m_Overlay.SetActive(false);

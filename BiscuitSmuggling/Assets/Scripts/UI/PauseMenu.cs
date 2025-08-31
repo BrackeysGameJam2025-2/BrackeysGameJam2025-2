@@ -86,8 +86,8 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         RuntimeManager.PlayOneShot(m_UnpauseEvent);
         RuntimeManager.StudioSystem.setParameterByName("PauseBlend", 0f);
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
     }
 
     public void SetPaused()

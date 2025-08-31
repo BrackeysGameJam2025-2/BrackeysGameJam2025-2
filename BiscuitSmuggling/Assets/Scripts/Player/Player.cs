@@ -6,7 +6,7 @@ public class Player : SingletonMonoBehaviour<Player>
 
     private void OnEnable()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
     }
 }

@@ -111,7 +111,7 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
     {
         _masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
         _sfxVolume = PlayerPrefs.GetFloat("SfxVolume", 1f);
-        _soundtrackVolume = PlayerPrefs.GetFloat("SoundtrackVolume", 0.8f);
+        _soundtrackVolume = PlayerPrefs.GetFloat("SoundtrackVolume", 0.7f);
         _dialogVolume = PlayerPrefs.GetFloat("DialogVolume", 1f);
 
         UpdateVolumes();

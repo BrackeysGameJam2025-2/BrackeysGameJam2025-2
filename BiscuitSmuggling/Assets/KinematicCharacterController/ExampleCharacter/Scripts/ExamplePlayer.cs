@@ -20,7 +20,7 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
-            if (_lockCursor)
+            /*if (_lockCursor)
             {
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -29,21 +29,22 @@ namespace KinematicCharacterController.Examples
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-            }
+            }*/
 
             HandleCharacterInput();
         }
 
         private void HandleCharacterInput()
         {
-            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
-
-            // Build the CharacterInputs struct
-            characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
-            characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-            characterInputs.CameraRotation = Quaternion.identity; // No camera rotation
-            characterInputs.CrouchDown = Input.GetKeyDown(KeyCode.C);
-            characterInputs.CrouchUp = Input.GetKeyUp(KeyCode.C);
+            PlayerCharacterInputs characterInputs = new()
+            {
+                // Build the CharacterInputs struct
+                MoveAxisForward = Input.GetAxisRaw(VerticalInput),
+                MoveAxisRight = Input.GetAxisRaw(HorizontalInput),
+                CameraRotation = Quaternion.identity, // No camera rotation
+                CrouchDown = Input.GetKeyDown(KeyCode.C),
+                CrouchUp = Input.GetKeyUp(KeyCode.C)
+            };
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
