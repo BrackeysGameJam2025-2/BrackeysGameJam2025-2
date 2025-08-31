@@ -15,14 +15,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 222
-    y: 481
+    x: 362
+    y: 548
     width: 190
     height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: This is insulting! You're under arrest!
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -815
-    y: 375
+    x: -675
+    y: 442
     width: 190
     height: 135
   IsDragging: 1
@@ -77,8 +77,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 121
-    y: 304
+    x: 261
+    y: 371
     width: 240
     height: 160
   IsDragging: 1
@@ -108,14 +108,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -563
-    y: 435
+    x: -423
+    y: 502
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: '*Guard barely looks* Whatever. Move along.'
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -140,14 +140,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 658
-    y: 230
+    x: 798
+    y: 297
     width: 190
     height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: Smart move.
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -172,8 +172,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 552
-    y: 483
+    x: 692
+    y: 550
     width: 190
     height: 135
   IsDragging: 1
@@ -204,14 +204,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -821
-    y: 227
+    x: -681
+    y: 294
     width: 190
     height: 135
   IsDragging: 0
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: Papers. Now.
     CharacterSprite: {fileID: 0}
   ParentNodes: []
@@ -235,14 +235,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -571
-    y: 282
+    x: -431
+    y: 349
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: '*snatches papers* Hmm... fine.'
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -302,8 +302,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 161
-    y: 657
+    x: 301
+    y: 724
     width: 210
     height: 155
   IsDragging: 1
@@ -333,14 +333,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 99
-    y: 121
+    x: 239
+    y: 188
     width: 190
     height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
+    CharacterName: FATTY
     Text: Don't move.
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -365,14 +365,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -78
-    y: 585
+    x: 62
+    y: 652
     width: 190
     height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: You're under arrest! Hands up!
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -397,8 +397,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 422
-    y: 259
+    x: 562
+    y: 326
     width: 210
     height: 155
   IsDragging: 1
@@ -427,14 +427,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -337
-    y: 350
+    x: -197
+    y: 417
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: Got anything illegal in that car?
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -460,14 +460,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 886
-    y: 234
+    x: 1026
+    y: 301
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Fatty
+    CharacterName: FATTY
     Text: Get out of here.
     CharacterSprite: {fileID: 0}
   ParentNodes:
@@ -492,8 +492,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -123
-    y: 343
+    x: 17
+    y: 410
     width: 190
     height: 155
   IsDragging: 1
@@ -524,12 +524,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 356
-    y: 36
+    x: 496
+    y: 103
     width: 190
     height: 135
   IsDragging: 0
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Me
     Text: '*Waiting*'
