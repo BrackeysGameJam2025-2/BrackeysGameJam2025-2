@@ -301,8 +301,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7435018747505923313, guid: 5e8616c44588c4447add92c01f858c14, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 19440052}
+    - targetCorrespondingSourceObject: {fileID: 7435018747505923313, guid: 5e8616c44588c4447add92c01f858c14, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 19440051}
   m_SourcePrefab: {fileID: 100100000, guid: 5e8616c44588c4447add92c01f858c14, type: 3}
+--- !u!1 &19440050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7435018747505923313, guid: 5e8616c44588c4447add92c01f858c14, type: 3}
+  m_PrefabInstance: {fileID: 19440049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &19440051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19440050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091e795a15377d04ea0b7d0dc143858c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObject
+  behavior: {fileID: 11400000, guid: bec621837368c0d4c96c564acb2e659b, type: 2}
+  waitForPlayerToInteract: 1
+  preventMultipleInteractions: 0
+  interactionArea: {fileID: 19440052}
+--- !u!65 &19440052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19440050}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.84, y: 1, z: 5.94}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &249756832
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +587,43 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 808584566006204989, guid: f3a226199a77e0d4ba9bd91e5a36deba, type: 3}
   m_PrefabInstance: {fileID: 337693206}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &590963231
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 640
+  m_Height: 360
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!224 &894537244 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7407709492112842003, guid: 2597f777df6b086429e675dd1bb9084d, type: 3}
@@ -731,7 +816,7 @@ PrefabInstance:
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 2007836298}
+      objectReference: {fileID: 590963231}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: orthographic size
       value: 8.5
@@ -845,43 +930,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4df389e131f2d4458818227702c109a, type: 3}
---- !u!84 &2007836298
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 640
-  m_Height: 360
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &1661864441414462177
 PrefabInstance:
   m_ObjectHideFlags: 0
