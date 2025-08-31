@@ -150,7 +150,6 @@ namespace KinematicCharacterController.Examples
                         // Sprinting input using Input.GetKey
                         if (Input.GetKey(KeyCode.LeftShift))
                         {
-                            Debug.Log("Sprinting!");
                             MaxStableMoveSpeed = _defaultMaxStableMoveSpeed * 2f; // Double the speed
                         }
                         else

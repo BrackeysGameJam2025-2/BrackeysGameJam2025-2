@@ -304,14 +304,10 @@ PrefabInstance:
       propertyPath: AxisRight.x
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 5737386255984387326, guid: f4df389e131f2d4458818227702c109a, type: 3}
-      propertyPath: MaxStableMoveSpeed
-      value: 6.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1693598875}
+      objectReference: {fileID: 1826090702}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: orthographic size
       value: 8.5
@@ -609,7 +605,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!84 &1693598875
+--- !u!84 &1826090702
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -756,7 +752,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3005845779420887022, guid: b4128ac85de0a9442a4661dec27ca646, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4128ac85de0a9442a4661dec27ca646, type: 3}

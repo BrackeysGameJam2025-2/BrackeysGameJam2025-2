@@ -125,4 +125,21 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
         PlayerPrefs.SetFloat("DialogVolume", _dialogVolume);
         PlayerPrefs.Save();
     }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (RuntimeManager.StudioSystem.isValid())
+        {
+            RuntimeManager.PauseAllEvents(!focus);
+
+            if (!focus)
+            {
+                RuntimeManager.CoreSystem.mixerSuspend();
+            }
+            else
+            {
+                RuntimeManager.CoreSystem.mixerResume();
+            }
+        }
+    }
 }
