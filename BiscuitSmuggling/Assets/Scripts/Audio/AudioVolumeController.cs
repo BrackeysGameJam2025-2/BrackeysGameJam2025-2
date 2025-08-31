@@ -87,7 +87,11 @@ public sealed class AudioVolumeController : SingletonMonoBehaviour<AudioVolumeCo
     {
         base.OnDestroy();
 
+#if UNITY_WEBGL
+        MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
+#else
         MasterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+#endif
     }
 
     private void Start()
