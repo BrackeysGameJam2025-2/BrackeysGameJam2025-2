@@ -10,6 +10,7 @@ public class ShopInteraction : InteractiveObjectBehavior
 
     public override void Prepare(DialogBehaviour dialogBehaviour)
     {
+        GameManager.Instance.PrepareCharactersInfo(dialogBehaviour);
         Inventory.Instance.PrepareInventoryInfo.PrepareBartender(dialogBehaviour);
     }
 

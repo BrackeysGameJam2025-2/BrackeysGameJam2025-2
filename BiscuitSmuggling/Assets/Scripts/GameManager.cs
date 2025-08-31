@@ -1,3 +1,4 @@
+using cherrydev;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,14 +112,30 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
-    private void StartSerchingCars()
-    {
-        //TODO : Call CheckVehicleGuard to seacrh car
-    }
-
     public void StartSearchingCars()
     {
         Debug.Log("Car search requested by GameManager.");
         OnCarSearchRequested?.Invoke();
+    }
+
+    public void PrepareCharactersInfo(DialogBehaviour dialogBehaviour)
+    {
+        // Set the current guard type name as a dialog variable
+        GuardsType currentGuardType = GetCurrentGuardType();
+        string guardTypeName = currentGuardType.ToString();
+        dialogBehaviour.SetVariableValue("currentGuardType", guardTypeName);
+
+        // Set the spots that will be checked as a comma-separated string
+        if (willBeChekcedSpots != null && willBeChekcedSpots.Count > 0)
+        {
+            string spotsToCheck = string.Join(", ", willBeChekcedSpots);
+            dialogBehaviour.SetVariableValue("spotsToCheck", spotsToCheck);
+        }
+        else
+        {
+            dialogBehaviour.SetVariableValue("spotsToCheck", "None");
+        }
+
+        Debug.Log($"PrepareCharactersInfo: Guard Type = {guardTypeName}, Spots to Check = {string.Join(", ", willBeChekcedSpots ?? new List<string>())}");
     }
 }
