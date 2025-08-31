@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("TODO: Check if that's start right.");
+        Debug.Log("TODO: Check if this starts right.");
         SceneManager.LoadScene("WarehouseDay", LoadSceneMode.Single);
     }
 

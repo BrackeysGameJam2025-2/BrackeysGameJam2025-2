@@ -339,7 +339,7 @@ public class PatrolNPC : MonoBehaviour
 
     private void Chase()
     {
-        if (NavMesh.SamplePosition(Player.Transform.position, out var hit, 5f, -1))
+        if (NavMesh.SamplePosition(Player.Transform.position, out var hit, 2.5f, -1))
         {
             _agent.SetDestination(hit.position);
         }
@@ -366,7 +366,7 @@ public class PatrolNPC : MonoBehaviour
             if (_bustTimer >= m_TimeToBust)
             {
                 ClankerHivemind.Instance.Busted();
-                m_BustBehavior.Interact();
+                //m_BustBehavior.Interact();
             }
         }
         else

@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 1563346428}
+  _lockCursor: 1
 --- !u!4 &171118618
 Transform:
   m_ObjectHideFlags: 0
@@ -795,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 1563346430}
-  MaxStableMoveSpeed: 10
+  MaxStableMoveSpeed: 8
   StableMovementSharpness: 15
   OrientationSharpness: 20
   OrientationMethod: 1

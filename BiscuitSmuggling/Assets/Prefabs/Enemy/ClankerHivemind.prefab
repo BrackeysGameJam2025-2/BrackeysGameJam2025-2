@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4493e2238b0091349a1eaf3e30bbf954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClankerHivemind
-  m_TimeForAlarm: 20
+  m_TimeForAlarm: 15
   m_AlarmRefreshPlayerPositionTime: 3
   m_Soundtrack:
     Guid:

@@ -44,7 +44,7 @@ public sealed class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
             if (IsPaused)
             {
