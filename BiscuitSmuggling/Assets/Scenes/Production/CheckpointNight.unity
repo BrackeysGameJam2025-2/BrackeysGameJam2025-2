@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!84 &644495304
+--- !u!84 &199189614
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 902375406747391884, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02222909
+      value: -0.010001289
       objectReference: {fileID: 0}
     - target: {fileID: 902375406747391884, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 644495304}
+      objectReference: {fileID: 199189614}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: orthographic size
       value: 8.5
@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280923557898932988, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.022224426
+      value: 0.010002136
       objectReference: {fileID: 0}
     - target: {fileID: 6280923557898932988, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492050202161788892, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 84.6
+      value: 96.91
       objectReference: {fileID: 0}
     - target: {fileID: 7492050202161788892, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.y

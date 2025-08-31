@@ -29,6 +29,10 @@ public sealed class ClankerHivemind : SingletonMonoBehaviour<ClankerHivemind>
 
     public bool WasAlarmStarted { get; private set; } = false;
 
+    public bool IsBusted { get; private set; } = false;
+
+    public bool AnyoneChases => _chasingClankers > 0;
+
     public event Action AlarmStarted;
 
     private void Start()
@@ -151,6 +155,10 @@ public sealed class ClankerHivemind : SingletonMonoBehaviour<ClankerHivemind>
 
     public void Busted()
     {
+        if (IsBusted) return;
+
+        IsBusted = true;
+
         _sirenInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         foreach (var clanker in _clankers)
         {

@@ -1,18 +1,17 @@
-using System;
 using KinematicCharacterController;
 using KinematicCharacterController.Examples;
 using UnityEngine;
 
 public class PlyrAnimations : MonoBehaviour
 {
-    ExampleCharacterController characterController;
-    KinematicCharacterMotor kinamaticMotor;
-    
-    Animator animator;
-    Rigidbody rb;
-    float animSmooth = 12;
-    float velocityZ = 4;
-    void Start()
+    private ExampleCharacterController characterController;
+    private KinematicCharacterMotor kinamaticMotor;
+
+    private Animator animator;
+    private Rigidbody rb;
+    private float animSmooth = 12;
+    private float velocityZ = 4;
+    private void Start()
     {
         animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<ExampleCharacterController>();
@@ -23,31 +22,30 @@ public class PlyrAnimations : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
-        Debug.Log(kinamaticMotor.BaseVelocity);
         if (kinamaticMotor.BaseVelocity.magnitude <= 4 && kinamaticMotor.BaseVelocity.magnitude > 0.2f)
         {
             velocityZ = 4;
         }
-        else if (Input.GetKey(KeyCode.LeftShift)&& kinamaticMotor.BaseVelocity.magnitude >= 0.2)
+        else if (Input.GetKey(KeyCode.LeftShift) && kinamaticMotor.BaseVelocity.magnitude >= 0.2)
         {
             velocityZ = 8;
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftShift) )
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             velocityZ = 4;
         }
 
-        if (kinamaticMotor.BaseVelocity.magnitude < 0.2f && velocityZ >=0)
+        if (kinamaticMotor.BaseVelocity.magnitude < 0.2f && velocityZ >= 0)
         {
             velocityZ -= Time.deltaTime * animSmooth;
         }
         GetVelotity();
     }
 
-    void GetVelotity()
+    private void GetVelotity()
     {
         animator.SetFloat("VelocityZ", velocityZ);
     }
