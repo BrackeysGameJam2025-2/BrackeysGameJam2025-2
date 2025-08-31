@@ -246,43 +246,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 69.277, y: -114.733, z: -92.362}
---- !u!84 &62606148
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 640
-  m_Height: 360
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &245529799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,6 +757,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.021783978
       objectReference: {fileID: 0}
+    - target: {fileID: 1726382810209403214, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 833ef1ded74a74440a9dade6dba1bfc0, type: 2}
+    - target: {fileID: 2705794782001435949, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c61cbe78d2412d4bb7333f8bee1658a, type: 2}
+    - target: {fileID: 3224021995736374885, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c61cbe78d2412d4bb7333f8bee1658a, type: 2}
+    - target: {fileID: 3456289380908189402, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d03694ad330f2488b1c31416018509, type: 2}
+    - target: {fileID: 3653490298356600791, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 833ef1ded74a74440a9dade6dba1bfc0, type: 2}
     - target: {fileID: 3903246478020815070, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: orthographic size
       value: 8.452778
@@ -806,10 +789,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4487495571005283686, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 833ef1ded74a74440a9dade6dba1bfc0, type: 2}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 62606148}
+      objectReference: {fileID: 1611654994}
     - target: {fileID: 5845652790027427319, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: orthographic size
       value: 8.5
@@ -838,6 +825,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.00821273
       objectReference: {fileID: 0}
+    - target: {fileID: 6618807483124974885, guid: f4df389e131f2d4458818227702c109a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 833ef1ded74a74440a9dade6dba1bfc0, type: 2}
     - target: {fileID: 7492050202161788892, guid: f4df389e131f2d4458818227702c109a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6
@@ -1045,6 +1036,43 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75015589612bc3245abdd65c5ffd1cbc, type: 3}
+--- !u!84 &1611654994
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 640
+  m_Height: 360
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1699892711
 PrefabInstance:
   m_ObjectHideFlags: 0
