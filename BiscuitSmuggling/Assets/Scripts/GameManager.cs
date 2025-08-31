@@ -33,6 +33,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public List<string> WillBeCheckedSpots => willBeChekcedSpots;
     public List<string> HiddenSpots => hidenSpots;
 
+    public static bool IsDay { private set; get; } = true;
+
     private List<Guard> guards;
 
     // Event for car searching
@@ -137,5 +139,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
 
         Debug.Log($"PrepareCharactersInfo: Guard Type = {guardTypeName}, Spots to Check = {string.Join(", ", willBeChekcedSpots ?? new List<string>())}");
+    }
+
+    public void SkipTime()
+    {
+        IsDay = !IsDay;
     }
 }

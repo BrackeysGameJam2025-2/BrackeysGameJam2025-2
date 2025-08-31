@@ -94,6 +94,28 @@ public class CheckVehicleGuard : MonoBehaviour
         int actualSpotsToCheck = Mathf.Min(maxSpotsToCheck, spotsToCheckNames.Count);
         bool playerFound = false;
 
+        bool hasContraband = false;
+
+        foreach (var name in spotsToCheckNames)
+        {
+
+            List<CarItem> itemsInSpot = CarInventory.Instance.GetItemsInSpot(name);
+            foreach (var item in itemsInSpot)
+            {
+                if (item.Item == illegalItem)
+                {
+                    hasContraband = true;
+                    break;
+                }
+            }
+        }
+
+        if (!hasContraband)
+        {
+            SetGameResult(false);
+            return;
+        }
+
         // Check the spots that are marked for inspection
         for (int i = 0; i < actualSpotsToCheck; i++)
         {
@@ -101,7 +123,7 @@ public class CheckVehicleGuard : MonoBehaviour
             // Check if this spot has contraband (items) using CarInventory system
             List<CarItem> itemsInSpot = CarInventory.Instance.GetItemsInSpot(spotName);
 
-            bool hasContraband = false;
+            hasContraband = false;
 
             if (guardType == GuardType.WithDog)
             {
@@ -140,12 +162,10 @@ public class CheckVehicleGuard : MonoBehaviour
         // Determine game result
         if (playerFound)
         {
-            Debug.Log("GAME OVER - Player was caught by the guard!");
             SetGameResult(false);
         }
         else
         {
-            Debug.Log("SUCCESS - Player was not found by the guard!");
             SetGameResult(true);
         }
     }
@@ -156,15 +176,11 @@ public class CheckVehicleGuard : MonoBehaviour
         // we'll use a simple approach to notify about the game result
         if (playerWon)
         {
-            Debug.Log("Setting game result: PLAYER WINS");
-            // You could trigger an event here or call a method on GameManager
-            // For now, just logging the result
+            VictoryScreen.Instance.Show();
         }
         else
         {
-            Debug.Log("Setting game result: PLAYER LOSES");
-            // You could trigger an event here or call a method on GameManager
-            // For now, just logging the result
+            LoseScreen.Instance.Show();
         }
 
         // The BorderGuard.Reject() method will handle the final outcome
