@@ -42,6 +42,7 @@ public class PlyrAnimations : MonoBehaviour
         {
             velocityZ -= Time.deltaTime * animSmooth;
         }
+        
         GetVelotity();
     }
 
