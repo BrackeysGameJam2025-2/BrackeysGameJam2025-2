@@ -1246,8 +1246,10 @@ GameObject:
   - component: {fileID: 5084689026176156015}
   - component: {fileID: 5966271739642212777}
   - component: {fileID: 5403364242855618329}
+  - component: {fileID: 4761137665213161293}
   - component: {fileID: 4426484986784840904}
   - component: {fileID: 825787831499127125}
+  - component: {fileID: 3695434909698795303}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -1420,6 +1422,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   prepareInventoryInfo: {fileID: 4426484986784840904}
+--- !u!114 &4761137665213161293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985759011386455204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b268200fbd7c2284c98bcf14a06c9abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarInventory
+  itemIndexList:
+  - Index: 1
+    Items:
+    - {fileID: 11400000, guid: 5400aea99758d384eadd587688efd54d, type: 2}
+  - Index: 2
+    Items:
+    - {fileID: 11400000, guid: 9a94f160e8fad7b49bbab83f3482aca6, type: 2}
+  - Index: 3
+    Items:
+    - {fileID: 11400000, guid: 9a94f160e8fad7b49bbab83f3482aca6, type: 2}
+    - {fileID: 11400000, guid: 5400aea99758d384eadd587688efd54d, type: 2}
 --- !u!114 &4426484986784840904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,6 +1486,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d2dca5eb5fce6478887410f77a6cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlyrAnimations
+--- !u!114 &3695434909698795303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985759011386455204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50a93564d06e694ca3c996539cf5b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  carSpots:
+  - trunk
+  - engine
+  - frontW
+  - rearW
 --- !u!1 &5825870014156403097
 GameObject:
   m_ObjectHideFlags: 0
