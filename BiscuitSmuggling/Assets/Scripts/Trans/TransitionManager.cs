@@ -1,12 +1,14 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class TransitionManager
 {
     public static bool IsDay()
     {
-        Debug.LogWarning("IMPLEMENT IsDay!!!!");
-        return Random.Range(0, 2) == 0;
+        if (GameManager.Instance == null)
+        {
+            return true; // Default to day if GameManager is not found
+        }
+        return GameManager.IsDay;
     }
 
     private static void Transition(string location)
