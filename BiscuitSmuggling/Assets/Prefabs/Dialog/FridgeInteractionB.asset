@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FridgeInteractionB
   m_EditorClassIdentifier: Assembly-CSharp::FridgeInteraction
   dialogGraphs:
-  - {fileID: 11400000, guid: 5810996d1e272e24081634507f14db5f, type: 2}
+  - {fileID: 11400000, guid: 593e8647c5a6e394280efcbb4d43a224, type: 2}
   dialogType: 0
   food: {fileID: 11400000, guid: 9a94f160e8fad7b49bbab83f3482aca6, type: 2}
