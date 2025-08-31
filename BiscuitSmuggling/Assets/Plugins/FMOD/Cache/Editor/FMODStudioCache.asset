@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Dialog.bank
   Name: Dialog
   StudioPath: bank:/Dialog
-  lastModified: 638921840478921741
+  lastModified: 638922477735666124
   FileSizes: []
   Exists: 1
 --- !u!114 &-7278547829071377246
@@ -220,7 +220,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638921840479862538
+  lastModified: 638922477735703586
   FileSizes: []
   Exists: 1
 --- !u!114 &-2139608673629717337
@@ -238,7 +238,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638921840478932099
+  lastModified: 638922477735676573
   FileSizes:
   - Name: 
     Value: 2260
@@ -312,7 +312,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638921840478932099
+  lastModified: 638922477735671401
   FileSizes: []
   Exists: 1
 --- !u!114 &-894543279346941155
@@ -389,7 +389,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2139608673629717337}
   cacheVersion: 131848
-  cacheTime: 638921840483846735
+  cacheTime: 638922477735944491
   SerializableEventsDict:
   - key: event:/Dialog/Bartender
     index: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
   Path: Assets/Audio/FMod Banks/Desktop/Soundtrack.bank
   Name: Soundtrack
   StudioPath: bank:/Soundtrack
-  lastModified: 638921840483846735
+  lastModified: 638922477735944491
   FileSizes: []
   Exists: 1
 --- !u!114 &1817573480104441110
